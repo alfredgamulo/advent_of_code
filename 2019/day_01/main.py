@@ -1,8 +1,5 @@
-import math
-
-
 def calc(num):
-    fuel = math.floor(num/3) - 2
+    fuel = (num//3) - 2
     return fuel if fuel > 0 else 0
     
 
@@ -25,7 +22,6 @@ def part2():
         print(".."+str(more_fuel))
         more_fuel = calc(more_fuel)
         fuel = fuel + more_fuel
-        
     return fuel
 
 
