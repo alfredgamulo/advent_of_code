@@ -2,7 +2,10 @@ def read_input(file):
     with open(file) as f:
         wire1 = f.readline().strip().split(',')
         wire2 = f.readline().strip().split(',')
-    return wire1, wire2
+    coords1 = get_coords(wire1)
+    coords2 = get_coords(wire2)
+    intersections = set(coords1).intersection(set(coords2))
+    return coords1, coords2, intersections
 
 
 def get_coords(wire):
@@ -28,10 +31,7 @@ def get_coords(wire):
 
 
 def part1():
-    wire1, wire2 = read_input("input")
-    coords1 = get_coords(wire1)
-    coords2 = get_coords(wire2)
-    intersections = set(coords1).intersection(set(coords2))
+    coords1, coords2, intersections = read_input("input")
     closest_intersection = float('inf')
     for i in intersections:
         distance = abs(i[0])+abs(i[1])
@@ -40,20 +40,19 @@ def part1():
     return(closest_intersection)
     
 
-print(part1())
+print("Part 1:", part1())
 
 
 def part2():
-    wire1, wire2 = read_input("input")
-    coords1 = get_coords(wire1)
-    coords2 = get_coords(wire2)
-    intersections = set(coords1).intersection(set(coords2))
-    total_steps = []
+    coords1, coords2, intersections = read_input("input")
+    min_steps = float('inf')
     for i in intersections:
         steps1 = coords1.index(i)
         steps2 = coords2.index(i)
-        total_steps.append(steps1+steps2+2) # 2 is the offset added because we didn't include origin
-    return(min(total_steps))
+        intersection_steps = steps1 + steps2 + 2 # 2 is the offset added because we didn't include origin
+        if intersection_steps < min_steps:
+            min_steps = intersection_steps
+    return(min_steps)
 
 
-print(part2())
+print("Part 2:", part2())
