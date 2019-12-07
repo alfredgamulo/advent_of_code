@@ -10,6 +10,7 @@ class Computer():
         self.file = file
         self.program = self.read_input(self.file)
         self.signals = signals
+        self.output = []
 
     def read_input(self, file):
         program = []
@@ -44,16 +45,17 @@ class Computer():
                 self.program[self.program[pos+3]] = a * b
                 pos += 4
             elif opcode == 3:
+                if not self.signals:
+                    return False
                 i = int(self.signals.pop(0))
-                print("input:", i)
+                # print("input:", i)
                 self.program[self.program[pos+1]] = i
                 pos += 2
             elif opcode == 4:
                 o = self.get_parameters(1, param_modes, pos)[0]
-                print("output:", o)
+                # print("output:", o)
+                self.output.append(o)
                 pos += 2
-                if o != 0:
-                    return o
             elif opcode == 5:
                 a, b = self.get_parameters(2, param_modes, pos)
                 if a != 0:
@@ -85,25 +87,40 @@ class Computer():
 
             else:
                 print("Unknown opcode:", self.program[pos])
-                return self.program
+                exit()
         # print("\nHalting...")
-        return 0
+        return True
 
 
-def part1():
+def part2():
     max_output = 0
     maximum_p = None
-    for p in permutations([0, 1, 2, 3, 4]):
-        signal = 0
-        for c, i in enumerate(p):
-            computer = Computer("input", [i, signal])
-            signal = computer.run()
+    signal = 0
+    for p in permutations([5, 6, 7, 8, 9]):
+        signals = {
+            0: [p[0], 0],
+            1: [p[1]],
+            2: [p[2]],
+            3: [p[3]],
+            4: [p[4]]
+        }
+        final = False
+        while not final:
+            file = "input"
+            for i in range(5):
+                computer = Computer(file, signals[i][:])
+                ret = computer.run()
+                signals[(i+1) % 5].append(computer.output[-1])
+                if i == 4 and ret:
+                    final = True
+                    signal = computer.output[-1]
+            
         if signal > max_output:
             max_output = signal
             maximum_p = p
     
     print("maximum signal output:", max_output)
-    print("config", p)
+    print("config", maximum_p)
 
 
-part1()
+part2()
