@@ -35,17 +35,17 @@ def part2(loops):
     offset = int("".join(map(str, signal[:7])))
     signal = signal*10000
     working_signal = signal[offset:]
-    phase = working_signal[:]
-
+    phase = working_signal[::-1]
+    
     for l in range(loops):
-        print(l)
+        # print(l)
         new_phase = []
         new_p = 0
-        for p in phase[::-1]:
+        for p in phase:
             new_p = (p + new_p) % 10
-            new_phase.insert(0, new_p)
+            new_phase.append(new_p)
         phase = new_phase
-    return "".join(map(str,phase[:8]))
+    return "".join(map(str,phase[-1:-9:-1]))
 
 
 print("Part 2:", part2(100))
