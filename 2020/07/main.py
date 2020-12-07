@@ -14,7 +14,7 @@ with open("input") as f:
         in_nodes = dict((" ".join(s.split()[1:-1]), s[0]) for s in in_list)
 
         for k,v in in_nodes.items():
-            G.add_edge(out_node, k, count=v)
+            G.add_edge(out_node, k, count=int(v))
 
 #part 1
 print("part 1:", len(nx.algorithms.dag.ancestors(G, "shiny gold")))
@@ -24,7 +24,7 @@ def curse(bag, prev):
     successors = G.successors(bag)
     tally = 0
     for s in successors:
-        count = int(G.get_edge_data(bag, s)['count'])
+        count = G.get_edge_data(bag, s)['count']
         tally += count + count*curse(s, count)
     return tally
 
