@@ -1,6 +1,4 @@
 import networkx as nx
-from functools import reduce
-from operator import mul
 
 G = nx.DiGraph()
 
