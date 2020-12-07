@@ -15,13 +15,12 @@ with open("input") as f:
             G.add_edge(out_node, k, count=int(v))
 
 #part 1
-print("part 1:", len(nx.algorithms.dag.ancestors(G, "shiny gold")))
+print("part 1:", len(nx.ancestors(G, "shiny gold")))
 
 #part 2
 def curse(bag, prev):
-    successors = G.successors(bag)
     tally = 0
-    for s in successors:
+    for s in G.successors(bag):
         count = G.get_edge_data(bag, s)['count']
         tally += count + count*curse(s, count)
     return tally
