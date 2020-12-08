@@ -1,47 +1,42 @@
 with open("input") as f:
     code = [(x, int(y)) for x, y in (line.split() for line in f.readlines())]
     
-class AssMachine():
-    def __init__(self, ass):
-        self.ass = ass
-        self.accumulator = 0
-        
+class Machine():
+    def __init__(self, code):
+        self.code = code
+
     def run(self):
         pos = 0
+        acc = 0
         vis = set()
-        clean = True
-        while pos < len(self.ass):
+        while pos < len(self.code):
             if pos in vis:
-                clean = False
-                break
-            op = self.ass[pos][0]
-            val = self.ass[pos][1]
+                return (False, acc)
+            op = self.code[pos][0]
+            jmp = 1
             vis.add(pos)
-            if op == "nop":
-                pos += 1
-                continue
             if op == "acc":
-                self.accumulator += val
-                pos += 1
-                continue
-            if op == "jmp":
-                pos += val
-                continue
+                acc += self.code[pos][1]
+            elif op == "jmp":
+                jmp = self.code[pos][1]
+            pos += jmp
         
-        return (clean, self.accumulator)
+        return (True, acc)
 
 # part 1
-a = AssMachine(code)
-print(a.run()[1])
+m = Machine(code)
+print("part 1:", m.run()[1])
 
 # part 2
 for i in range(len(code)):
-    a = AssMachine([c for c in code])
+    if 'acc' == code[i][0]:
+        continue
+    m.code = code[:]
     if 'jmp' == code[i][0]:
-        a.ass[i] = ("nop", a.ass[i][1])
+        m.code[i] = ("nop", code[i][1])
     elif 'nop' == code[i][0]:
-        a.ass[i] = ("jmp", a.ass[i][1])
-    rc, acc = a.run()
+        m.code[i] = ("jmp", code[i][1])
+    rc, acc = m.run()
     if rc:
-        print(acc)
+        print("part 2:", acc)
         break
