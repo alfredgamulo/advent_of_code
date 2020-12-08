@@ -32,7 +32,7 @@ class AssMachine():
 
 # part 1
 a = AssMachine(code)
-print(a.run())
+print(a.run()[1])
 
 # part 2
 for i in range(len(code)):
@@ -41,7 +41,7 @@ for i in range(len(code)):
         a.ass[i] = ("nop", a.ass[i][1])
     elif 'nop' == code[i][0]:
         a.ass[i] = ("jmp", a.ass[i][1])
-    rc = a.run()
-    if rc[0]:
-        print(rc[1])
+    rc, acc = a.run()
+    if rc:
+        print(acc)
         break
