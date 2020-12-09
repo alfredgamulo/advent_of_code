@@ -1,6 +1,9 @@
+import time
+start_time = time.time()
+
 with open("input") as f:
     code = [(x, int(y)) for x, y in (line.split() for line in f.readlines())]
-    
+
 class Machine():
     def __init__(self, code):
         self.code = code
@@ -20,7 +23,7 @@ class Machine():
             elif op == "jmp":
                 jmp = self.code[pos][1]
             pos += jmp
-        
+
         return (True, acc)
 
 # part 1
@@ -40,3 +43,5 @@ for i in range(len(code)):
     if rc:
         print("part 2:", acc)
         break
+
+print("--- %s seconds ---" % (time.time() - start_time))

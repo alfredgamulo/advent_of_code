@@ -1,3 +1,6 @@
+import time
+start_time = time.time()
+
 with open("input") as f:
     cypher = list(map(int, f.readlines()))
 
@@ -28,3 +31,5 @@ while lo > 0 and hi > 0:
         lo -= 1
     else:
         hi -= 1
+
+print("--- %s seconds ---" % (time.time() - start_time))
