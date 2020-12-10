@@ -19,10 +19,7 @@ for x, y in combinations(joltages, 2):
 
 branch_count = {}
 for k in reversed(d): 
-    s = 0
-    for v in d.get(k):
-        s += branch_count.get(v, 1)
-    branch_count[k] = s
+    branch_count[k] = sum(branch_count.get(v, 1) for v in d.get(k))
 
 print("Part 2:", branch_count.get(0))
 print("--- %s seconds ---" % (time.time() - start_time))
