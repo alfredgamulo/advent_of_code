@@ -19,16 +19,12 @@ with open("input") as f:
             mask = line.split('=')[1].strip()
 
             # Part 1:
-            mask_1 = "".join(map(str,[1 if s == "1" else 0 for s in mask]))
-            mask_0 = "".join(map(str,[1 if s == "0" else 0 for s in mask]))
-            mask_1 = int(mask_1,2)
-            mask_0 = int(mask_0,2)
+            mask_1 = int("".join(map(str,[1 if s == "1" else 0 for s in mask])), 2)
+            mask_0 = int("".join(map(str,[1 if s == "0" else 0 for s in mask])), 2)
 
             # Part 2:
-            mask_10 = "".join(map(str,[s if s != "X" else 0 for s in mask]))
-            mask_xx = "".join(map(str,[1 if s == "X" else 0 for s in mask]))
-            mask_10 = int(mask_10, 2)
-            mask_xx = int(mask_xx, 2)
+            mask_10 = int("".join(map(str,[s if s != "X" else 0 for s in mask])), 2)
+            mask_xx = int("".join(map(str,[1 if s == "X" else 0 for s in mask])), 2)
         else:
             nums = list(map(int,re.findall(r'\d+', line)))
             mem = nums[0]
