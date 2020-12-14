@@ -24,7 +24,7 @@ with open("input") as f:
 
             # Part 2:
             mask_10 = int("".join(map(str,[s if s != "X" else 0 for s in mask])), 2)
-            mask_xx = int("".join(map(str,[1 if s == "X" else 0 for s in mask])), 2)
+            mask_xx = [2**i for i,x in enumerate(mask[::-1]) if x == "X"]
         else:
             nums = list(map(int,re.findall(r'\d+', line)))
             mem = nums[0]
@@ -38,9 +38,8 @@ with open("input") as f:
             # Part 2:
             mem_0 = mem | mask_10
             mems = [mem_0]
-            for i in range(36):
-                if mask_xx & 2**i > 0:
-                    mems.extend(list(m ^ 2**i for m in mems))
+            for x in mask_xx:
+                mems.extend(list(m ^ x for m in mems))
             for m in mems:
                 memory2[m] = val
 
