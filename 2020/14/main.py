@@ -16,25 +16,17 @@ with open("input") as f:
     for line in f.readlines():
         if line.startswith("mask"):
             mask = [(i, x) for i, x in enumerate(line.split('=')[1].strip()[::-1])]
-
             # Part 1:
             mask_1 = sum([2**i for i,x in mask if x == "1"])
             mask_0 = sum([2**i for i,x in mask if x == "0"])
             # Part 2:
             mask_x = [2**i for i,x in mask if x == "X"]
         else:
-            nums = list(map(int,re.findall(r'\d+', line)))
-            mem = nums[0]
-            val = nums[1]
-
+            mem, val = tuple(map(int,re.findall(r'\d+', line)))
             # Part 1:
-            result = val | mask_1 # apply mask 1
-            result = (result | mask_0) - mask_0 # apply mask 0
-            memory1[mem] = result
-
+            memory1[mem] = ((val | mask_1) | mask_0) - mask_0
             # Part 2:
-            mem_0 = mem | mask_1
-            mems = [mem_0]
+            mems = [mem | mask_1]
             for x in mask_x:
                 mems.extend(list(m ^ x for m in mems))
             for m in mems:
