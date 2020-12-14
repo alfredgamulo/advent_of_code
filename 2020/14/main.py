@@ -15,13 +15,13 @@ mask_x = None
 with open("input") as f:
     for line in f.readlines():
         if line.startswith("mask"):
-            mask = line.split('=')[1].strip()
+            mask = [(i, x) for i, x in enumerate(line.split('=')[1].strip()[::-1])]
 
             # Part 1:
-            mask_1 = sum([2**i for i,x in enumerate(mask[::-1]) if x == "1"])
-            mask_0 = sum([2**i for i,x in enumerate(mask[::-1]) if x == "0"])
+            mask_1 = sum([2**i for i,x in mask if x == "1"])
+            mask_0 = sum([2**i for i,x in mask if x == "0"])
             # Part 2:
-            mask_x = [2**i for i,x in enumerate(mask[::-1]) if x == "X"]
+            mask_x = [2**i for i,x in mask if x == "X"]
         else:
             nums = list(map(int,re.findall(r'\d+', line)))
             mem = nums[0]
