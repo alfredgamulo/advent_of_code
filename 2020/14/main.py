@@ -10,8 +10,7 @@ mask_1 = None
 mask_0 = None
 # Part 2:
 memory2 = defaultdict(int)
-mask_10 = None
-mask_xx = None
+mask_x = None
 
 with open("input") as f:
     for line in f.readlines():
@@ -19,12 +18,10 @@ with open("input") as f:
             mask = line.split('=')[1].strip()
 
             # Part 1:
-            mask_1 = int("".join(map(str,[1 if s == "1" else 0 for s in mask])), 2)
-            mask_0 = int("".join(map(str,[1 if s == "0" else 0 for s in mask])), 2)
-
+            mask_1 = sum([2**i for i,x in enumerate(mask[::-1]) if x == "1"])
+            mask_0 = sum([2**i for i,x in enumerate(mask[::-1]) if x == "0"])
             # Part 2:
-            mask_10 = int("".join(map(str,[s if s != "X" else 0 for s in mask])), 2)
-            mask_xx = [2**i for i,x in enumerate(mask[::-1]) if x == "X"]
+            mask_x = [2**i for i,x in enumerate(mask[::-1]) if x == "X"]
         else:
             nums = list(map(int,re.findall(r'\d+', line)))
             mem = nums[0]
@@ -36,9 +33,9 @@ with open("input") as f:
             memory1[mem] = result
 
             # Part 2:
-            mem_0 = mem | mask_10
+            mem_0 = mem | mask_1
             mems = [mem_0]
-            for x in mask_xx:
+            for x in mask_x:
                 mems.extend(list(m ^ x for m in mems))
             for m in mems:
                 memory2[m] = val
