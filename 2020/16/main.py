@@ -6,34 +6,19 @@ import re
 
 # Parse
 with open("input") as f:
-    lines = f.read().splitlines()
+    fields, my_ticket, nearby_tickets = f.read().split("\n\n")
 
 functions = []
-
-line_no = 0
-while lines[line_no]:
-    line = lines[line_no]
-    field_name, rules = line.split(':')
+for field in fields.splitlines():
+    field_name, rules = field.split(':')
     field_name = "custom_"+"_".join(field_name.split())
     a, b, c, d = tuple(map(int,re.findall(r'\d+', rules)))
     exec(f'def {field_name}(x):\n\treturn {a}<=x<={b} or {c}<=x<={d}')
     functions.append(field_name)
-    line_no += 1
 
-line_no += 1
-assert("your ticket:" in lines[line_no])
-line_no += 1
+my_ticket = list(map(int, my_ticket.splitlines()[1].strip().split(',')))
 
-my_ticket = list(map(int,lines[line_no].split(',')))
-
-line_no += 2
-assert("nearby tickets:" in lines[line_no])
-line_no += 1
-
-nearby_tickets = []
-while lines[line_no]:
-    nearby_tickets.append(list(map(int,lines[line_no].split(','))))
-    line_no += 1
+nearby_tickets = [list(map(int,n.split(','))) for n in nearby_tickets.splitlines()[1:]]
 
 # Part 1
 part1 = 0
