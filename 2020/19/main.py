@@ -56,18 +56,21 @@ root = stuffit(root)
 # Convert Rule tree to regex
 def inorder(root, ra):
     if root:
-        ra.append("(")
+        if root.left:
+            ra.append("(")
         inorder(root.left,ra)
         if root.val == "and":
             pass
         else:
             ra.append(root.val)
         inorder(root.right,ra)
-        ra.append(")")
+        if root.right:
+            ra.append(")")
 
 ra = []
 inorder(root, ra)
 rx = "^"+"".join(ra)+"$"
+print(rx)
 p = re.compile("".join(rx))
 matches = [p.match(m) for m in messages]
 print("Part 1:", len(list(filter(None, matches))))
