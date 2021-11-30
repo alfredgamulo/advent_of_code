@@ -1,16 +1,16 @@
 _:
     @just -l -u --list-heading $'Welcome to 2021 AoC 🎄\n'
 
-start dir:
+start day:
     #!/usr/bin/env bash
-    mkdir -p {{dir}}
-    touch {{dir}}/main.py
-    day=$((10#{{dir}}))
+    mkdir -p {{day}}
+    touch {{day}}/main.py
+    day=$((10#{{day}}))
     # echo "session=53616c74..." > cookie.txt
-    curl -b "$(cat cookie.txt)" "https://adventofcode.com/2021/day/$day/input" > {{dir}}/input
+    curl -b "$(cat cookie.txt)" "https://adventofcode.com/2021/day/$day/input" > {{day}}/input
 
-run dir:
-    poetry run python {{dir}}/main.py
+run day:
+    poetry run python {{day}}/main.py
 
 lint:
     poetry run black .
