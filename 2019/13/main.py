@@ -1,7 +1,7 @@
 import os
 
 
-class Computer():
+class Computer:
     """
     Intcode Computer
     """
@@ -9,7 +9,7 @@ class Computer():
     def __init__(self, file):
         self.file = file
         self.program = self.read_input(self.file)
-        self.program.extend([0]*len(self.program)*100)
+        self.program.extend([0] * len(self.program) * 100)
         self.relative_base = 0
         self.ball_x = 0
         self.padd_x = 0
@@ -17,19 +17,19 @@ class Computer():
     def read_input(self, file):
         program = []
         with open(file) as f:
-            program = list(map(int, f.readline().split(',')))
+            program = list(map(int, f.readline().split(",")))
         return program
 
     def get_parameters(self, num, param_modes, pos):
         ret = []
         for n in range(num):
             mode = param_modes % 10
-            if mode == 0: # position mode
-                ret.append(self.program[self.program[pos+1]])
-            elif mode == 1: # immediate mode
-                ret.append(self.program[pos+1])
-            elif mode == 2: # relative mode
-                ret.append(self.program[self.program[pos+1]+self.relative_base])
+            if mode == 0:  # position mode
+                ret.append(self.program[self.program[pos + 1]])
+            elif mode == 1:  # immediate mode
+                ret.append(self.program[pos + 1])
+            elif mode == 2:  # relative mode
+                ret.append(self.program[self.program[pos + 1] + self.relative_base])
             param_modes = param_modes // 10
             pos += 1
         if len(ret) == 1:
@@ -45,16 +45,16 @@ class Computer():
             if opcode == 1:
                 a, b = self.get_parameters(2, param_modes, pos)
                 if param_modes // 100 == 2:
-                    self.program[self.program[pos+3]+self.relative_base] = a + b
+                    self.program[self.program[pos + 3] + self.relative_base] = a + b
                 else:
-                    self.program[self.program[pos+3]] = a + b
+                    self.program[self.program[pos + 3]] = a + b
                 pos += 4
             elif opcode == 2:
                 a, b = self.get_parameters(2, param_modes, pos)
                 if param_modes // 100 == 2:
-                    self.program[self.program[pos+3]+self.relative_base] = a * b
+                    self.program[self.program[pos + 3] + self.relative_base] = a * b
                 else:
-                    self.program[self.program[pos+3]] = a * b
+                    self.program[self.program[pos + 3]] = a * b
                 pos += 4
             elif opcode == 3:
                 i = 0
@@ -64,9 +64,9 @@ class Computer():
                     i = 1
                 # print("input:", i)
                 if param_modes == 2:
-                    self.program[self.program[pos+1]+self.relative_base] = i
+                    self.program[self.program[pos + 1] + self.relative_base] = i
                 else:
-                    self.program[self.program[pos+1]] = i
+                    self.program[self.program[pos + 1]] = i
                 pos += 2
             elif opcode == 4:
                 o = self.get_parameters(1, param_modes, pos)
@@ -92,9 +92,9 @@ class Computer():
                 else:
                     c = 0
                 if param_modes // 100 == 2:
-                    self.program[self.program[pos+3]+self.relative_base] = c
+                    self.program[self.program[pos + 3] + self.relative_base] = c
                 else:
-                    self.program[self.program[pos+3]] = c
+                    self.program[self.program[pos + 3]] = c
                 pos += 4
             elif opcode == 8:
                 a, b = self.get_parameters(2, param_modes, pos)
@@ -103,9 +103,9 @@ class Computer():
                 else:
                     c = 0
                 if param_modes // 100 == 2:
-                    self.program[self.program[pos+3]+self.relative_base] = c
+                    self.program[self.program[pos + 3] + self.relative_base] = c
                 else:
-                    self.program[self.program[pos+3]] = c
+                    self.program[self.program[pos + 3]] = c
                 pos += 4
             elif opcode == 9:
                 a = self.get_parameters(1, param_modes, pos)
@@ -127,10 +127,10 @@ def part1():
             output.append(next(gen))
         except StopIteration as e:
             break
-    
+
     n = 3
-    tiles = [output[i*n:(i+1)*n] for i in range((len(output)+(n-1))//n)]
-    #print(tiles)
+    tiles = [output[i * n : (i + 1) * n] for i in range((len(output) + (n - 1)) // n)]
+    # print(tiles)
     block_tiles = len(list(filter(lambda t: t[2] == 2, tiles)))
     return block_tiles
 
@@ -142,7 +142,7 @@ def part2():
     computer = Computer("input")
     computer.program[0] = 2
     gen = computer.run()
-    
+
     output = {}
     score = 0
     p = False
@@ -151,7 +151,7 @@ def part2():
             x = next(gen)
             y = next(gen)
             b = next(gen)
-            
+
             if x == -1 and y == 0:
                 score = b
             else:
@@ -169,17 +169,17 @@ def part2():
                     p = True
                     b = "o"
                     computer.ball_x = x
-                output[(x,y)] = b
-            
+                output[(x, y)] = b
+
             if p:
                 p = False
                 # clear screen and print game
-                os.system('clear')
+                os.system("clear")
                 print("Score:", score)
                 for y in range(50):
                     for x in range(50):
-                        if (x,y) in output:
-                            b = output[(x,y)]
+                        if (x, y) in output:
+                            b = output[(x, y)]
                             print(b, end="")
                         else:
                             print(" ", end="")
@@ -187,5 +187,6 @@ def part2():
         except StopIteration as e:
             break
     return score
+
 
 print("Part 2:", part2())

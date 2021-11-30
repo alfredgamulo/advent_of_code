@@ -9,7 +9,7 @@ def get_input():
 def part1():
     entries = get_input()
     for i in range(len(entries)):
-        for j in range(i+1, len(entries)):
+        for j in range(i + 1, len(entries)):
             x = entries[i]
             y = entries[j]
             if x + y == 2020:
@@ -24,11 +24,11 @@ print(part1())
 def part2():
     entries = get_input()
     for i in range(len(entries)):
-        for j in range(i+1, len(entries)):
+        for j in range(i + 1, len(entries)):
             x = entries[i]
             y = entries[j]
             if x + y < 2020:
-                for k in range(j+1, len(entries)):
+                for k in range(j + 1, len(entries)):
                     z = entries[k]
                     if x + y + z == 2020:
                         return x * y * z

@@ -1,4 +1,4 @@
-class Computer():
+class Computer:
     """
     Intcode Computer
     """
@@ -6,25 +6,25 @@ class Computer():
     def __init__(self, file):
         self.file = file
         self.program = self.read_input(self.file)
-        self.program.extend([0]*len(self.program)*100)
+        self.program.extend([0] * len(self.program) * 100)
         self.relative_base = 0
 
     def read_input(self, file):
         program = []
         with open(file) as f:
-            program = list(map(int, f.readline().split(',')))
+            program = list(map(int, f.readline().split(",")))
         return program
 
     def get_parameters(self, num, param_modes, pos):
         ret = []
         for n in range(num):
             mode = param_modes % 10
-            if mode == 0: # position mode
-                ret.append(self.program[self.program[pos+1]])
-            elif mode == 1: # immediate mode
-                ret.append(self.program[pos+1])
-            elif mode == 2: # relative mode
-                ret.append(self.program[self.program[pos+1]+self.relative_base])
+            if mode == 0:  # position mode
+                ret.append(self.program[self.program[pos + 1]])
+            elif mode == 1:  # immediate mode
+                ret.append(self.program[pos + 1])
+            elif mode == 2:  # relative mode
+                ret.append(self.program[self.program[pos + 1] + self.relative_base])
             param_modes = param_modes // 10
             pos += 1
         if len(ret) == 1:
@@ -40,24 +40,24 @@ class Computer():
             if opcode == 1:
                 a, b = self.get_parameters(2, param_modes, pos)
                 if param_modes // 100 == 2:
-                    self.program[self.program[pos+3]+self.relative_base] = a + b
+                    self.program[self.program[pos + 3] + self.relative_base] = a + b
                 else:
-                    self.program[self.program[pos+3]] = a + b
+                    self.program[self.program[pos + 3]] = a + b
                 pos += 4
             elif opcode == 2:
                 a, b = self.get_parameters(2, param_modes, pos)
                 if param_modes // 100 == 2:
-                    self.program[self.program[pos+3]+self.relative_base] = a * b
+                    self.program[self.program[pos + 3] + self.relative_base] = a * b
                 else:
-                    self.program[self.program[pos+3]] = a * b
+                    self.program[self.program[pos + 3]] = a * b
                 pos += 4
             elif opcode == 3:
                 i = yield
                 # print("input:", i)
                 if param_modes == 2:
-                    self.program[self.program[pos+1]+self.relative_base] = i
+                    self.program[self.program[pos + 1] + self.relative_base] = i
                 else:
-                    self.program[self.program[pos+1]] = i
+                    self.program[self.program[pos + 1]] = i
                 pos += 2
             elif opcode == 4:
                 o = self.get_parameters(1, param_modes, pos)
@@ -83,9 +83,9 @@ class Computer():
                 else:
                     c = 0
                 if param_modes // 100 == 2:
-                    self.program[self.program[pos+3]+self.relative_base] = c
+                    self.program[self.program[pos + 3] + self.relative_base] = c
                 else:
-                    self.program[self.program[pos+3]] = c
+                    self.program[self.program[pos + 3]] = c
                 pos += 4
             elif opcode == 8:
                 a, b = self.get_parameters(2, param_modes, pos)
@@ -94,9 +94,9 @@ class Computer():
                 else:
                     c = 0
                 if param_modes // 100 == 2:
-                    self.program[self.program[pos+3]+self.relative_base] = c
+                    self.program[self.program[pos + 3] + self.relative_base] = c
                 else:
-                    self.program[self.program[pos+3]] = c
+                    self.program[self.program[pos + 3]] = c
                 pos += 4
             elif opcode == 9:
                 a = self.get_parameters(1, param_modes, pos)
@@ -110,40 +110,37 @@ class Computer():
 
 def left(face, pos):
     if face == "up":
-        pos = (pos[0]-1, pos[1])
+        pos = (pos[0] - 1, pos[1])
         face = "left"
     elif face == "left":
-        pos = (pos[0], pos[1]+1)
+        pos = (pos[0], pos[1] + 1)
         face = "down"
     elif face == "down":
-        pos = (pos[0]+1, pos[1])
+        pos = (pos[0] + 1, pos[1])
         face = "right"
     elif face == "right":
-        pos = (pos[0], pos[1]-1)
+        pos = (pos[0], pos[1] - 1)
         face = "up"
     return face, pos
 
 
 def right(face, pos):
     if face == "up":
-        pos = (pos[0]+1, pos[1])
+        pos = (pos[0] + 1, pos[1])
         face = "right"
     elif face == "left":
-        pos = (pos[0], pos[1]-1)
+        pos = (pos[0], pos[1] - 1)
         face = "up"
     elif face == "down":
-        pos = (pos[0]-1, pos[1])
+        pos = (pos[0] - 1, pos[1])
         face = "left"
     elif face == "right":
-        pos = (pos[0], pos[1]+1)
+        pos = (pos[0], pos[1] + 1)
         face = "down"
     return face, pos
 
 
-direction = {
-    0: left,
-    1: right
-}
+direction = {0: left, 1: right}
 
 
 def part1():
@@ -165,10 +162,10 @@ def part1():
             break
 
     print(len(panel_paint))
-    
+
     for y in range(-50, 50):
         for x in range(-50, 50):
-            if (x,y) in panel_paint and panel_paint[(x,y)] == 1:
+            if (x, y) in panel_paint and panel_paint[(x, y)] == 1:
                 print("*", end="")
             else:
                 print(" ", end="")
@@ -197,10 +194,10 @@ def part2():
             break
 
     print(len(panel_paint))
-    
+
     for y in range(-50, 50):
         for x in range(-50, 50):
-            if (x,y) in panel_paint and panel_paint[(x,y)] == 1:
+            if (x, y) in panel_paint and panel_paint[(x, y)] == 1:
                 print("*", end="")
             else:
                 print(" ", end="")

@@ -1,4 +1,4 @@
-class Computer():
+class Computer:
     """
     Intcode Computer
     """
@@ -10,7 +10,7 @@ class Computer():
     def read_input(self, file):
         program = []
         with open(file) as f:
-            program = list(map(int, f.readline().split(',')))
+            program = list(map(int, f.readline().split(",")))
         return program
 
     def get_parameters(self, num, param_modes, pos):
@@ -18,9 +18,9 @@ class Computer():
         for n in range(num):
             mode = param_modes % 10
             if mode == 0:
-                ret.append(self.program[self.program[pos+1]])
+                ret.append(self.program[self.program[pos + 1]])
             else:
-                ret.append(self.program[pos+1])
+                ret.append(self.program[pos + 1])
             param_modes = param_modes // 10
             pos += 1
         return ret
@@ -33,15 +33,15 @@ class Computer():
             param_modes = self.program[pos] // 100
             if opcode == 1:
                 a, b = self.get_parameters(2, param_modes, pos)
-                self.program[self.program[pos+3]] = a + b
+                self.program[self.program[pos + 3]] = a + b
                 pos += 4
             elif opcode == 2:
                 a, b = self.get_parameters(2, param_modes, pos)
-                self.program[self.program[pos+3]] = a * b
+                self.program[self.program[pos + 3]] = a * b
                 pos += 4
             elif opcode == 3:
                 i = int(input("input:"))
-                self.program[self.program[pos+1]] = i
+                self.program[self.program[pos + 1]] = i
                 pos += 2
             elif opcode == 4:
                 o = self.get_parameters(1, param_modes, pos)[0]
@@ -70,7 +70,7 @@ class Computer():
                     c = 1
                 else:
                     c = 0
-                self.program[self.program[pos+3]] = c
+                self.program[self.program[pos + 3]] = c
                 pos += 4
             elif opcode == 8:
                 a, b = self.get_parameters(2, param_modes, pos)
@@ -78,7 +78,7 @@ class Computer():
                     c = 1
                 else:
                     c = 0
-                self.program[self.program[pos+3]] = c
+                self.program[self.program[pos + 3]] = c
                 pos += 4
 
             else:

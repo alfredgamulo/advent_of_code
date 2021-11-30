@@ -1,4 +1,4 @@
-class SpaceObject():
+class SpaceObject:
     """
     Universal Orbit Map Object
     """

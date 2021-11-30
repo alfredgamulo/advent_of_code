@@ -1,4 +1,5 @@
 from collections import Counter
+
 part1 = 0
 part2 = 0
 with open("input") as f:

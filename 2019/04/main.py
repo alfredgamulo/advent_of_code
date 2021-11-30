@@ -5,7 +5,7 @@ def fits1(number, lower, upper):
     str_n = str(number)
 
     # It is a six-digit number.
-    if len(str_n) != 6: 
+    if len(str_n) != 6:
         # print(f"{number} Not a six-digit number.")
         return False
 
@@ -15,8 +15,8 @@ def fits1(number, lower, upper):
         return False
 
     # Going from left to right, the digits never decrease
-    for i in range(len(str_n)-1):
-        if str_n[i] > str_n[i+1]:
+    for i in range(len(str_n) - 1):
+        if str_n[i] > str_n[i + 1]:
             # print(f"{number} Digits decrease")
             return False
 
@@ -26,7 +26,7 @@ def fits1(number, lower, upper):
         if x == y:
             return True
     # print(f"{number} No adjacent matches")
-    
+
     # Conditions unmet
     return False
 
@@ -48,8 +48,8 @@ def fits2(number):
     str_n = str(number)
     triplets = set()
     for x, y, z in list(zip(str_n, str_n[1:], str_n[2:])):
-       if x == y == z:
-           triplets.add(x)
+        if x == y == z:
+            triplets.add(x)
     for x, y in list(zip(str_n, str_n[1:])):
         if x == y and x not in triplets:
             return True

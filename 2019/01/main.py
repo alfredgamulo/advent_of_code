@@ -1,7 +1,7 @@
 def calc1(module):
-    fuel = (module//3) - 2
+    fuel = (module // 3) - 2
     return fuel if fuel > 0 else 0
-    
+
 
 def part1():
     fuel = 0
@@ -22,7 +22,7 @@ def calc2(module):
         more_fuel = calc1(more_fuel)
         fuel = fuel + more_fuel
     return fuel
-    
+
 
 def part2():
     fuel = 0
@@ -31,6 +31,6 @@ def part2():
             module = int(line.strip())
             fuel = fuel + calc2(module)
     return fuel
-     
+
 
 print(part2())

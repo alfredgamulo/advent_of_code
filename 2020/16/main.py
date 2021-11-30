@@ -1,4 +1,5 @@
 import time as timer
+
 start_time = timer.time()
 from collections import defaultdict
 from functools import reduce
@@ -10,15 +11,15 @@ with open("input") as f:
 
 functions = []
 for field in fields.splitlines():
-    field_name, rules = field.split(':')
-    field_name = "custom_"+"_".join(field_name.split())
-    a, b, c, d = tuple(map(int,re.findall(r'\d+', rules)))
-    exec(f'def {field_name}(x):\n\treturn {a}<=x<={b} or {c}<=x<={d}')
+    field_name, rules = field.split(":")
+    field_name = "custom_" + "_".join(field_name.split())
+    a, b, c, d = tuple(map(int, re.findall(r"\d+", rules)))
+    exec(f"def {field_name}(x):\n\treturn {a}<=x<={b} or {c}<=x<={d}")
     functions.append(field_name)
 
-my_ticket = list(map(int, my_ticket.splitlines()[1].strip().split(',')))
+my_ticket = list(map(int, my_ticket.splitlines()[1].strip().split(",")))
 
-nearby_tickets = [list(map(int,n.split(','))) for n in nearby_tickets.splitlines()[1:]]
+nearby_tickets = [list(map(int, n.split(","))) for n in nearby_tickets.splitlines()[1:]]
 
 # Part 1
 part1 = 0
@@ -61,7 +62,10 @@ while len(good_fields) < len(functions):
         except ValueError:
             pass
 
-part2 = reduce(lambda a, b: a*b, [my_ticket[v] for f,v in good_fields.items() if "departure" in f])
+part2 = reduce(
+    lambda a, b: a * b,
+    [my_ticket[v] for f, v in good_fields.items() if "departure" in f],
+)
 print("Part 2:", part2)
 
-print("--- %s millis ---" % ((timer.time() - start_time)*1000))
+print("--- %s millis ---" % ((timer.time() - start_time) * 1000))
