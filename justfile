@@ -18,8 +18,8 @@ start day:
 run day input="input":
     #!/usr/bin/env bash
     cd {{year}}/{{day}}
-    poetry run python main.py {{input}}
+    (time poetry run python main.py {{input}}) 2>&1 | tee output
 
-lint:
-    poetry run black {{year}}/.
-    poetry run flake8 {{year}}/.
+lint day:
+    poetry run black {{year}}/{{day}}/.
+    poetry run flake8 {{year}}/{{day}}/.
