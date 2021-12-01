@@ -1,12 +1,11 @@
 import sys
 
-input = sys.argv[1]
+lines = list(map(int, sys.stdin.readlines()))
 
-with open(input) as f:
-    lines = list(map(int, f.read().splitlines()))
 
 def count_increasing(depths):
     return sum([1 for x, y in zip(depths, depths[1:]) if y > x])
+
 
 print("Part 1: ", count_increasing(lines))
 
