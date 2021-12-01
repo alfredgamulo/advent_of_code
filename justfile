@@ -11,9 +11,21 @@ start day:
     touch main.py
     day=$((10#{{day}}))
     # echo "session=53616c74..." > cookie.txt
-    curl -b "$(cat {{justfile_directory()}}/cookie.txt)" "https://adventofcode.com/{{year}}/day/${day}/input" > input
+    url="https://adventofcode.com/{{year}}/day/${day}"
+    curl -b "$(cat {{justfile_directory()}}/cookie.txt)" "${url}/input" > input
+    echo $url
+    just sample "${url}" > sample
     code input
+    code sample
     code main.py
+
+sample url:
+    #!.venv/bin/python
+    import requests
+    from bs4 import BeautifulSoup
+    page = requests.get("{{url}}").text.encode('utf-8')
+    soup = BeautifulSoup(page, "html.parser")
+    print(soup.find('pre').find('code').contents[0].strip())
 
 run day input="input":
     #!/usr/bin/env bash
