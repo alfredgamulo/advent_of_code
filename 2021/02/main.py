@@ -3,34 +3,31 @@ import sys
 lines = sys.stdin.readlines()
 
 
-def move(position, step):
+def adjust(position, step):
     return tuple(map(sum, zip(position, step)))
 
 
-position = (0, 0)
-operate = {
-    "up": lambda n: move(position, (0, -n)),
-    "down": lambda n: move(position, (0, n)),
-    "forward": lambda n: move(position, (n, 0)),
+def travel(position, operations):
+    for line in lines:
+        instruction, number = line.split()
+        position = operations[instruction](position, int(number))
+    return position[0] * position[1]
+
+
+operations = {
+    "up": lambda p, n: adjust(p, (0, -n)),
+    "down": lambda p, n: adjust(p, (0, n)),
+    "forward": lambda p, n: adjust(p, (n, 0)),
 }
-for line in lines:
-    instruction, number = line.split()
-    position = operate[instruction](int(number))
+print("Part 1:", travel((0, 0), operations))
 
-print("Part 1:", position[0] * position[1])
-
-position = (0, 0, 0)
-operate = {
-    "up": lambda n: move(position, (0, 0, -n)),
-    "down": lambda n: move(position, (0, 0, n)),
-    "forward": lambda n: (
-        position[0] + n,
-        position[1] + n * position[2],
-        position[2],
+operations = {
+    "up": lambda p, n: adjust(p, (0, 0, -n)),
+    "down": lambda p, n: adjust(p, (0, 0, n)),
+    "forward": lambda p, n: (
+        p[0] + n,
+        p[1] + n * p[2],
+        p[2],
     ),
 }
-for line in lines:
-    instruction, number = line.split()
-    position = operate[instruction](int(number))
-
-print("Part 2:", position[0] * position[1])
+print("Part 2:", travel((0, 0, 0), operations))
