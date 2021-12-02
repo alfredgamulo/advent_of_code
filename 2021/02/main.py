@@ -2,13 +2,12 @@ import sys
 
 lines = sys.stdin.readlines()
 
-position = (0, 0)
-
 
 def move(position, step):
-    return tuple(x + y for x, y in zip(position, step))
+    return tuple(map(sum, zip(position, step)))
 
 
+position = (0, 0)
 for line in lines:
     instruction, number = line.split()
     number = int(number)
@@ -22,7 +21,6 @@ for line in lines:
 print("Part 1:", position[0] * position[1])
 
 position = (0, 0, 0)
-
 for line in lines:
     instruction, number = line.split()
     number = int(number)
