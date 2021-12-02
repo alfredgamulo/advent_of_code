@@ -3,6 +3,8 @@ year := "2021"
 _:
     @just -l -u --list-heading $'Welcome to {{year}} AoC 🎄\n'
 
+# Python
+
 start day:
     #!/usr/bin/env bash
     cd {{year}}
@@ -35,3 +37,11 @@ run day input="input":
 lint day:
     poetry run black {{year}}/{{day}}/.
     poetry run flake8 {{year}}/{{day}}/.
+
+# Lua
+
+run-lua day input="input":
+    #!/usr/bin/env bash
+    cd {{year}}/{{day}}
+    touch main.lua
+    lua main.lua < {{input}}
