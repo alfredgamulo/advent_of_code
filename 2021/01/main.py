@@ -4,7 +4,7 @@ lines = list(map(int, sys.stdin.readlines()))
 
 
 def count_increasing(depths):
-    return sum([1 for x, y in zip(depths, depths[1:]) if y > x])
+    return sum(y > x for x, y in zip(depths, depths[1:]))
 
 
 print("Part 1:", count_increasing(lines))
