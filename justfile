@@ -39,9 +39,12 @@ lint day:
     poetry run flake8 {{year}}/{{day}}/.
 
 # Lua
+start-lua day:
+    #!/usr/bin/env bash
+    cd {{year}}/{{day}}
+    cp -n ../00/start.lua main.lua || echo "already exists"
 
 run-lua day input="input":
     #!/usr/bin/env bash
     cd {{year}}/{{day}}
-    touch main.lua
     lua main.lua < {{input}}
