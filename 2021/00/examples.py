@@ -15,3 +15,6 @@ with open(input) as f:
     lines = f.read().splitlines()
 
 sys.stdin.readlines()
+
+# Invert a matrix
+zip(*(i.strip() for i in input))
