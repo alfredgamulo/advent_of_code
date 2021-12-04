@@ -16,7 +16,7 @@ def play(b, n):
     except ValueError:
         return
     if not (any(b[x::5]) and any(b[y:z])):
-        return True, b, n
+        return b, n
 
 
 winners = []
@@ -31,5 +31,5 @@ for n in numbers:
     for b in remove:
         boards.remove(b)
 
-print("Part 1:", sum(map(int, winners[0][1])) * int(winners[0][2]))
-print("Part 2:", sum(map(int, winners[-1][1])) * int(winners[-1][2]))
+print("Part 1:", sum(map(int, winners[0][0])) * int(winners[0][1]))
+print("Part 2:", sum(map(int, winners[-1][0])) * int(winners[-1][1]))
