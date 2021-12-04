@@ -23,7 +23,7 @@ for n in numbers:
     if not boards:
         break
     remove = []
-    for i, b in enumerate(boards):
+    for b in boards:
         if play(b, n):
             winners.append((b, n))
             remove.append(b)
