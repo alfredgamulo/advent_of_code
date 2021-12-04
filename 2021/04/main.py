@@ -16,7 +16,6 @@ def play(b, n):
         return
     if not any(b[x::5]) or not any(b[y : y + 5]):
         return True, b, n
-    return
 
 
 winners = []
