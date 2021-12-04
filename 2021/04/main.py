@@ -12,10 +12,9 @@ def play(b, n):
         b[i] = False
         x = i % 5
         y = (i // 5) * 5
-        z = y + 5
     except ValueError:
         return
-    if not (any(b[x::5]) and any(b[y:z])):
+    if not (any(b[x::5]) and any(b[y : y + 5])):
         return True
 
 
