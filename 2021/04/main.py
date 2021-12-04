@@ -15,7 +15,7 @@ def play(b, n):
         z = y + 5
     except ValueError:
         return
-    if not any(b[x::5]) or not any(b[y:z]):
+    if not (any(b[x::5]) and any(b[y:z])):
         return True, b, n
 
 
