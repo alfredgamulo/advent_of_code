@@ -1,0 +1,63 @@
+import sys
+
+data = sys.stdin.read().strip().split("\n\n")
+numbers = map(int, data[0].split(","))
+groups = [d.split("\n") for d in data[1:]]
+# horz = [[list(map(int,a)) for a in [row.split() for row in g]] for g in groups]
+# vert = [[list(a) for a in (zip(*[row for row in h]))] for h in horz]
+
+boards = [list(map(int, b.split())) for b in [" ".join(g) for g in groups]]
+
+def play(b, n):
+    try:
+        i = b.index(n)
+        b[i] = 0
+    except ValueError:
+        pass
+    if (
+        not any(b[:5])
+        or not any(b[5:10])
+        or not any(b[10:15])
+        or not any(b[15:20])
+        or not any(b[20:25])
+        or not any([b[0], b[5], b[10], b[15], b[20]])
+        or not any([b[1], b[6], b[11], b[16], b[21]])
+        or not any([b[2], b[7], b[12], b[17], b[22]])
+        or not any([b[3], b[8], b[13], b[18], b[23]])
+        or not any([b[4], b[9], b[14], b[19], b[24]])
+    ):
+        # print("\t".join(map(str,b[:5])))
+        # print("\t".join(map(str,b[5:10])))
+        # print("\t".join(map(str,b[10:15])))
+        # print("\t".join(map(str,b[15:20])))
+        # print("\t".join(map(str,b[20:25])))
+        return True, b, n
+    return False
+
+
+found = False
+for n in numbers:
+    for b in boards:
+        found = play(b, n)
+        if found:
+            break
+    else:
+        continue
+    break
+for b in boards:
+    print("----")
+    print("\t".join(map(str,b[:5])))
+    print("\t".join(map(str,b[5:10])))
+    print("\t".join(map(str,b[10:15])))
+    print("\t".join(map(str,b[15:20])))
+    print("\t".join(map(str,b[20:25])))
+    print("=====")
+
+print(found, sum(found[1]), found[2])
+print("Part 1:", sum(found[1]) * found[2])
+
+b = [46,79,77,45,57,34,44,13,32,88,86,82,91,97,89,1,48,31,18,10,55,74,24,11,80,78,28,37,47,17,21,61,26,85,99,96,23,70,3,54,5,41,50,63,14,64,42,36,95,52,76,68,29,9,98,35,84,83,71,49,73,58,56,66,92,30,51,20,81,69,65,15,6,16,39,43,67,7,59,40,60,4,90,72,22,0,93,94,38,53,87,27,12,2,25,19,8,62,33,75
+]
+for c in b:
+    if 22680/c == 22680//c:
+        print(c, 22680/c)
