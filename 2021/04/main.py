@@ -25,8 +25,7 @@ for n in numbers:
         break
     remove = []
     for i, b in enumerate(boards):
-        found = play(b, n)
-        if found:
+        if found := play(b, n):
             winners.append(found)
             remove.append(b)
     for b in remove:
