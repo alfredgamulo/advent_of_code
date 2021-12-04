@@ -14,10 +14,7 @@ def play(b, n):
         y = (i // 5) * 5
     except ValueError:
         return
-    if (
-        not any(b[x::5])
-        or not any(b[y:y+5])
-    ):
+    if not any(b[x::5]) or not any(b[y : y + 5]):
         return True, b, n
     return
 
