@@ -16,7 +16,7 @@ def play(b, n):
     except ValueError:
         return
     if not (any(b[x::5]) and any(b[y:z])):
-        return b, n
+        return True
 
 
 winners = []
@@ -25,8 +25,8 @@ for n in numbers:
         break
     remove = []
     for i, b in enumerate(boards):
-        if found := play(b, n):
-            winners.append(found)
+        if play(b, n):
+            winners.append((b, n))
             remove.append(b)
     for b in remove:
         boards.remove(b)
