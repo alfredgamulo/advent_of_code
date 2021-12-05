@@ -12,8 +12,7 @@ p2_plots = set()
 p1_overlap = set()
 p2_overlap = set()
 for line in map(lambda l: l.strip().split(" -> "), sys.stdin.readlines()):
-    x1, y1 = map(int, line[0].split(","))
-    x2, y2 = map(int, line[1].split(","))
+    x1, y1, x2, y2 = list(map(int, line[0].split(",") + line[1].split(",")))
     if x1 == x2:
         for p in range(min(y1, y2), max(y1, y2) + 1):
             point = (x1, p)
