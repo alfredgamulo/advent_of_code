@@ -16,5 +16,5 @@ with open(input) as f:
 
 sys.stdin.readlines()
 
-# Invert a matrix
+# Rotate a matrix
 zip(*(i.strip() for i in input))
