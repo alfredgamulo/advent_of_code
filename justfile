@@ -43,6 +43,7 @@ start-lua day:
     #!/usr/bin/env bash
     cd {{year}}/{{day}}
     cp -n ../00/start.lua main.lua || echo "already exists"
+    code main.lua
 
 run-lua day input="input":
     #!/usr/bin/env bash
