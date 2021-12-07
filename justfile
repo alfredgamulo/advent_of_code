@@ -48,4 +48,4 @@ start-lua day:
 run-lua day input="input":
     #!/usr/bin/env bash
     cd {{year}}/{{day}}
-    lua main.lua < {{input}}
+    lua -l inspect main.lua < {{input}}
