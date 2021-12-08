@@ -3,14 +3,6 @@ import sys
 lines = sys.stdin.readlines()
 cases = [line.split(" | ") for line in lines]
 cases = [(input.split(), display.split()) for input, display in cases]
-
-part1 = 0
-for c in cases:
-    for display in c[1]:
-        if len(display) in (2, 3, 4, 7):
-            part1 += 1
-print("Part 1", part1)
-
 segment_map = {
     "abcefg": "0",
     "cf": "1",
@@ -50,16 +42,19 @@ def get_connector_map(input):
     return connector_map
 
 
+part1 = 0
 part2 = 0
 for c in cases:
-    input = sorted(["".join(sorted(i)) for i in c[0]], key=len)
-    display = ["".join(sorted(i)) for i in c[1]]
+    input = sorted(c[0], key=len)
     connector_map = get_connector_map(input)
     translate_map = {min(v): k for k, v in connector_map.items()}
     number = ""
-    for d in display:
+    for d in c[1]:
+        if len(d) in (2, 3, 4, 7):
+            part1 += 1
         t = "".join(sorted("".join(min(translate_map[v]) for v in list(d))))
         number += segment_map[t]
     part2 += int(number)
 
+print("Part 1:", part1)
 print("Part 2:", part2)
