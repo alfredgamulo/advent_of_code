@@ -42,8 +42,7 @@ for c in cases:
     translate_map = {min(v): k for k, v in connector_map.items()}
     number = ""
     for d in c[1]:
-        if len(d) in (2, 3, 4, 7):
-            part1 += 1
+        part1 += len(d) in (2, 3, 4, 7)
         t = "".join(sorted("".join(min(translate_map[v]) for v in list(d))))
         number += segment_map[t]
     part2 += int(number)
