@@ -18,28 +18,20 @@ segment_map = {
 
 
 def get_connector_map(input):
-    connector_map = {}
-    connector_map["a"] = set(input[1]) - set(input[0])
+    cm = {}
     ced = (
         (set(input[9]) - set(input[6]))
         .union(set(input[9]) - set(input[7]))
         .union(set(input[9]) - set(input[8]))
     )
-    connector_map["e"] = ced - set(input[2])
-    connector_map["d"] = ced - set(input[0]) - connector_map["e"]
-    connector_map["c"] = ced - connector_map["e"] - connector_map["d"]
-    connector_map["g"] = (
-        set(input[9]) - set(input[2]) - connector_map["a"] - connector_map["e"]
-    )
-    connector_map["f"] = set(input[0]) - connector_map["c"]
-    connector_map["b"] = (
-        set(input[9])
-        - set(input[1])
-        - connector_map["d"]
-        - connector_map["e"]
-        - connector_map["g"]
-    )
-    return connector_map
+    cm["a"] = set(input[1]) - set(input[0])
+    cm["e"] = ced - set(input[2])
+    cm["d"] = ced - set(input[0]) - cm["e"]
+    cm["c"] = ced - cm["e"] - cm["d"]
+    cm["f"] = set(input[0]) - cm["c"]
+    cm["g"] = set(input[9]) - set(input[2]) - cm["a"] - cm["e"]
+    cm["b"] = set(input[9]) - set(input[1]) - cm["d"] - cm["e"] - cm["g"]
+    return cm
 
 
 part1 = 0
