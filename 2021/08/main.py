@@ -18,6 +18,7 @@ segment_map = {
 
 
 def get_connector_map(input):
+    input.sort(key=len)
     cm = {}
     ced = (
         (set(input[9]) - set(input[6]))
@@ -37,8 +38,7 @@ def get_connector_map(input):
 part1 = 0
 part2 = 0
 for c in cases:
-    input = sorted(c[0], key=len)
-    connector_map = get_connector_map(input)
+    connector_map = get_connector_map(c[0])
     translate_map = {min(v): k for k, v in connector_map.items()}
     number = ""
     for d in c[1]:
