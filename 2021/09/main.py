@@ -8,7 +8,6 @@ for line in map(str.strip, sys.stdin.readlines()):
 lows = {}
 for i in range(len(matrix)):
     for j in range(len(matrix[0])):
-        lowest = True
         if i > 0 and matrix[i][j] >= matrix[i - 1][j]:
             continue
         if j > 0 and matrix[i][j] >= matrix[i][j - 1]:
