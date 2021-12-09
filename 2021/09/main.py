@@ -29,18 +29,18 @@ for low in lows.keys():
         i, j = d.popleft()
         if matrix[i][j] < 9:
             size += 1
-            if i > 0 and (i - 1, j) not in v:
-                v.add((i - 1, j))
-                d.append((i - 1, j))
-            if j > 0 and (i, j - 1) not in v:
-                v.add((i, j - 1))
-                d.append((i, j - 1))
-            if i < len(matrix) - 1 and (i + 1, j) not in v:
-                v.add((i + 1, j))
-                d.append((i + 1, j))
-            if j < len(matrix[0]) - 1 and (i, j + 1) not in v:
-                v.add((i, j + 1))
-                d.append((i, j + 1))
+            if i > 0 and (p:=(i - 1, j)) not in v:
+                v.add(p)
+                d.append(p)
+            if j > 0 and (p:=(i, j - 1)) not in v:
+                v.add(p)
+                d.append(p)
+            if i < len(matrix) - 1 and (p:=(i + 1, j)) not in v:
+                v.add(p)
+                d.append(p)
+            if j < len(matrix[0]) - 1 and (p:=(i, j + 1)) not in v:
+                v.add(p)
+                d.append(p)
     basins.append(size)
 basins.sort()
 print("Part 2:", basins[-1] * basins[-2] * basins[-3])
