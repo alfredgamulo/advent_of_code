@@ -4,17 +4,19 @@ from collections import deque
 matrix = []
 for line in map(str.strip, sys.stdin.readlines()):
     matrix.append(list(map(int, list(line))))
+len_i = len(matrix)
+len_j = len(matrix[0])
 
 lows = {}
-for i in range(len(matrix)):
-    for j in range(len(matrix[0])):
+for i in range(len_i):
+    for j in range(len_j):
         if i > 0 and matrix[i][j] >= matrix[i - 1][j]:
             continue
         if j > 0 and matrix[i][j] >= matrix[i][j - 1]:
             continue
-        if i < len(matrix) - 1 and matrix[i][j] >= matrix[i + 1][j]:
+        if i < len_i - 1 and matrix[i][j] >= matrix[i + 1][j]:
             continue
-        if j < len(matrix[0]) - 1 and matrix[i][j] >= matrix[i][j + 1]:
+        if j < len_j - 1 and matrix[i][j] >= matrix[i][j + 1]:
             continue
         lows[(i, j)] = matrix[i][j]
 print("Part 1:", sum(lows.values()) + len(lows.values()))
@@ -35,10 +37,10 @@ for low in lows.keys():
             if j > 0 and (p:=(i, j - 1)) not in v:
                 v.add(p)
                 d.append(p)
-            if i < len(matrix) - 1 and (p:=(i + 1, j)) not in v:
+            if i < len_i - 1 and (p:=(i + 1, j)) not in v:
                 v.add(p)
                 d.append(p)
-            if j < len(matrix[0]) - 1 and (p:=(i, j + 1)) not in v:
+            if j < len_j - 1 and (p:=(i, j + 1)) not in v:
                 v.add(p)
                 d.append(p)
     basins.append(size)
