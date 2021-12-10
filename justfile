@@ -39,6 +39,7 @@ lint day:
     poetry run flake8 {{year}}/{{day}}/.
 
 # Lua
+
 start-lua day:
     #!/usr/bin/env bash
     cd {{year}}/{{day}}
