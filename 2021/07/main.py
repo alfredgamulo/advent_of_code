@@ -15,7 +15,7 @@ print("Part 1:", min(fuels))
 
 fuels = []
 for i in range(len(crab_positions)):
-    fuel = [(sum(range(1, abs(j - i)+1))*cj) for j, cj in enumerate(crab_positions)]
+    fuel = [((abs(i-j)*(abs(i-j)+1)//2)*cj) for j, cj in enumerate(crab_positions)]
     fuels.append(sum(fuel))
 
 print("Part 2:", min(fuels))
