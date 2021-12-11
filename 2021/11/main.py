@@ -36,15 +36,13 @@ for step in range(100):
 
 print("Part 1:", part1)
 
-part2 = 0
+part2 = 100
 flashes = 0
-
 while flashes != (li)*(lj):
+    part2 += 1
     for i, j in product(range(li), range(lj)):
         matrix[i][j] += 1
     while f := count_flashes(matrix):
-        part2 += 1
         flashes = f
-    print(part2)
-print((li)*(lj))
+
 print("Part 2:",part2)
