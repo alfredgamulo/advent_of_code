@@ -27,7 +27,7 @@ def count_flashes(m):
 f100 = 0
 days = 0
 flashes = 0
-while flashes != (li)*(lj):
+while flashes != (li) * (lj):
     for i, j in product(range(li), range(lj)):
         matrix[i][j] += 1
     flashes = count_flashes(matrix)
