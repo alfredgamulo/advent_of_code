@@ -1,15 +1,12 @@
 import sys
 from itertools import product
 
-# sample -> 1656
-
 matrix = []
 for line in map(str.strip, sys.stdin.readlines()):
     matrix.append(list(map(int, list(line))))
 li = len(matrix)
 lj = len(matrix[0])
 
-# print(matrix)
 ns = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]
 
 
