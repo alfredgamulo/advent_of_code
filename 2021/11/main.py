@@ -24,22 +24,16 @@ def count_flashes(m):
     return flashes
 
 
-part1 = 0
-for step in range(100):
-    for i, j in product(range(li), range(lj)):
-        matrix[i][j] += 1
-    while f := count_flashes(matrix):
-        part1 += f
-
-print("Part 1:", part1)
-
-part2 = 100
+f100 = 0
+days = 0
 flashes = 0
 while flashes != (li)*(lj):
-    part2 += 1
     for i, j in product(range(li), range(lj)):
         matrix[i][j] += 1
-    while f := count_flashes(matrix):
-        flashes = f
+    flashes = count_flashes(matrix)
+    if days < 100:
+        f100 += flashes
+    days += 1
 
-print("Part 2:",part2)
+print("Part 1:", f100)
+print("Part 2:", days)
