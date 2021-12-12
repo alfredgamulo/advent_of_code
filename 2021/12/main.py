@@ -29,8 +29,7 @@ print("Part 2:", find_paths(limit=2))
 
 
 def no_recursion(limit=1):
-    queue = deque()
-    queue.append((["start"], limit))
+    queue = deque([(["start"], limit)])
     count = 0
     while queue:
         (path, limit) = queue.popleft()
