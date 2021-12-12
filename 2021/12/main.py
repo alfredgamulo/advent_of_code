@@ -8,7 +8,7 @@ for line in map(str.strip, sys.stdin.readlines()):
     edges[y].add(x)
 
 
-def find_paths(path=["start"], limit=1):
+def recursion(path=["start"], limit=1):
     count = 0
     for n in edges[path[-1]]:
         if n == "start" or n.islower() and path.count(n) >= limit:
@@ -16,7 +16,7 @@ def find_paths(path=["start"], limit=1):
         if n == "end":
             count += 1
         else:
-            count += find_paths(
+            count += recursion(
                 path=path + [n],
                 limit=1 if n.islower() and n in path else limit,
             )
@@ -24,8 +24,8 @@ def find_paths(path=["start"], limit=1):
 
 
 print("recursion:")
-print("Part 1:", find_paths())
-print("Part 2:", find_paths(limit=2))
+print("Part 1:", recursion())
+print("Part 2:", recursion(limit=2))
 
 
 def no_recursion(limit=1):
