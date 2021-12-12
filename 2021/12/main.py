@@ -8,9 +8,9 @@ for line in map(str.strip, sys.stdin.readlines()):
     edges[y].add(x)
 
 
-def find_paths(path=[], start="start", limit=1):
+def find_paths(path=["start"], limit=1):
     count = 0
-    for n in edges[start]:
+    for n in edges[path[-1]]:
         if n == "start" or n.islower() and path.count(n) >= limit:
             continue
         if n == "end":
@@ -18,7 +18,6 @@ def find_paths(path=[], start="start", limit=1):
         else:
             count += find_paths(
                 path=path + [n],
-                start=n,
                 limit=1 if n.islower() and n in path else limit,
             )
     return count
