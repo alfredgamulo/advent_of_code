@@ -1,11 +1,11 @@
 import sys
 from collections import defaultdict
 
-edges = defaultdict(list)
+edges = defaultdict(set)
 for line in map(str.strip, sys.stdin.readlines()):
     (x, y) = line.split("-")
-    edges[x].append(y)
-    edges[y].append(x)
+    edges[x].add(y)
+    edges[y].add(x)
 
 
 def find_paths(paths=[], path=[], start="start", limit=1):
