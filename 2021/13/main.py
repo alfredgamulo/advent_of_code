@@ -23,7 +23,7 @@ print("Part 2:")
 
 paper = defaultdict(list)
 for i in range(6):
-    paper[i] = ["."]*50
+    paper[i] = [" "]*50
 for i, dot in enumerate(dots):
     paper[dot[1]][dot[0]] = "#"
 for p in paper.values():
