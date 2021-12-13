@@ -21,9 +21,9 @@ for i, f in enumerate(fold):
 print("Part 2:")
 
 paper = defaultdict(list)
-for i in range(6):
-    paper[i] = [" "] * 50
+for i in range(8):
+    paper[i] = [" "] * 175
 for dot in dots:
-    paper[dot[1]][dot[0]] = "#"
+    paper[dot[1]][dot[0]] = "\u2588"
 for p in paper.values():
     print("".join(p))
