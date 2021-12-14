@@ -7,7 +7,7 @@ arrow = " -> "
 rules = {r.split(arrow)[0]: r.split(arrow)[1] for r in next(lines).split("\n")}
 
 polymer = templ
-for _ in range(40):
+for _ in range(10):
     new_poly = polymer[0]
     for a, b in zip(polymer, polymer[1:]):
         new_poly += rules[a + b] + b
