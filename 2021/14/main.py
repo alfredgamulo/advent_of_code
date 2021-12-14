@@ -3,7 +3,7 @@ from collections import defaultdict
 
 lines = map(str.strip, sys.stdin.read().split("\n\n"))
 template = next(lines)
-rules = {r.split(" -> ")[0]: r.split(" -> ")[1] for r in next(lines).split("\n")}
+rules = dict(r for r in [r.split(" -> ") for r in next(lines).split("\n")])
 
 
 def run(steps):
@@ -14,9 +14,8 @@ def run(steps):
     for _ in range(steps):
         newpairs = defaultdict(int)
         for k, v in pairs.items():
-            if v > 0:
-                newpairs[k[0] + rules[k]] += v
-                newpairs[rules[k] + k[1]] += v
+            newpairs[k[0] + rules[k]] += v
+            newpairs[rules[k] + k[1]] += v
         pairs = newpairs
 
     counter = defaultdict(int)
