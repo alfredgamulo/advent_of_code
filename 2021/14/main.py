@@ -1,9 +1,8 @@
 import sys
 from collections import defaultdict
 
-lines = map(str.strip, sys.stdin.read().split("\n\n"))
-template = next(lines)
-rules = dict(r for r in [r.split(" -> ") for r in next(lines).split("\n")])
+template, rules = sys.stdin.read().split("\n\n")
+rules = dict(r for r in [r.split(" -> ") for r in rules.strip().split("\n")])
 
 
 def run(steps):
