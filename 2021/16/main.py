@@ -10,9 +10,9 @@ operators = {
     1: math.prod,
     2: min,
     3: max,
-    5: lambda x: 1 if x[0] > x[1] else 0,
-    6: lambda x: 1 if x[0] < x[1] else 0,
-    7: lambda x: 1 if x[0] == x[1] else 0,
+    5: lambda x: x[0] > x[1],
+    6: lambda x: x[0] < x[1],
+    7: lambda x: x[0] == x[1],
 }
 
 
