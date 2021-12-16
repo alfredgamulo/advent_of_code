@@ -17,25 +17,18 @@ operators = {
 
 
 def read_subpacket(binary):
-    packets = []
     if binary.read(1) == "0":
         length = int(binary.read(15), 2)
-        packets.extend(read_packets(StringIO(binary.read(length))))
-
+        return read_packets(StringIO(binary.read(length)))
     else:
         length = int(binary.read(11), 2)
-        packets.extend([read_packet(binary) for _ in range(length)])
-
-    return packets
+        return [read_packet(binary) for _ in range(length)]
 
 
 def read_packet(binary):
     try:
-        header = binary.read(6)
-        version = int(header[:3], 2)
-        type = int(header[3:], 2)
-        versions.append(version)
-
+        versions.append(int(binary.read(3), 2))
+        type = int(binary.read(3), 2)
         if type == 4:
             end_packet = False
             packet = ""
