@@ -3,7 +3,7 @@ from math import sqrt
 from itertools import product
 
 (ax, zx), (ay, zy) = (
-    sorted([int(c.split("..")[0].split("=")[-1]), int(c.split("..")[1])])
+    [int(c.split("..")[0].split("=")[-1]), int(c.split("..")[1])]
     for c in sys.stdin.readline().split(":")[1].strip().split(",")
 )
 
