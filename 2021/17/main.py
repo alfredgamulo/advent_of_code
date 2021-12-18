@@ -9,17 +9,14 @@ from itertools import product
 
 print("Part 1:", ay *-~ ay >> 1)
 
-initial_velocities = set()
+counter = 0
 minx = math.floor(math.sqrt(ax * 2))
 for x, y in product(range(minx, zx + 1), range(ay, abs(ay) + 1)):
-    xp = 0
-    yp = 0
-    s = 0
+    xp = yp = s = 0
     while xp < ax or yp > zy:
-        xp = xp + (x - 1 * s if x - 1 * s > 0 else 0)
-        yp = yp + (y - 1 * s)
+        xp += x - s if x - s > 0 else 0
+        yp += y - s
         s += 1
-    if ax <= xp <= zx and ay <= yp <= zy:
-        initial_velocities.add((x, y))
+    counter += ax <= xp <= zx and ay <= yp <= zy
 
-print("Part 2:", len(initial_velocities))
+print("Part 2:", counter)
