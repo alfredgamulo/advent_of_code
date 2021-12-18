@@ -17,8 +17,8 @@ for x, y in product(range(minx, zx + 1), range(ay, abs(ay) + 1)):
     yp = 0
     s = 0
     while xp < ax or yp > zy:
-        xp = xp + (x - (1 * s) if x - (1 * s) > 0 else 0)
-        yp = yp + (y - (1 * s))
+        xp = xp + (x - 1 * s if x - 1 * s > 0 else 0)
+        yp = yp + (y - 1 * s)
         s += 1
     if ax <= xp <= zx and ay <= yp <= zy:
         initial_velocities.add((x, y))
