@@ -1,5 +1,5 @@
 import sys
-import math
+from math import sqrt
 from itertools import product
 
 (ax, zx), (ay, zy) = (
@@ -7,16 +7,16 @@ from itertools import product
     for c in sys.stdin.readline().split(":")[1].strip().split(",")
 )
 
-print("Part 1:", ay *-~ ay >> 1)
+print("Part 1:", ay * -~ay >> 1)
 
 counter = 0
-minx = math.floor(math.sqrt(ax * 2))
+minx = int(sqrt(ax << 1))
 for x, y in product(range(minx, zx + 1), range(ay, abs(ay) + 1)):
-    xp = yp = s = 0
-    while xp < ax or yp > zy:
-        xp += x - s if x - s > 0 else 0
-        yp += y - s
+    px = py = s = 0
+    while px < ax or py > zy:
+        px += x - s if x - s > 0 else 0
+        py += y - s
         s += 1
-    counter += ax <= xp <= zx and ay <= yp <= zy
+    counter += ax <= px <= zx and ay <= py <= zy
 
 print("Part 2:", counter)
