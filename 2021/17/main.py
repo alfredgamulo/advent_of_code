@@ -6,12 +6,11 @@ from itertools import product
     sorted([int(c.split("..")[0].split("=")[-1]), int(c.split("..")[1])])
     for c in sys.stdin.readline().split(":")[1].strip().split(",")
 )
-minx = math.floor(math.sqrt(ax * 2))
-y = abs(ay + 1)
 
-print("Part 1:", (y * (y + 1) // 2))
+print("Part 1:", ay *-~ ay >> 1)
 
 initial_velocities = set()
+minx = math.floor(math.sqrt(ax * 2))
 for x, y in product(range(minx, zx + 1), range(ay, abs(ay) + 1)):
     xp = 0
     yp = 0
