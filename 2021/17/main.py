@@ -17,6 +17,6 @@ for x, y in product(range(minx, zx + 1), range(ay, abs(ay))):
         px += x - s if x - s > 0 else 0
         py += y - s
         s += 1
-    counter += ax <= px <= zx and ay <= py <= zy
+    counter += px <= zx and ay <= py
 
 print("Part 2:", counter)
