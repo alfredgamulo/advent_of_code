@@ -11,7 +11,7 @@ print("Part 1:", ay * -~ay >> 1)
 
 counter = 0
 minx = int(sqrt(ax << 1))
-for x, y in product(range(minx, zx + 1), range(ay, abs(ay) + 1)):
+for x, y in product(range(minx, zx + 1), range(ay, abs(ay))):
     px = py = s = 0
     while px < ax or py > zy:
         px += x - s if x - s > 0 else 0
