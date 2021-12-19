@@ -37,9 +37,7 @@ class SnailFish:
             return
         x, y, pivot = explosion
 
-        # add the left:
-        for p in range(pivot, -1, -1):
-            n = p
+        def new_indexes(n):
             ll = n % 2
             n = n >> 1
             kk = n % 2
@@ -47,6 +45,11 @@ class SnailFish:
             jj = n % 2
             n = n >> 1
             ii = n % 2
+            return ll, kk, jj, ii
+
+        # add the left:
+        for p in range(pivot, -1, -1):
+            ll, kk, jj, ii = new_indexes(p)
             with suppress(TypeError):
                 if isinstance(self.number[ii][jj][kk][ll], int):
                     self.number[ii][jj][kk][ll] += x
@@ -66,32 +69,22 @@ class SnailFish:
 
         # add the right:
         for p in range(pivot + 1, 16):
-            try:
-                n = p
-                ll = n % 2
-                n = n >> 1
-                kk = n % 2
-                n = n >> 1
-                jj = n % 2
-                n = n >> 1
-                ii = n % 2
-                if isinstance(self.number[ii], int):
-                    self.number[ii] += y
-                    break
-                if isinstance(self.number[ii][jj], int):
-                    self.number[ii][jj] += y
-                    break
-                if isinstance(self.number[ii][jj][kk], int):
-                    self.number[ii][jj][kk] += y
-                    break
-                if isinstance(self.number[ii][jj][kk][ll], int):
-                    self.number[ii][jj][kk][ll] += y
-                    break
-                if isinstance(self.number[ii][jj][kk][ll][0], int):
-                    self.number[ii][jj][kk][ll][0] += y
-                    break
-            except:
-                pass
+            ll, kk, jj, ii = new_indexes(p)
+            if isinstance(self.number[ii], int):
+                self.number[ii] += y
+                break
+            if isinstance(self.number[ii][jj], int):
+                self.number[ii][jj] += y
+                break
+            if isinstance(self.number[ii][jj][kk], int):
+                self.number[ii][jj][kk] += y
+                break
+            if isinstance(self.number[ii][jj][kk][ll], int):
+                self.number[ii][jj][kk][ll] += y
+                break
+            if isinstance(self.number[ii][jj][kk][ll][0], int):
+                self.number[ii][jj][kk][ll][0] += y
+                break
 
         self.number[(pivot >> 3) % 2][(pivot >> 2) % 2][(pivot >> 1) % 2][pivot % 2] = 0
         return True
