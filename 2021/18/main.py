@@ -160,10 +160,7 @@ if __name__ == "__main__":
 
     part2 = 0
     for a, b in permutations(lines, 2):
-        a = SnailFish(eval(a))
-        b = SnailFish(eval(b))
-        c = a + b
-        m = c.magnitude()
+        m = (SnailFish(eval(a)) + SnailFish(eval(b))).magnitude()
         part2 = max(m, part2)
 
     print("Part 2:", part2)
