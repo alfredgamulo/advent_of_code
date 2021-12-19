@@ -19,32 +19,23 @@ class SnailFish:
 
     def explode(self):
         # find the explosion
-        x = None
-        y = None
-        for i, a in enumerate(self.number):
-            if isinstance(a, list):
-                for j, b in enumerate(a):
-                    if isinstance(b, list):
-                        for k, c in enumerate(b):
-                            if isinstance(c, list):
-                                for l, d in enumerate(c):
-                                    if isinstance(d, list):
-                                        x, y = d
-                                        break
-                                else:
-                                    continue
-                                break
-                        else:
-                            continue
-                        break
-                else:
-                    continue
-                break
+        def find_explosion():
+            for i, a in enumerate(self.number):
+                if isinstance(a, list):
+                    for j, b in enumerate(a):
+                        if isinstance(b, list):
+                            for k, c in enumerate(b):
+                                if isinstance(c, list):
+                                    for l, d in enumerate(c):
+                                        if isinstance(d, list):
+                                            x, y = d
+                                            pivot = (i << 3) + (j << 2) + (k << 1) + l
+                                            return x, y, pivot
 
-        if not x and not y:
+        explosion = find_explosion()
+        if not explosion:
             return
-
-        pivot = (i << 3) + (j << 2) + (k << 1) + l
+        x, y, pivot = explosion
 
         # add the left:
         for p in range(pivot, -1, -1):
@@ -102,7 +93,7 @@ class SnailFish:
             except:
                 pass
 
-        self.number[i][j][k][l] = 0
+        self.number[(pivot >> 3) % 2][(pivot >> 2) % 2][(pivot >> 1) % 2][pivot % 2] = 0
         return True
 
     def split(self):
@@ -154,7 +145,8 @@ class SnailFish:
         def tree_stuff(data):
             if isinstance(data, int):
                 return data
-            return 3*tree_stuff(data[0])+2*tree_stuff(data[1])
+            return 3 * tree_stuff(data[0]) + 2 * tree_stuff(data[1])
+
         return tree_stuff(self.number)
 
 

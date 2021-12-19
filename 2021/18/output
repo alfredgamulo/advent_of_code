@@ -1,9 +1,6 @@
-Part 1: 3806
-Traceback (most recent call last):
-  File "/Users/slicer/code/advent_of_code/2021/18/main.py", line 178, in <module>
-    print("Part 2:", max(part2))
-ValueError: max() arg is an empty sequence
+Part 1: 4239
+Part 2: 4239
 
-real	0m3.618s
-user	0m3.467s
-sys	0m0.122s
+real	0m0.524s
+user	0m0.415s
+sys	0m0.096s
