@@ -178,21 +178,24 @@ rotation_options = {
 }
 
 def find_scanner_match(scanner1, scanner2):
-    for a, p in scanner_data[scanner1].items():
-        for o in rotation_options:
-            x_diff_counter = defaultdict(int)
-            y_diff_counter = defaultdict(int)
-            z_diff_counter = defaultdict(int)
+    print(scanner1, scanner2)
+    for o in rotation_options:
+        x_diff_counter = defaultdict(int)
+        y_diff_counter = defaultdict(int)
+        z_diff_counter = defaultdict(int)
+        for a, p in scanner_data[scanner1].items():
             for b, q in scanner_data[scanner2].items():
-                xx, yy, zz = rotation_options[o](q[0],q[1],q[2])
-                x_diff_counter[p[0]-xx] += 1
-                y_diff_counter[p[1]-yy] += 1
-                z_diff_counter[p[2]-zz] += 1
-            if max(x_diff_counter.values()) >= 12 and max(y_diff_counter.values()) >= 12 and max(z_diff_counter.values()) >= 12:
-                print("!!!!!!!!!!!!")
-                return (scanner1, scanner2, o)
+                x, y, z = rotation_options[0](q[0],q[1],q[2])
+                x_diff_counter[p[0]-x] += 1
+                y_diff_counter[p[1]-y] += 1
+                z_diff_counter[p[2]-z] += 1
+        if max(x_diff_counter.values()) >= 12 and max(y_diff_counter.values()) >= 12 and max(z_diff_counter.values()) >= 12:
+            print("!!!!!!!!!!!!")
+            return (scanner1, scanner2, o)
 
-for i in range(1, len(scanner_data)):
-    print(find_scanner_match(0,i))
+print(find_scanner_match(0,1))
+
+# for i in range(0, len(scanner_data)):
+#     print(find_scanner_match(0,i))
 
 
