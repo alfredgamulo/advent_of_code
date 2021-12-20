@@ -185,7 +185,7 @@ def find_scanner_match(scanner1, scanner2):
         z_diff_counter = defaultdict(int)
         for a, p in scanner_data[scanner1].items():
             for b, q in scanner_data[scanner2].items():
-                x, y, z = rotation_options[0](q[0],q[1],q[2])
+                x, y, z = rotation_options[o](q[0],q[1],q[2])
                 x_diff_counter[p[0]-x] += 1
                 y_diff_counter[p[1]-y] += 1
                 z_diff_counter[p[2]-z] += 1
@@ -193,9 +193,7 @@ def find_scanner_match(scanner1, scanner2):
             print("!!!!!!!!!!!!")
             return (scanner1, scanner2, o)
 
-print(find_scanner_match(0,1))
-
-# for i in range(0, len(scanner_data)):
-#     print(find_scanner_match(0,i))
+for i, j in combinations(range(len(scanner_data)), 2):
+    print(find_scanner_match(i,j))
 
 
