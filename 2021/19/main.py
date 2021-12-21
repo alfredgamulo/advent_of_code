@@ -40,10 +40,10 @@ rotations = {
     22: lambda x, y, z: (-z, -x, y),
     23: lambda x, y, z: (-z, -y, -x),
 }
-known_beacons = set()
+known_beacons = Counter()
 for beacon in scanner_data[0].values():
-    known_beacons.add(beacon)
-
+    known_beacons[beacon] += 1
+known_scanners = {0: (0, 0, 0)}
 
 def find_scanner_match(scanner):
     for r in rotations:
@@ -76,11 +76,18 @@ while tries:
     if not data:
         tries.append(t)
         continue
+    known_scanners[t] = (data["x_offset"], data["y_offset"], data["z_offset"])
+    print("data for ", t)
     for beacon in scanner_data[t].values():
+        
         x, y, z = rotations[data["rotation"]](beacon[0], beacon[1], beacon[2])
         x += data["x_offset"]
         y += data["y_offset"]
         z += data["z_offset"]
-        known_beacons.add((x, y, z))
+        known_beacons[(x, y, z)] += 1
+        print(beacon, "\t-->\t", (x,y,z))
+    print()
 
+print(known_scanners)
+print(known_beacons)
 print("Part 1:", len(known_beacons))
