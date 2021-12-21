@@ -1,18 +1,16 @@
 import sys
 from collections import defaultdict, Counter, deque
 from pprint import PrettyPrinter
+from itertools import combinations
 
 pp = PrettyPrinter(indent=2)
 
-# Ingest the information
 lines = sys.stdin.read().split("\n\n")
 scanner_data = defaultdict(dict)
 for i, line in enumerate(lines):
     data = line.strip().split("\n")
     for j, probes in enumerate(data[1:]):
         scanner_data[i][j] = tuple(map(int, probes.split(",")))
-# Don't touch ^
-# pp.pprint(scanner_data)
 
 rotations = {
     0: lambda x, y, z: (x, y, z),
@@ -88,3 +86,10 @@ while tries:
         scanner_data[t][i] = (x, y, z)
 
 print("Part 1:", len(known_beacons))
+
+part2 = 0
+for s1, s2 in combinations(known_scanners.values(), 2):
+    manhattan = abs(s1[0] - s2[0]) + abs(s1[1] - s2[1]) + abs(s1[2] - s2[2])
+    part2 = max(part2, manhattan)
+
+print("Part 2:", part2)
