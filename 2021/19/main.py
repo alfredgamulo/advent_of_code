@@ -45,28 +45,30 @@ for beacon in scanner_data[0].values():
     known_beacons[beacon] += 1
 known_scanners = {0: (0, 0, 0)}
 
+
 def find_scanner_match(scanner):
     for r in rotations:
-        x_diff_counter = Counter()
-        y_diff_counter = Counter()
-        z_diff_counter = Counter()
-        for b in known_beacons:
-            for q in scanner_data[scanner].values():
-                x, y, z = rotations[r](q[0], q[1], q[2])
-                x_diff_counter[b[0] - x] += 1
-                y_diff_counter[b[1] - y] += 1
-                z_diff_counter[b[2] - z] += 1
-        if (
-            x_diff_counter.most_common(1)[0][1] >= 12
-            and y_diff_counter.most_common(1)[0][1] >= 12
-            and z_diff_counter.most_common(1)[0][1] >= 12
-        ):
-            return {
-                "rotation": r,
-                "x_offset": x_diff_counter.most_common(1)[0][0],
-                "y_offset": y_diff_counter.most_common(1)[0][0],
-                "z_offset": z_diff_counter.most_common(1)[0][0],
-            }
+        for k in known_scanners.keys():
+            x_diff_counter = Counter()
+            y_diff_counter = Counter()
+            z_diff_counter = Counter()
+            for b in scanner_data[k].values():
+                for q in scanner_data[scanner].values():
+                    x, y, z = rotations[r](q[0], q[1], q[2])
+                    x_diff_counter[b[0] - x] += 1
+                    y_diff_counter[b[1] - y] += 1
+                    z_diff_counter[b[2] - z] += 1
+                if (
+                    x_diff_counter.most_common(1)[0][1] >= 12
+                    and y_diff_counter.most_common(1)[0][1] >= 12
+                    and z_diff_counter.most_common(1)[0][1] >= 12
+                ):
+                    return {
+                        "rotation": r,
+                        "x_offset": x_diff_counter.most_common(1)[0][0],
+                        "y_offset": y_diff_counter.most_common(1)[0][0],
+                        "z_offset": z_diff_counter.most_common(1)[0][0],
+                    }
 
 
 tries = deque(range(1, len(scanner_data)))
@@ -77,17 +79,12 @@ while tries:
         tries.append(t)
         continue
     known_scanners[t] = (data["x_offset"], data["y_offset"], data["z_offset"])
-    print("data for ", t)
-    for beacon in scanner_data[t].values():
-        
+    for i, beacon in scanner_data[t].items():
         x, y, z = rotations[data["rotation"]](beacon[0], beacon[1], beacon[2])
         x += data["x_offset"]
         y += data["y_offset"]
         z += data["z_offset"]
         known_beacons[(x, y, z)] += 1
-        print(beacon, "\t-->\t", (x,y,z))
-    print()
+        scanner_data[t][i] = (x, y, z)
 
-print(known_scanners)
-print(known_beacons)
 print("Part 1:", len(known_beacons))
