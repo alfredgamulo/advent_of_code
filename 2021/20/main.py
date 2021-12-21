@@ -1,49 +1,48 @@
 import sys
 from itertools import product
+from pprint import PrettyPrinter
+from itertools import chain
 
-# 5179
-# 16112
-algorithm, image_string = sys.stdin.read().split("\n\n")
-image_string = [list(s) for s in image_string.strip().split()]
-lenx = len(image_string)
-leny = len(image_string[0])
+pp = PrettyPrinter(indent=2)
 
-bit_lookup = [
-    (1, 1),
-    (1, 0),
-    (1, -1),
-    (0, 1),
-    (0, 0),
-    (0, -1),
-    (-1, 1),
-    (-1, 0),
-    (-1, -1),
-]
+algorithm, image = sys.stdin.read().split("\n\n")
+algorithm = algorithm.strip()
 
-image = set()
-for i in range(len(image_string)):
-    for j in range(len(image_string[i])):
-        if image_string[i][j] == "#":
-            image.add((i + 1, j + 1))
+image = [list(s) for s in image.strip().split()]
 
-toggle = 0
-for _ in range(2):
-    output = set()
-    lenx += 2
-    leny += 2
-    for i, j in product(range(0, lenx), range(0, leny)):
-        b = 0
-        for e in range(len(bit_lookup)):
-            x, y = i + bit_lookup[e][0], j + bit_lookup[e][1]
-            if (x, y) in image  or (
-                algorithm[0] == "#"
-                and toggle
-                and (x < 0 or x > lenx  or y < 0 or y > leny)
-            ):
-                b += 1 << e
-        if algorithm[b] == "#":
-            output.add((i + 1, j + 1))
-    image = output
-    toggle = not toggle
 
-print("Part 1:", len(image))
+def enhance(image, steps):
+    for s in range(1, steps + 1):
+        print(s, flush=True)
+        output = []
+        for i in range(0 - s, len(image) + s):
+            line = []
+            for j in range(0 - s, len(image[0]) + s):
+                lookup = ""
+                for x, y in product((-1, 0, 1), (-1, 0, 1)):
+                    try:
+                        if (
+                            i + x >= 0
+                            and i + x <= len(image)
+                            and (j + y >= 0 and j + y <= len(image[0]))
+                        ):
+                            lookup += image[i + x][j + y]
+                        else:
+                            lookup += (
+                                "#" if ((algorithm[0] == "#") and s % 2 == 0) else "."
+                            )
+                    except IndexError:
+                        lookup += "#" if ((algorithm[0] == "#") and s % 2 == 0) else "."
+
+                line.append(
+                    algorithm[
+                        int("".join(["1" if l == "#" else "0" for l in lookup]), 2)
+                    ]
+                )
+            output.append(line)
+        image = output
+    return sum(c == "#" for c in chain.from_iterable(image))
+
+
+# print("Part 1:", enhance(image, 2))
+print("Part 2:", enhance(image, 50))
