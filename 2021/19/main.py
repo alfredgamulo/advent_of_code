@@ -1,7 +1,6 @@
 import sys
-from collections import defaultdict
+from collections import defaultdict, Counter, deque
 from pprint import PrettyPrinter
-from itertools import combinations, permutations
 
 pp = PrettyPrinter(indent=2)
 
@@ -15,142 +14,7 @@ for i, line in enumerate(lines):
 # Don't touch ^
 # pp.pprint(scanner_data)
 
-
-"""
-
-z   y
-|  /
-| /
-|/_____ x
-
-y   -z
-|  /
-| /
-|/_____ x
-
--z   -y
-|  /
-| /
-|/_____ x
-
--y  z
-|  /
-| /
-|/_____ x
-
-*
-
-z   -y
-|  /
-| /
-|/_____ -x
-
--y   -z
-|  /
-| /
-|/_____ -x
-
--z   y
-|  /
-| /
-|/_____ -x
-
-y   z
-|  /
-| /
-|/_____ -x
-
-* 
-
-z   -x
-|  /
-| /
-|/_____ y
-
--x   -z
-|  /
-| /
-|/_____ y
-
--z   x
-|  /
-| /
-|/_____ y
-
-x   z
-|  /
-| /
-|/_____ y
-
-*
-
-z   x
-|  /
-| /
-|/_____ -y
-
-x   -z
-|  /
-| /
-|/_____ -y
-
--z   -x
-|  /
-| /
-|/_____ -y
-
--x   z
-|  /
-| /
-|/_____ -y
-
-*
-
--x   y
-|  /
-| /
-|/_____ z
-
-y   x
-|  /
-| /
-|/_____ z
-
-x   -y
-|  /
-| /
-|/_____ z
-
--y  -x
-|  /
-| /
-|/_____ z
-
-*
-
--y  x
-|  /
-| /
-|/_____ -z
-
-x  y
-|  /
-| /
-|/_____ -z
-
-y  -x
-|  /
-| /
-|/_____ -z
-
--x  -y
-|  /
-| /
-|/_____ -z
-
-"""
-
-rotation_options = {
+rotations = {
     0: lambda x, y, z: (x, y, z),
     1: lambda x, y, z: (x, -z, y),
     2: lambda x, y, z: (x, -y, -z),
@@ -176,24 +40,47 @@ rotation_options = {
     22: lambda x, y, z: (-z, -x, y),
     23: lambda x, y, z: (-z, -y, -x),
 }
-
-def find_scanner_match(scanner1, scanner2):
-    print(scanner1, scanner2)
-    for o in rotation_options:
-        x_diff_counter = defaultdict(int)
-        y_diff_counter = defaultdict(int)
-        z_diff_counter = defaultdict(int)
-        for a, p in scanner_data[scanner1].items():
-            for b, q in scanner_data[scanner2].items():
-                x, y, z = rotation_options[o](q[0],q[1],q[2])
-                x_diff_counter[p[0]-x] += 1
-                y_diff_counter[p[1]-y] += 1
-                z_diff_counter[p[2]-z] += 1
-        if max(x_diff_counter.values()) >= 12 and max(y_diff_counter.values()) >= 12 and max(z_diff_counter.values()) >= 12:
-            print("!!!!!!!!!!!!")
-            return (scanner1, scanner2, o)
-
-for i, j in combinations(range(len(scanner_data)), 2):
-    print(find_scanner_match(i,j))
+known_beacons = set()
+for beacon in scanner_data[0].values():
+    known_beacons.add(beacon)
 
 
+def find_scanner_match(scanner):
+    for r in rotations:
+        x_diff_counter = Counter()
+        y_diff_counter = Counter()
+        z_diff_counter = Counter()
+        for b in known_beacons:
+            for q in scanner_data[scanner].values():
+                x, y, z = rotations[r](q[0], q[1], q[2])
+                x_diff_counter[b[0] - x] += 1
+                y_diff_counter[b[1] - y] += 1
+                z_diff_counter[b[2] - z] += 1
+        if (
+            x_diff_counter.most_common(1)[0][1] >= 12
+            and y_diff_counter.most_common(1)[0][1] >= 12
+            and z_diff_counter.most_common(1)[0][1] >= 12
+        ):
+            return {
+                "rotation": r,
+                "x_offset": x_diff_counter.most_common(1)[0][0],
+                "y_offset": y_diff_counter.most_common(1)[0][0],
+                "z_offset": z_diff_counter.most_common(1)[0][0],
+            }
+
+
+tries = deque(range(1, len(scanner_data)))
+while tries:
+    t = tries.popleft()
+    data = find_scanner_match(t)
+    if not data:
+        tries.append(t)
+        continue
+    for beacon in scanner_data[t].values():
+        x, y, z = rotations[data["rotation"]](beacon[0], beacon[1], beacon[2])
+        x += data["x_offset"]
+        y += data["y_offset"]
+        z += data["z_offset"]
+        known_beacons.add((x, y, z))
+
+print("Part 1:", len(known_beacons))
