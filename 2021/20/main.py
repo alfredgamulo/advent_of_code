@@ -25,7 +25,8 @@ for i in range(len(image_string)):
         if image_string[i][j] == "#":
             image.add((i + 1, j + 1))
 
-for s in range(1, 3):
+toggle = -1
+for _ in range(2):
     output = set()
     lenx += 2
     leny += 2
@@ -35,8 +36,8 @@ for s in range(1, 3):
             x, y = i + bit_lookup[e][0], j + bit_lookup[e][1]
             if (x, y) in image or (
                 algorithm[0] == "#"
-                and s % 2 == 0
-                and (x < -1 or x > lenx + 1 or y < -1 or y > leny + 1)
+                and (toggle:= ~toggle)
+                and (x <= 0 or x >= lenx  or y <= 0 or y >= leny)
             ):
                 b += 1 << e
         if algorithm[b] == "#":
