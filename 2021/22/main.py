@@ -11,14 +11,14 @@ directions = []
 for line in lines:
     toggle, coords = line.split()
     x, y, z = (eval(c[2:].replace("..", ",")) for c in coords.split(","))
-    directions.append((toggle, x, y, z))
+    directions.append((toggle == "on", x, y, z))
 
 
 cubes = set()
-for (toggle, x, y, z) in directions:
+for (on, x, y, z) in directions:
     x1, y1, z1 = max(-50, x[0]), max(-50, y[0]), max(-50, z[0])
     x2, y2, z2 = min(50, x[1]) + 1, min(50, y[1]) + 1, min(50, z[1]) + 1
-    if toggle == "on":
+    if on:
         for cx, cy, cz in product(range(x1, x2), range(y1, y2), range(z1, z2)):
             cubes.add((cx, cy, cz))
     else:
