@@ -40,15 +40,15 @@ quantum_moves = [sum(rolls) for rolls in (product([1,2,3], repeat=3))]
 @cache
 def part2(player1, score1, player2, score2, turn=True):
     if score1 >= 21:
-        return 1, 0
+        return 1
     if score2 >= 21:
-        return 0, 1
+        return 0
     if turn:
         moves = [(player1 + moves - 1) % 10 + 1 for moves in quantum_moves]
         results = (part2(move, score1 + move, player2, score2, not turn) for move in moves)
     else:
         moves = [(player2 + moves - 1) % 10 + 1 for moves in quantum_moves]
         results = (part2(player1, score1, move, score2 + move, not turn) for move in moves)
-    return sum(a for a, _ in results), sum(b for _, b in results)
+    return sum(results)
 
 print("Part 2:", part2(player1, 0, player2, 0))
