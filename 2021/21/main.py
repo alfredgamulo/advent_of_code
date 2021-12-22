@@ -2,40 +2,33 @@ import sys
 
 player1, player2 = map(lambda s: int(s.split(":")[-1].strip()), sys.stdin.readlines())
 
-# print(player1, player2)
-counter = 0
 
-def die(sides):
+def die(sides, counter):
     number = 0
-    global counter
     while True:
-        counter += 1
+        counter[0] += 1
         number = (number) % sides + 1
-        yield number 
+        yield number
 
-def move(position):
+
+def part1(player1, player2):
+    roll_counter = [0]
+    roll = die(100, roll_counter)
+    score1 = 0
+    score2 = 0
     while True:
-        position = position % 10 + 1
-        yield position
+        spaces = next(roll) + next(roll) + next(roll)
+        player1 = (player1 + spaces - 1) % 10 + 1
+        score1 += player1
+        if score1 >= 1000:
+            break
 
-roll = die(100)
-move1 = move(player1)
-move2 = move(player2)
-score1 = 0
-score2 = 0
-while True:
-    spaces = next(roll) + next(roll) + next(roll)
-    for m in range(spaces):
-        score = next(move1)
-    score1 += score
-    if score1 >= 1000:
-        break
+        spaces = next(roll) + next(roll) + next(roll)
+        player2 = (player2 + spaces - 1) % 10 + 1
+        score2 += player2
+        if score2 >= 1000:
+            break
+    return min(score1, score2) * roll_counter[0]
 
-    spaces = next(roll) + next(roll) + next(roll)
-    for m in range(spaces):
-        score = next(move2)
-    score2 += score
-    if score2 >= 1000:
-        break
 
-print("Part 1:", min(score1, score2)*counter)
+print("Part 1:", part1(player1, player2))
