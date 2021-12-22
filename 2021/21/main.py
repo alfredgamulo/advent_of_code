@@ -1,4 +1,6 @@
 import sys
+from functools import cache
+from itertools import product
 
 player1, player2 = map(lambda s: int(s.split(":")[-1].strip()), sys.stdin.readlines())
 
@@ -32,3 +34,21 @@ def part1(player1, player2):
 
 
 print("Part 1:", part1(player1, player2))
+
+quantum_moves = [sum(rolls) for rolls in (product([1,2,3], repeat=3))]
+
+@cache
+def part2(player1, score1, player2, score2, turn=True):
+    if score1 >= 21:
+        return 1, 0
+    if score2 >= 21:
+        return 0, 1
+    if turn:
+        moves = [(player1 + moves - 1) % 10 + 1 for moves in quantum_moves]
+        results = (part2(move, score1 + move, player2, score2, not turn) for move in moves)
+    else:
+        moves = [(player2 + moves - 1) % 10 + 1 for moves in quantum_moves]
+        results = (part2(player1, score1, move, score2 + move, not turn) for move in moves)
+    return sum(a for a, _ in results), sum(b for _, b in results)
+
+print("Part 2:", part2(player1, 0, player2, 0))
