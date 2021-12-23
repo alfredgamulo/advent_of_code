@@ -1,0 +1,3 @@
+run:
+    #!/usr/bin/env bash
+    poetry run python main.py < input
