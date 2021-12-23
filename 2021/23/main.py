@@ -22,6 +22,14 @@ point_map = {
 def set_selector(ch):
     global selector
     global selected
+    for i in range(selector[0],len(game)):
+        for j in range(0,len(game[i])):
+            if i == selector[0] and j < selector[1]:
+                continue
+            if game[i][j] == ch.upper() and (i, j) != selector:
+                selector = (i, j)
+                selected = game[i][j]
+                return
     for i, line in enumerate(game):
         for j, char in enumerate(line):
             if char == ch.upper() and (i, j) != selector:
@@ -42,7 +50,8 @@ while True:
     console.print(f"Selector: {selector}")
     console.print(f"Selected: {selected}")
     console.print(f"Score: {score}")
-    ch = console.input("Select a letter [A/B/C/D], or direction \[up/down/left/right]. Press q to quit:")
+    # ch = console.input("Select a letter [A/B/C/D], or direction \[up/down/left/right]. Press q to quit:")
+    ch = console.input("Input:")
     move = False
     match ch:
         case "a" | "b" | "c" | "d" :

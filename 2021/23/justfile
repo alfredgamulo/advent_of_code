@@ -1,3 +1,3 @@
-run:
+run input="input":
     #!/usr/bin/env bash
-    poetry run python main.py < input
+    poetry run python main.py < {{input}}
