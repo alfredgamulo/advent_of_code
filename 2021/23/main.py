@@ -88,7 +88,7 @@ while True:
                 case "C":
                     move = (0, 1)
     if move:
-        if selected == "":
+        if selected == "" or game[selector[0] + move[0]][selector[1] + move[1]] != ".":
             continue
         game[selector[0]][selector[1]] = "."
         selector = (selector[0] + move[0], selector[1] + move[1])
