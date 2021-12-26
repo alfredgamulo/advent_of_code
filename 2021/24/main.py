@@ -8,7 +8,7 @@ def solver(part1):
         r = range(9, 0, -1)
     else:
         r = range(1, 10)
-    model = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    model = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     for i in r:
         if i + 9 - 2 in r:
             model[0] = i
@@ -45,7 +45,7 @@ def solver(part1):
             model[9] = i + 9 - 6
             break
     return "".join([str(n) for n in model])
-    
+
 
 print("Part 1:", solver(1))
 print("Part 2:", solver(0))
