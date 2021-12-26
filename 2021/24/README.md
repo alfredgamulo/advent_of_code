@@ -60,3 +60,17 @@ w = int(input())
 z *= 26
 z += w+c
 ```
+
+So this block of code is "pushing" a digit of `w+c` in base 26. So to get `0` at the end, we have to "pop" these digits back out using `z //= 26` and don't add any more back. Thus, in the lines with `a=26`, `x = int((z % 26) + b != w)` must be `0`, which means the last pushed digit `w_old+c` must be equal to `w_now-b`.
+
+For my input that means:
+
+```
+I[9] +  9 -  6 == I[10]
+I[7] +  0 -  6 == I[8]
+I[6] +  5 -  6 == I[11]
+I[4] +  3 - 11 == I[5]
+I[3] + 11 - 16 == I[12]
+I[2] +  1 -  4 == I[13]
+I[1] +  9 -  2 == I[14]
+```
