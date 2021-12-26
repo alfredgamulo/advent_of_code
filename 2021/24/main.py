@@ -1,65 +1,51 @@
-import sys
-from functools import cache, reduce
+"""
+This day does is not a general solution for any input, but a decompilation of my specific input as described in the README.
+"""
 
-program = []
-subprogram = None
-for p in [p.split() for p in sys.stdin.readlines()]:
-    if "inp" in p:
-        if subprogram:
-            program.append(subprogram)
-        subprogram = []
-    subprogram.append(p)
-program.append(subprogram)
 
-bees = [1,1,1,1,26,1,1,26,1,26,26,26,26,26]
+def solver(part1):
+    if part1:
+        r = list(range(9, 0, -1))
+    else:
+        r = list(range(1, 10))
+    model = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    for i in r:
+        if i + 9 - 2 in range(1, 10):
+            model[0] = i
+            model[13] = i + 9 - 2
+            break
+    for i in r:
+        if i + 1 - 4 in range(1, 10):
+            model[1] = i
+            model[12] = i + 1 - 4
+            break
+    for i in r:
+        if i + 11 - 16 in range(1, 10):
+            model[2] = i
+            model[11] = i + 11 - 16
+            break
+    for i in r:
+        if i + 3 - 11 in range(1, 10):
+            model[3] = i
+            model[4] = i + 3 - 11
+            break
+    for i in r:
+        if i + 5 - 6 in range(1, 10):
+            model[5] = i
+            model[10] = i + 5 - 6
+            break
+    for i in r:
+        if i + 0 - 6 in range(1, 10):
+            model[6] = i
+            model[7] = i + 0 - 6
+            break
+    for i in r:
+        if i + 9 - 6 in range(1, 10):
+            model[8] = i
+            model[9] = i + 9 - 6
+            break
+    return "".join([str(n) for n in model])
+    
 
-register_lookup = {
-            "w": 0,
-            "x": 1,
-            "y": 2,
-            "z": 3,
-        }
-
-@cache
-def run_sub(subprogram, registers, n):
-    registers = list(registers)
-    for instruction in program[subprogram]:
-        match instruction[0]:
-            case "inp":
-                registers[register_lookup[instruction[1]]] = n
-            case "add":
-                registers[register_lookup[instruction[1]]] = registers[register_lookup[instruction[1]]] + int(register_lookup.get(instruction[2], instruction[2]))
-            case "mul":
-                registers[register_lookup[instruction[1]]] = registers[register_lookup[instruction[1]]] * int(register_lookup.get(instruction[2], instruction[2]))
-            case "div":
-                registers[register_lookup[instruction[1]]] = registers[register_lookup[instruction[1]]] // int(register_lookup.get(instruction[2], instruction[2]))
-            case "mod":
-                registers[register_lookup[instruction[1]]] = registers[register_lookup[instruction[1]]] % int(register_lookup.get(instruction[2], instruction[2]))
-            case "eql":
-                registers[register_lookup[instruction[1]]] = registers[register_lookup[instruction[1]]] == int(register_lookup.get(instruction[2], instruction[2])) and 1 or 0
-    return tuple(registers)
-
-@cache
-def work(subprogram, registers, model):
-    print(model, flush=True)
-    registers = list(registers)
-    models = []
-    if subprogram == 14:
-        if registers[3] == 0:
-            return model
-        return None
-    for i in range(1,10):
-        registers = run_sub(subprogram, tuple(registers), i)
-        
-        if registers[3] >= reduce(lambda x, y: x*y, bees[subprogram:]):
-            return None
-        recurse = work(subprogram+1, tuple(registers), model+str(i))
-        if recurse:
-            models.append(recurse)
-    if registers[3] >= reduce(lambda x, y: x*y, bees[subprogram:]):
-        return None
-    return models
-
-part1 = work(0, (0,0,0,0), "")
-
-print("Part 1:", part1)
+print("Part 1:", solver(1))
+print("Part 2:", solver(0))
