@@ -1,0 +1,27 @@
+defaultdict(<class 'dict'>,
+            {'Frosting': {'calories': 6,
+                          'capacity': 0,
+                          'durability': -1,
+                          'flavor': 4,
+                          'texture': 0},
+             'PeanutButter': {'calories': 1,
+                              'capacity': -1,
+                              'durability': 3,
+                              'flavor': 0,
+                              'texture': 0},
+             'Sprinkles': {'calories': 5,
+                           'capacity': 5,
+                           'durability': -1,
+                           'flavor': 0,
+                           'texture': 0},
+             'Sugar': {'calories': 8,
+                       'capacity': -1,
+                       'durability': 0,
+                       'flavor': 0,
+                       'texture': 2}})
+Part 1: 13882464
+Part 2: 11162880
+
+real	0m27.330s
+user	0m27.076s
+sys	0m0.169s
