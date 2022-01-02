@@ -43,13 +43,16 @@ def get_highscore(check_calories=False):
             flavor += ingredients[ingredient]["flavor"]*p[i]
             texture += ingredients[ingredient]["texture"]*p[i]
             calories += ingredients[ingredient]["calories"]*p[i]
-        if capacity < 0 or durability < 0 or flavor < 0 or texture < 0:
-            continue
+
         if check_calories and calories != check_calories:
             continue
+        capacity = max(0, capacity)
+        durability = max(0, durability)
+        flavor = max(0, flavor)
+        texture = max(0, texture)
         highscore.add(capacity*durability*flavor*texture)
         
     return max(highscore)
 
 print("Part 1:", get_highscore())
-print("Part 2:", get_highscore(374)) # 11171160
+print("Part 2:", get_highscore(500)) # 11171160

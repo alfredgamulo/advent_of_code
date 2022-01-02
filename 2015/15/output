@@ -22,6 +22,6 @@ defaultdict(<class 'dict'>,
 Part 1: 13882464
 Part 2: 11162880
 
-real	0m27.330s
-user	0m27.076s
-sys	0m0.169s
+real	0m27.707s
+user	0m27.387s
+sys	0m0.188s
