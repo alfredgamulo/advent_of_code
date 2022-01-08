@@ -6,7 +6,7 @@ containers = list(map(int, sys.stdin.readlines()))
 
 combos = defaultdict(int)
 for r in range(len(containers)):
-    for combo in  combinations(containers, r):
+    for combo in combinations(containers, r):
         if sum(combo) == 150:
             combos[len(combo)] += 1
 

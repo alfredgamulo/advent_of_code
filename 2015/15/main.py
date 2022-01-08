@@ -1,6 +1,6 @@
 import sys
 from collections import defaultdict
-from itertools import  permutations
+from itertools import permutations
 from pprint import PrettyPrinter
 
 pp = PrettyPrinter()
@@ -22,10 +22,11 @@ for line in lines:
         "durability": durability,
         "flavor": flavor,
         "texture": texture,
-        "calories": calories
+        "calories": calories,
     }
 
 pp.pprint(ingredients)
+
 
 def get_highscore(check_calories=False):
     highscore = set()
@@ -38,11 +39,11 @@ def get_highscore(check_calories=False):
         texture = 0
         calories = 0
         for i, ingredient in enumerate(ingredients):
-            capacity += ingredients[ingredient]["capacity"]*p[i]
-            durability += ingredients[ingredient]["durability"]*p[i]
-            flavor += ingredients[ingredient]["flavor"]*p[i]
-            texture += ingredients[ingredient]["texture"]*p[i]
-            calories += ingredients[ingredient]["calories"]*p[i]
+            capacity += ingredients[ingredient]["capacity"] * p[i]
+            durability += ingredients[ingredient]["durability"] * p[i]
+            flavor += ingredients[ingredient]["flavor"] * p[i]
+            texture += ingredients[ingredient]["texture"] * p[i]
+            calories += ingredients[ingredient]["calories"] * p[i]
 
         if check_calories and calories != check_calories:
             continue
@@ -50,9 +51,10 @@ def get_highscore(check_calories=False):
         durability = max(0, durability)
         flavor = max(0, flavor)
         texture = max(0, texture)
-        highscore.add(capacity*durability*flavor*texture)
-        
+        highscore.add(capacity * durability * flavor * texture)
+
     return max(highscore)
 
+
 print("Part 1:", get_highscore())
-print("Part 2:", get_highscore(500)) # 11171160
+print("Part 2:", get_highscore(500))  # 11171160
