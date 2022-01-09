@@ -12,10 +12,11 @@ for i, line in enumerate(sys.stdin.readlines()):
 
 neighbors = [(-1, -1), (0, -1), (1, -1), (-1, 0), (1, 0), (-1, 1), (0, 1), (1, 1)]
 
+
 def part1(lights):
     for _ in range(100):
         new_lights = set()
-        for x1, y1 in product(range(lenx+1), range(leny+1)):
+        for x1, y1 in product(range(lenx + 1), range(leny + 1)):
             count = 0
             for (x2, y2) in neighbors:
                 count += (x1 + x2, y1 + y2) in lights
@@ -26,14 +27,15 @@ def part1(lights):
         lights = new_lights
     return len(lights)
 
+
 def part2(lights):
     lights.add((0, 0))
     lights.add((lenx, 0))
     lights.add((0, leny))
-    lights.add((lenx,leny))
+    lights.add((lenx, leny))
     for _ in range(100):
         new_lights = set()
-        for x1, y1 in product(range(lenx+1), range(leny+1)):
+        for x1, y1 in product(range(lenx + 1), range(leny + 1)):
             count = 0
             for (x2, y2) in neighbors:
                 count += (x1 + x2, y1 + y2) in lights
@@ -45,8 +47,9 @@ def part2(lights):
         lights.add((0, 0))
         lights.add((lenx, 0))
         lights.add((0, leny))
-        lights.add((lenx,leny))
+        lights.add((lenx, leny))
     return len(lights)
+
 
 print("Part 1:", part1(lights))
 print("Part 2:", part2(lights))
