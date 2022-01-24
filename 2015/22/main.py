@@ -17,17 +17,7 @@ spells = {
 
 
 @cache
-def turn(
-    spell,
-    mana_spent,
-    my_mana,
-    my_hp,
-    boss_hp,
-    shield_left,
-    poison_left,
-    recharge_left,
-    hard_mode,
-):
+def turn(spell, mana_spent, my_mana, my_hp, boss_hp, shield_left, poison_left, recharge_left, hard_mode):
 
     if hard_mode:
         my_hp -= 1
@@ -64,8 +54,6 @@ def turn(
 
     my_hp += spells[spell].get("heal", 0)
     boss_hp -= spells[spell].get("damage", 0)
-    if boss_hp <= 0:
-        return mana_spent
 
     # boss turn
     my_armor = 0
@@ -78,6 +66,7 @@ def turn(
     if poison_left:
         boss_hp -= spells["Poison"]["dot"]
         poison_left -= 1
+
     if boss_hp <= 0:
         return mana_spent
     my_hp -= boss_dmg - my_armor
@@ -87,28 +76,10 @@ def turn(
     # take next turn
     return min(
         (
-            turn(
-                spell,
-                mana_spent,
-                my_mana,
-                my_hp,
-                boss_hp,
-                shield_left,
-                poison_left,
-                recharge_left,
-                hard_mode,
-            )
+            turn(spell, mana_spent, my_mana, my_hp, boss_hp, shield_left, poison_left, recharge_left, hard_mode)
             for spell in spells.keys()
         )
     )
 
-
-part1 = min(
-    (turn(spell, 0, my_mana, my_hp, boss_hp, 0, 0, 0, False) for spell in spells.keys())
-)
-print("Part 1:", part1)
-
-part2 = min(
-    (turn(spell, 0, my_mana, my_hp, boss_hp, 0, 0, 0, True) for spell in spells.keys())
-)
-print("Part 2:", part2)
+print("Part 1:", min((turn(spell, 0, my_mana, my_hp, boss_hp, 0, 0, 0, False) for spell in spells.keys())))
+print("Part 2:", min((turn(spell, 0, my_mana, my_hp, boss_hp, 0, 0, 0, True) for spell in spells.keys())))
