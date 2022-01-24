@@ -86,78 +86,29 @@ def turn(
 
     # take next turn
     return min(
-        turn(
-            "Recharge",
-            mana_spent,
-            my_mana,
-            my_hp,
-            boss_hp,
-            shield_left,
-            poison_left,
-            recharge_left,
-            hard_mode,
-        ),
-        turn(
-            "Poison",
-            mana_spent,
-            my_mana,
-            my_hp,
-            boss_hp,
-            shield_left,
-            poison_left,
-            recharge_left,
-            hard_mode,
-        ),
-        turn(
-            "Missile",
-            mana_spent,
-            my_mana,
-            my_hp,
-            boss_hp,
-            shield_left,
-            poison_left,
-            recharge_left,
-            hard_mode,
-        ),
-        turn(
-            "Shield",
-            mana_spent,
-            my_mana,
-            my_hp,
-            boss_hp,
-            shield_left,
-            poison_left,
-            recharge_left,
-            hard_mode,
-        ),
-        turn(
-            "Drain",
-            mana_spent,
-            my_mana,
-            my_hp,
-            boss_hp,
-            shield_left,
-            poison_left,
-            recharge_left,
-            hard_mode,
-        ),
+        (
+            turn(
+                spell,
+                mana_spent,
+                my_mana,
+                my_hp,
+                boss_hp,
+                shield_left,
+                poison_left,
+                recharge_left,
+                hard_mode,
+            )
+            for spell in spells.keys()
+        )
     )
 
 
 part1 = min(
-    turn("Recharge", 0, my_mana, my_hp, boss_hp, 0, 0, 0, False),
-    turn("Poison", 0, my_mana, my_hp, boss_hp, 0, 0, 0, False),
-    turn("Missile", 0, my_mana, my_hp, boss_hp, 0, 0, 0, False),
-    turn("Shield", 0, my_mana, my_hp, boss_hp, 0, 0, 0, False),
-    turn("Drain", 0, my_mana, my_hp, boss_hp, 0, 0, 0, False),
+    (turn(spell, 0, my_mana, my_hp, boss_hp, 0, 0, 0, False) for spell in spells.keys())
 )
 print("Part 1:", part1)
 
 part2 = min(
-    turn("Recharge", 0, my_mana, my_hp, boss_hp, 0, 0, 0, True),
-    turn("Poison", 0, my_mana, my_hp, boss_hp, 0, 0, 0, True),
-    turn("Missile", 0, my_mana, my_hp, boss_hp, 0, 0, 0, True),
-    turn("Shield", 0, my_mana, my_hp, boss_hp, 0, 0, 0, True),
-    turn("Drain", 0, my_mana, my_hp, boss_hp, 0, 0, 0, True),
+    (turn(spell, 0, my_mana, my_hp, boss_hp, 0, 0, 0, True) for spell in spells.keys())
 )
 print("Part 2:", part2)
