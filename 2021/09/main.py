@@ -32,16 +32,16 @@ for low in lows.keys():
         if matrix[i][j] == 9:
             continue
         size += 1
-        if i > 0 and (p:=(i - 1, j)) not in v:
+        if i > 0 and (p := (i - 1, j)) not in v:
             v.add(p)
             d.append(p)
-        if j > 0 and (p:=(i, j - 1)) not in v:
+        if j > 0 and (p := (i, j - 1)) not in v:
             v.add(p)
             d.append(p)
-        if i < len_i - 1 and (p:=(i + 1, j)) not in v:
+        if i < len_i - 1 and (p := (i + 1, j)) not in v:
             v.add(p)
             d.append(p)
-        if j < len_j - 1 and (p:=(i, j + 1)) not in v:
+        if j < len_j - 1 and (p := (i, j + 1)) not in v:
             v.add(p)
             d.append(p)
     basins.append(size)
