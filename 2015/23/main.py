@@ -2,12 +2,6 @@ import sys
 
 lines = sys.stdin.readlines()
 
-instructions = {
-    "hlf": lambda x: x // 2,
-    "tpl": lambda x: x * 3,
-    "inc": lambda x: x + 1,
-}
-
 
 def compute(a):
     registers = {
