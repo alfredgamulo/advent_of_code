@@ -7,6 +7,7 @@ _:
 
 start day:
     #!/usr/bin/env bash
+    mkdir -p {{year}}
     cd {{year}}
     mkdir -p {{day}}
     cd {{day}}
@@ -35,7 +36,7 @@ run day input="input":
     (time poetry run python main.py < {{input}}) 2>&1 | tee output
 
 lint day:
-    poetry run black {{year}}/{{day}}/.
+    poetry run black {{year}}/{{day}}/. --target-version py310
     poetry run flake8 {{year}}/{{day}}/.
 
 # Lua
