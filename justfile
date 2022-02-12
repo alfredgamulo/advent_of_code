@@ -11,15 +11,15 @@ start day:
     cd {{year}}
     mkdir -p {{day}}
     cd {{day}}
-    touch main.py
+    cp -n ../../common/template.py main.py
     day=$((10#{{day}}))
     # echo "session=53616c74..." > cookie.txt
     url="https://adventofcode.com/{{year}}/day/${day}"
     curl -b "$(cat {{justfile_directory()}}/cookie.txt)" "${url}/input" > input
     echo $url
-    just sample "${url}" > sample
+    # just sample "${url}" > sample
     code input
-    code sample
+    # code sample
     code main.py
 
 sample url:
@@ -36,7 +36,7 @@ run day input="input":
     (time poetry run python main.py < {{input}}) 2>&1 | tee output
 
 lint day:
-    poetry run black {{year}}/{{day}}/. --target-version py310
+    poetry run black {{year}}/{{day}}/.
     poetry run flake8 {{year}}/{{day}}/.
 
 # Lua
