@@ -18,9 +18,9 @@ start day:
     url="https://adventofcode.com/{{year}}/day/${day}"
     curl -b "$(cat {{justfile_directory()}}/cookie.txt)" "${url}/input" > input
     echo $url
-    # just sample "${url}" > sample
+    just sample "${url}" > sample
     code input
-    # code sample
+    code sample
     code main.py
 
 sample url:
