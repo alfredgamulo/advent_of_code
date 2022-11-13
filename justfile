@@ -1,7 +1,8 @@
-year := "2021"
+year := "2022"
 
 _:
-    @just -l -u --list-heading $'Welcome to {{year}} AoC 🎄\n'
+    @echo Welcome to {{year}} AoC 🎄
+    @just -l -u
 
 # Python
 
