@@ -28,14 +28,19 @@ def hex_to_bin(hexval):
     return bin(int(hexval, 16))[2:].zfill(4)
 
 
+disk = set()
+
+
 def part1(lines):
     key = lines[0].strip()
-    squares = 0
+    global disk
     for n in range(128):
         row = knot(f"{key}-{n}")
-        for r in row:
-            squares += sum(i == "1" for i in hex_to_bin(r))
-    return squares
+        bins = hex_to_bin(row).zfill(128)
+        for i in range(128):
+            if bins[i] == "1":
+                disk.add((n, i))
+    return len(disk)
 
 
 def part2():
