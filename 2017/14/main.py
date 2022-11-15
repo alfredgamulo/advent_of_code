@@ -1,5 +1,7 @@
 import sys
+from collections import deque
 from functools import reduce
+from itertools import product
 
 from more_itertools import grouper
 
@@ -45,7 +47,21 @@ def part1(lines):
 
 def part2():
     # This is a counting islands problem
-    pass
+    groups = 0
+    visited = set()
+    stack = deque()
+    adjacency = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+    for x, y in product(range(128), range(128)):
+        if (x, y) in disk and (x, y) not in visited:
+            groups += 1
+            stack.append((x, y))
+            while stack:
+                a, b = stack.popleft()
+                visited.add((a, b))
+                for i, j in adjacency:
+                    if (a + i, b + j) in disk and (a + i, b + j) not in visited:
+                        stack.append((a + i, b + j))
+    return groups
 
 
 if __name__ == "__main__":
