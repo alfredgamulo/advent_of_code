@@ -14,8 +14,7 @@ def part2(inventory):
 
 
 if __name__ == "__main__":
-    lines = sys.stdin.read().strip()
-    inventory = lines.split("\n\n")
+    inventory = sys.stdin.read().strip().split("\n\n")
     inventory = [list(map(int, i.split("\n"))) for i in inventory if i]
 
     print("Part 1:", part1(inventory))
