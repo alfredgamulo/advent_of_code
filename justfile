@@ -52,3 +52,20 @@ run-lua day input="input":
     #!/usr/bin/env bash
     cd {{year}}/{{day}}
     lua -l inspect main.lua < {{input}}
+
+# Go
+
+start-go day:
+    #!/usr/bin/env bash
+    cd {{year}}/{{day}}
+    cp -n ../../common/template.go main.go || echo "already exists"
+    go mod init {{year}}/{{day}}
+    code main.go
+    cd ../..
+    go work use ./{{year}}/{{day}}/
+
+run-go day input="input":
+    #!/usr/bin/env bash
+    cd {{year}}/{{day}}
+    go mod tidy
+    go run . < {{input}}
