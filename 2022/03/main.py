@@ -22,7 +22,7 @@ def part2(lines):
 
 
 if __name__ == "__main__":
-    lines = list(map(str.strip, sys.stdin.readlines()))
+    lines = sys.stdin.read().splitlines()
 
     print("Part 1:", part1(lines))
     print("Part 2:", part2(lines))
