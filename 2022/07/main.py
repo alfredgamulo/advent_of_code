@@ -20,14 +20,13 @@ def run(lines):
 
     dir_sizes = defaultdict(int)
     for f, v in filesizes.items():
-        paths = str(f).split("/")[:-1]
-        for i in range(1, len(paths) + 1):
-            dir_sizes["/".join(paths[:i])] += v
+        for p in f.parents:
+            dir_sizes[str(p)] += v
 
     p1_target = 100000  # magic number
     print("Part 1:", sum(v for v in dir_sizes.values() if v <= p1_target))
 
-    p2_target = 30000000 - (70000000 - dir_sizes[""])  # magic numbers
+    p2_target = 30000000 - (70000000 - dir_sizes["/"])  # magic numbers
     for v in sorted(dir_sizes.values()):
         if v > p2_target:
             print("Part 2:", v)
