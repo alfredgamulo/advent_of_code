@@ -15,8 +15,7 @@ def run(lines):
             case ("dir", dir):
                 ...
             case (num, file):
-                f = path.joinpath(file)
-                filesizes[f] = int(num)
+                filesizes[path.joinpath(file)] = int(num)
 
     dir_sizes = defaultdict(int)
     for f, v in filesizes.items():
