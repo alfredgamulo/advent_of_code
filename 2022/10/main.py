@@ -13,19 +13,18 @@ def run(lines):
     display = ""
 
     for c in count(1):
+        if c in capture_times:
+            capture_total += x * c
         if (c - 1) % 40 in (x - 1, x, x + 1):
             display += "#"
         else:
-            display += "."
-        if c in capture_times:
-            capture_total += x * c
+            display += " "
         if addx:
             x += addx
             addx = False
             continue
         try:
             instruction = next(gen).split()
-            # print(instruction)
         except StopIteration:
             break
         if instruction[0] == "noop":
