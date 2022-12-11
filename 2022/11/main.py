@@ -22,8 +22,8 @@ def parse(monkeys):
     monkey_list = []
     for monkey in monkeys:
         details = monkey.splitlines()
-        id = re.findall("\d", details[0])
-        items = list(map(int, re.findall("\d{1,2}", details[1])))
+        id = re.findall("\\d", details[0])
+        items = list(map(int, re.findall("\\d{1,2}", details[1])))
         operation = details[2][13:]
         test = int(details[3].split()[-1])
         test_t = int(details[4].split()[-1])
