@@ -32,33 +32,21 @@ def parse(monkeys):
     return monkey_list
 
 
-def part1(monkeys):
+def solve(monkeys, rounds, relief=None):
     monkeys = parse(monkeys)
-    for _ in range(20):
+    if relief:
+        reduce = f"val // {relief}"
+    else:
+        mod = math.prod(m.test for m in monkeys)
+        reduce = f"val % {mod}"
+    for _ in range(rounds):
         for m in monkeys:
             while m.items:
                 item = m.items.pop(0)
                 m.inspects += 1
                 namespace = {"new": None, "old": item}
                 exec(m.operation, namespace)
-                worry = math.floor(namespace["new"] / 3)
-                n = m.test_t if ((worry % m.test) == 0) else m.test_f
-                monkeys[n].items.append(worry)
-
-    return math.prod(m.inspects for m in sorted(monkeys)[-2:])
-
-
-def part2(monkeys):
-    monkeys = parse(monkeys)
-    mod = math.prod(m.test for m in monkeys)
-    for _ in range(10000):
-        for m in monkeys:
-            while m.items:
-                item = m.items.pop(0)
-                m.inspects += 1
-                namespace = {"new": None, "old": item}
-                exec(m.operation, namespace)
-                worry = namespace["new"] % mod
+                worry = eval(reduce, {"val": namespace["new"]})
                 n = m.test_t if ((worry % m.test) == 0) else m.test_f
                 monkeys[n].items.append(worry)
 
@@ -68,5 +56,5 @@ def part2(monkeys):
 if __name__ == "__main__":
     monkeys = sys.stdin.read().split("\n\n")
 
-    print("Part 1:", part1(monkeys))
-    print("Part 2:", part2(monkeys))
+    print("Part 1:", solve(monkeys, 20, 3))
+    print("Part 2:", solve(monkeys, 10000))
