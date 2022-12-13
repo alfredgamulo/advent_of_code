@@ -23,14 +23,6 @@ def compare(left, right):
 
 
 def part1(lines):
-    s = 0
-    for i, pair in enumerate(lines, start=1):
-        left, right = (eval(packet) for packet in pair.splitlines())
-        s += i * compare(left, right)
-    return s
-
-
-def dumb1(lines):
     return sum(
         i * compare(*(eval(packet) for packet in pair.splitlines()))
         for i, pair in enumerate(lines, start=1)
@@ -54,5 +46,4 @@ if __name__ == "__main__":
     lines = sys.stdin.read().split("\n\n")
 
     print("Part 1:", part1(lines))
-    print("Dumb 1:", dumb1(lines))
     print("Part 2:", part2(lines))
