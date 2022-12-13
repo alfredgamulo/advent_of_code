@@ -42,9 +42,10 @@ def cmp_wrapper(left, right):
 
 
 def part2(lines):
-    packets = [eval(packet) for pair in lines for packet in pair.splitlines()]
-    dividers = [[2]], [[6]]
-    packets += dividers
+    dividers = [[[2]], [[6]]]
+    packets = [
+        eval(packet) for pair in lines for packet in pair.splitlines()
+    ] + dividers
     packets.sort(key=cmp_to_key(cmp_wrapper))
     return prod(packets.index(d) + 1 for d in dividers)
 
