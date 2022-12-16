@@ -1,5 +1,6 @@
 import re
 import sys
+from collections import Counter
 
 
 def parse(lines):
@@ -38,7 +39,7 @@ def part1(lines):
 
 def part2(lines):
     _, sensors, dists = parse(lines)
-    tries = set()
+    tries = Counter()
     validate = 4000000  # magic number
     for (sx, sy), dist in zip(sensors, dists):
         dist += 1
@@ -49,14 +50,13 @@ def part2(lines):
             ymax = dist + sy - abs(sx - nx)
             for ny in (ymin, ymax):
                 if (0 <= nx <= validate) and (0 <= ny <= validate):
-                    tries.add((nx, ny))
-    for t in tries:
+                    tries.update([(nx, ny)])
+    for t, _ in tries.most_common():
         found = False
         for (sx, sy), dist in zip(sensors, dists):
             if (abs(t[0] - sx) + abs(t[1] - sy)) <= dist:
                 found = True
                 break
-
         if not found:
             return t[0] * 4000000 + t[1]
 
