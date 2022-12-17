@@ -14,23 +14,28 @@ class Valve:
 data = {}
 
 
-def part1():
-    @cache
-    def one(time, current, visited):
-        if time < 1:
-            return 0
-        pressure = 0
-        if current not in visited and data[current].rate > 0:
-            pressure = max(
-                pressure,
-                one(time - 1, current, tuple(list(visited) + [current]))
-                + data[current].rate * (time - 1),
-            )
-        for valve in data[current].tunnels:
-            pressure = max(pressure, one(time - 1, valve, visited))
-        return pressure
+@cache
+def solve(time, current, visited):
+    if time < 1:
+        return 0
+    pressure = 0
+    if current not in visited and data[current].rate > 0:
+        pressure = max(
+            pressure,
+            solve(time - 1, current, tuple(list(visited) + [current]))
+            + data[current].rate * (time - 1),
+        )
+    for valve in data[current].tunnels:
+        pressure = max(pressure, solve(time - 1, valve, visited))
+    return pressure
 
-    return one(30, "AA", ())
+
+def part1():
+    return solve(30, "AA", ())
+
+
+def part2():
+    return solve(26, "AA", ()) + solve(25, "VQ", ())
 
 
 if __name__ == "__main__":
@@ -41,3 +46,4 @@ if __name__ == "__main__":
         data[valves[0]] = Valve(valves[0], int(rate[0]), valves[1:])
 
     print("Part 1:", part1())
+    print("Part 2:", part2())
