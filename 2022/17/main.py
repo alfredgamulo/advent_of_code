@@ -110,4 +110,4 @@ if __name__ == "__main__":
     lines = sys.stdin.read().splitlines()
 
     print("Part 1:", part1(lines))
-    print("Part 2:", part2(lines))  # looking for 1514285714288
+    print("Part 2:", part2(lines))
