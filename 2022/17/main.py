@@ -31,11 +31,14 @@ def shift(shape, offset):
     return res
 
 
-def solve(iterations, jet, shape):
+def part1(lines):
+    jet = jets(lines[0])
+    shape = shapes()
+
     floor = 0
     formation = deque(maxlen=1000)
 
-    for _ in range(iterations):
+    for _ in range(2022):
         rock = shift(next(shape)[1], (0, floor))
         stuck = False
         while not stuck:
@@ -51,19 +54,6 @@ def solve(iterations, jet, shape):
         floor = max(floor, max(y for _, y in rock) + 1)
 
     return floor
-
-
-def part1(lines):
-    jet = jets(lines[0])
-    shape = shapes()
-    return solve(2022, jet, shape)
-
-
-def movement(rock, init):
-    res = []
-    for r, i in zip(rock, init):
-        res.append((r[0] - i[0], r[1] - i[1]))
-    return tuple(res)
 
 
 def part2(lines):
