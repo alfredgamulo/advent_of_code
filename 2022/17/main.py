@@ -101,9 +101,8 @@ def part2(lines):
 
     beginning = f1
     middle = n * (f2 - f1)
-    end = 0
-    for h in h1[len(h1) - (i2 - i1) : len(h1) - (i2 - i1) + m]:
-        end += h
+    end = sum(h for h in h1[len(h1) - (i2 - i1) : len(h1) - (i2 - i1) + m])
+
     return beginning + middle + end
 
 
