@@ -67,7 +67,6 @@ def movement(rock, init):
 
 
 def part2(lines):
-    # 1000000000000
     jet = jets(lines[0])
     shape = shapes()
 
@@ -76,12 +75,11 @@ def part2(lines):
 
     cycles = None
     cache = defaultdict(list)
-    history = deque(maxlen=len(lines))
-    for i in range(9000):
-        # print(i, flush=True)
+    history = deque(maxlen=len(lines[0]))
+    for i in range(12000):
+        before = floor
         si, sn = next(shape)
         rock = shift(sn, (0, floor))
-        init = rock
         stuck = False
         while not stuck:
             ji, jn = next(jet)
@@ -96,23 +94,28 @@ def part2(lines):
         formation.extend(rock)
         floor = max(floor, max(y for _, y in rock) + 1)
 
-        history.append(movement(rock, init))
-        cache[(si, ji, tuple(history))].append((i, floor - 1))
-        if len(cache[(si, ji, tuple(history))]) > 5:
+        history.append((floor - before))
+        cache[(si, ji, tuple(history))].append((i, floor - 1, tuple(history)))
+        if len(cache[(si, ji, tuple(history))]) > 1:
             cycles = (
+                cache[(si, ji, tuple(history))][0],
                 cache[(si, ji, tuple(history))][1],
-                cache[(si, ji, tuple(history))][3],
             )
             break
 
-    i1, h1 = cycles[0]
-    i2, h2 = cycles[1]
+    i1, f1, h1 = cycles[0]
+    i2, f2, _ = cycles[1]
 
-    # return ((1000000000000 - i1) // (i2 - i1) * (h2 - h1)) + h1
+    n = (1000000000000 - i1) // (i2 - i1)
+    m = (1000000000000 - i1) % (i2 - i1)
 
+    beginning = f1
+    middle = n * (f2 - f1)
+    end = 0
+    for h in h1[len(h1) - (i2 - i1) : len(h1) - (i2 - i1) + m]:
+        end += h
+    return beginning + middle + end
 
-# too low 1540634005750
-#         1540634005764 < not right
 
 if __name__ == "__main__":
     lines = sys.stdin.read().splitlines()
