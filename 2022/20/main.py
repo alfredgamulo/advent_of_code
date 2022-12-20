@@ -1,5 +1,6 @@
 import sys
 from dataclasses import dataclass
+from itertools import product
 
 
 @dataclass
@@ -13,20 +14,15 @@ def solve(lines, key=1, times=1):
     decrypted = coords[:]
 
     z = None
-    for _ in range(times):
-        for c in coords:
-            i = decrypted.index(c)
-            if not z and c.n == 0:
-                z = c
-            popped = decrypted.pop(i)
-            decrypted.insert(((i + c.n) % len(decrypted)), popped)
+    for _, c in product(range(times), coords):
+        i = decrypted.index(c)
+        if not z and c.n == 0:
+            z = c
+        decrypted.pop(i)
+        decrypted.insert(((i + c.n) % len(decrypted)), c)
 
     zi = decrypted.index(z)
-    res = 0
-    for i in (1000, 2000, 3000):
-        res += decrypted[(zi + i) % len(decrypted)].n
-
-    return res
+    return sum(decrypted[(zi + i) % len(decrypted)].n for i in (1000, 2000, 3000))
 
 
 if __name__ == "__main__":
