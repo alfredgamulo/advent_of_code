@@ -8,16 +8,18 @@ class Number:
     _: int
 
 
-def part1(coords):
+def solve(lines, key=1, times=1):
+    coords = [Number(int(line) * key, i) for i, line in enumerate(lines)]
     decrypted = coords[:]
 
     z = None
-    for c in coords:
-        i = decrypted.index(c)
-        if not z and c.n == 0:
-            z = c
-        popped = decrypted.pop(i)
-        decrypted.insert(((i + c.n + len(decrypted)) % len(decrypted)), popped)
+    for _ in range(times):
+        for c in coords:
+            i = decrypted.index(c)
+            if not z and c.n == 0:
+                z = c
+            popped = decrypted.pop(i)
+            decrypted.insert(((i + c.n) % len(decrypted)), popped)
 
     zi = decrypted.index(z)
     res = 0
@@ -27,12 +29,7 @@ def part1(coords):
     return res
 
 
-def part2():
-    pass
-
-
 if __name__ == "__main__":
     lines = sys.stdin.read().splitlines()
-    coords = [Number(int(line), i) for i, line in enumerate(lines)]
-    print("Part 1:", part1(coords))
-    print("Part 2:", part2())
+    print("Part 1:", solve(lines))
+    print("Part 2:", solve(lines, 811589153, 10))
