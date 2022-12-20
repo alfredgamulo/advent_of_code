@@ -134,7 +134,7 @@ def part2(blueprints):
     res = 1
     for b in blueprints[:3]:
         g = dig(32, 0, 0, 0, 1, 0, 0, *b[1:7])
-        res += res * g
+        res = res * g
     return res
 
 
