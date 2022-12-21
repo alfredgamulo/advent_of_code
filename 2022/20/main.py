@@ -1,15 +1,10 @@
 import sys
-from dataclasses import dataclass
+from collections import namedtuple
 from itertools import product
 
 
-@dataclass
-class Number:
-    n: int
-    _: int
-
-
 def solve(lines, key=1, times=1):
+    Number = namedtuple("Number", "n, i")
     coords = [Number(int(line) * key, i) for i, line in enumerate(lines)]
     decrypted = coords[:]
 
