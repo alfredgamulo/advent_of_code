@@ -11,43 +11,40 @@ def step_generator(dirs):
         yield r
 
 
-def part1(open_tiles, solid_walls, steps, start, max_x, max_y):
-    pos, dir = start, "U"
-    for s in steps:
-        next_dir = 1 if s[0] == "R" else -1
-        dir = facing_order[(facing_order.index(dir) + next_dir) % len(facing_order)]
-        for _ in range(int(s[1:])):
-            n = tuple(map(sum, zip(pos, facing_moves[dir])))
-            if n in open_tiles:
-                pos = n
-            elif n in solid_walls:
-                break
-            else:
-                if dir == "U":
-                    m = (max_x, pos[1])
-                elif dir == "D":
-                    m = (0, pos[1])
-                elif dir == "L":
-                    m = (pos[0], max_y)
-                else:  # dir == "R":
-                    m = (pos[0], 0)
-
-                while m not in (open_tiles.union(solid_walls)):
-                    m = tuple(map(sum, zip(m, facing_moves[dir])))
-                if m in solid_walls:
-                    break
-                else:
-                    pos = m
-
-    return (1000 * (pos[0] + 1)) + (4 * (pos[1] + 1)) + facing_value[dir]
-
-
-def part2():
-    pass
+def cube_wrap(i, j, d):
+    if d == "R" and i == 151:  # 1-R
+        return 100, 151 - j, "L"
+    elif d == "D" and j == 51:  # 1-D
+        return 100, 50 + (i - 100), "L"
+    elif d == "U" and j == 0 and i > 100:  # 1-U
+        return i - 100, 200, "U"
+    elif d == "U" and j == 0 and 51 <= i <= 100:  # 2-U
+        return 1, 150 + (i - 50), "R"
+    elif d == "L" and i == 50 and j < 51:  # 2-L
+        return 1, 151 - j, "R"
+    elif d == "L" and i == 50 and 51 <= j <= 100:  # 3-L
+        return j - 50, 101, "D"
+    elif d == "R" and i == 101 and 51 <= j <= 100:  # 3-R
+        return 100 + (j - 50), 50, "U"
+    elif d == "R" and i == 101 and 101 <= j <= 150:  # 4-R
+        return 150, 151 - j, "L"
+    elif d == "D" and j == 151:  # 4-D
+        return 50, 150 + (i - 50), "L"
+    elif d == "L" and i == 0 and 101 <= j <= 150:  # 5-L
+        return 51, 151 - j, "R"
+    elif d == "U" and j == 100:  # 5-U
+        return 51, 50 + i, "R"
+    elif d == "L" and i == 0 and j >= 151:  # 6-L
+        return 50 + (j - 150), 1, "D"
+    elif d == "R" and i == 51:  # 6-R
+        return 50 + (j - 150), 150, "U"
+    elif d == "D" and j == 201:  # 6-D
+        return i + 100, 1, "D"
+    else:
+        print("Something broke!", i, j, d)
 
 
-if __name__ == "__main__":
-    sections = sys.stdin.read().split("\n\n")
+def solve(sections, cube=False):
     maze = sections[0].splitlines()
     dirs = sections[1]
 
@@ -70,5 +67,44 @@ if __name__ == "__main__":
 
     steps = step_generator("R" + dirs)
 
-    print("Part 1:", part1(open_tiles, solid_walls, steps, start, max_x, max_y))
-    print("Part 2:", part2())
+    pos, dir = start, "U"
+    for s in steps:
+        next_dir = 1 if s[0] == "R" else -1
+        dir = facing_order[(facing_order.index(dir) + next_dir) % len(facing_order)]
+        for _ in range(int(s[1:])):
+            n = tuple(map(sum, zip(pos, facing_moves[dir])))
+            if n in open_tiles:
+                pos = n
+            elif n in solid_walls:
+                break
+            else:
+                if not cube:
+                    ndir = dir
+                    if dir == "U":
+                        m = (max_x, pos[1])
+                    elif dir == "D":
+                        m = (0, pos[1])
+                    elif dir == "L":
+                        m = (pos[0], max_y)
+                    else:  # dir == "R":
+                        m = (pos[0], 0)
+
+                    while m not in (open_tiles.union(solid_walls)):
+                        m = tuple(map(sum, zip(m, facing_moves[dir])))
+                else:
+                    i, j, ndir = cube_wrap(n[1] + 1, n[0] + 1, dir)
+                    m = (j - 1, i - 1)
+                if m in solid_walls:
+                    break
+                else:
+                    pos = m
+                    dir = ndir
+
+    return (1000 * (pos[0] + 1)) + (4 * (pos[1] + 1)) + facing_value[dir]
+
+
+if __name__ == "__main__":
+    sections = sys.stdin.read().split("\n\n")
+
+    print("Part 1:", solve(sections))
+    print("Part 2:", solve(sections, True))
