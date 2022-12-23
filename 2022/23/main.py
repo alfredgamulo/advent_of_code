@@ -1,6 +1,6 @@
 import sys
 from collections import defaultdict
-from itertools import cycle, product
+from itertools import count, cycle, product
 
 neight = set(product((-1, 0, 1), repeat=2)) - set([(0, 0)])
 north = ([n for n in neight if n[0] == -1], (-1, 0))
@@ -15,17 +15,21 @@ def direction_order():
         yield directions[c:] + directions[:c]
 
 
-def part1(elves):
+def solve(elves):
     d = direction_order()
-    for _ in range(10):
+    for i in count(1):
         # check eights
         movers = set()
         for e in elves:
             for n in neight:
-                if tuple(map(sum, zip(e, n))) in elves:
+                if (e[0] + n[0], e[1] + n[1]) in elves:
                     movers.add(e)
                     break
         elves = elves - movers
+
+        if not movers:
+            print("Part 2:", i)
+            exit()
 
         # find potential moves
         dirs = next(d)
@@ -35,14 +39,14 @@ def part1(elves):
                 if not (
                     set(
                         [
-                            tuple(map(sum, zip(m, checks[0]))),
-                            tuple(map(sum, zip(m, checks[1]))),
-                            tuple(map(sum, zip(m, checks[2]))),
+                            (m[0] + checks[0][0], m[1] + checks[0][1]),
+                            (m[0] + checks[1][0], m[1] + checks[1][1]),
+                            (m[0] + checks[2][0], m[1] + checks[2][1]),
                         ]
                     )
                     & elves.union(movers)
                 ):
-                    proposals[tuple(map(sum, zip(m, p)))].append(m)
+                    proposals[(m[0] + p[0], m[1] + p[1])].append(m)
                     break
 
         # move if no conflicts
@@ -53,18 +57,17 @@ def part1(elves):
 
         elves.update(movers)  # add back conflicted movers
 
-    min_x, max_x, min_y, max_y = 0, 0, 0, 0
-    for e in elves:
-        min_x = min(min_x, e[0])
-        max_x = max(max_x, e[0])
-        min_y = min(min_y, e[1])
-        max_y = max(max_y, e[1])
+        if i == 10:
+            min_x, max_x, min_y, max_y = 0, 0, 0, 0
+            for e in elves:
+                min_x = min(min_x, e[0])
+                max_x = max(max_x, e[0])
+                min_y = min(min_y, e[1])
+                max_y = max(max_y, e[1])
 
-    return abs(max_x + 1 - min_x) * abs(max_y + 1 - min_y) - len(elves)
-
-
-def part2():
-    pass
+            print(
+                "Part 1:", abs(max_x + 1 - min_x) * abs(max_y + 1 - min_y) - len(elves)
+            )
 
 
 if __name__ == "__main__":
@@ -75,5 +78,4 @@ if __name__ == "__main__":
             if space == "#":
                 elves.add((r, c))
 
-    print("Part 1:", part1(elves))
-    print("Part 2:", part2())
+    solve(elves)
