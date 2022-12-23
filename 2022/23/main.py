@@ -29,23 +29,19 @@ def solve(elves):
 
         if not movers:
             print("Part 2:", i)
-            exit()
+            return
 
         # find potential moves
         dirs = next(d)
         proposals = defaultdict(list)
         for m in movers:
             for checks, p in dirs:
-                if not (
-                    set(
-                        [
-                            (m[0] + checks[0][0], m[1] + checks[0][1]),
-                            (m[0] + checks[1][0], m[1] + checks[1][1]),
-                            (m[0] + checks[2][0], m[1] + checks[2][1]),
-                        ]
-                    )
-                    & elves.union(movers)
-                ):
+                check_set = {
+                    (m[0] + checks[0][0], m[1] + checks[0][1]),
+                    (m[0] + checks[1][0], m[1] + checks[1][1]),
+                    (m[0] + checks[2][0], m[1] + checks[2][1]),
+                }
+                if not (check_set & elves or check_set & movers):
                     proposals[(m[0] + p[0], m[1] + p[1])].append(m)
                     break
 
@@ -60,10 +56,8 @@ def solve(elves):
         if i == 10:
             min_x, max_x, min_y, max_y = 0, 0, 0, 0
             for e in elves:
-                min_x = min(min_x, e[0])
-                max_x = max(max_x, e[0])
-                min_y = min(min_y, e[1])
-                max_y = max(max_y, e[1])
+                min_x, max_x = min(min_x, e[0]), max(max_x, e[0])
+                min_y, max_y = min(min_y, e[1]), max(max_y, e[1])
 
             print(
                 "Part 1:", abs(max_x + 1 - min_x) * abs(max_y + 1 - min_y) - len(elves)
