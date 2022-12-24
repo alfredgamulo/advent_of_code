@@ -40,13 +40,15 @@ def next_blizz(blizzards, limits):
     return nb
 
 
-def part1(blizzards, limits, end):
-    q = deque([(0, (0, 1), blizzards)])  # step, pos, blizz, waited
+def solve(blizzards, limits, start, end):
+    q = deque([(0, start, blizzards)])  # step, pos, blizz, waited
     visited = set()
     while q:
         step, position, blizzs = q.popleft()
-        # print(step, position, len(q))
-        # check if position is on a blizz
+
+        if position == end:
+            return step, blizzs
+
         skip = False
         for _, b in blizzs.items():
             if position in b:
@@ -57,10 +59,9 @@ def part1(blizzards, limits, end):
 
         for a in [(-1, 0), (1, 0), (0, -1), (0, 1), (0, 0)]:
             n = (position[0] + a[0], position[1] + a[1])
-            if n == end:
-                return step + 1
+
             if (
-                (n == (0, 1))
+                (n in [start, end])
                 or (1 <= n[0] <= limits[0] and 1 <= n[1] <= limits[1])
                 and (step + 1, n) not in visited
             ):
@@ -68,16 +69,11 @@ def part1(blizzards, limits, end):
                 q.append((step + 1, n, next_blizz(blizzs, limits)))
 
 
-def part2():
-    pass
-
-
 if __name__ == "__main__":
     lines = sys.stdin.read().splitlines()
     blizzards = hashabledefaultdict(list)
-    max_r = len(lines) - 2
-    max_c = len(lines[0]) - 2
-    end = None
+    limits = (len(lines) - 2, len(lines[0]) - 2)
+    start, end = (0, 1), None
     for r, line in enumerate(lines):
         for c, row in enumerate(line):
             if lines[r][c] != "#":
@@ -85,5 +81,10 @@ if __name__ == "__main__":
                     blizzards[lines[r][c]].append((r, c))
                 end = (r, c)
 
-    print("Part 1:", part1(blizzards, (max_r, max_c), end))
-    print("Part 2:", part2())
+    s1, b1 = solve(blizzards, limits, start, end)
+    print("Part 1:", s1)
+    next_blizz.cache_clear()
+    s2, b2 = solve(b1, limits, end, start)
+    next_blizz.cache_clear()
+    s3, _ = solve(b2, limits, start, end)
+    print("Part 2:", s1 + s2 + s3)
