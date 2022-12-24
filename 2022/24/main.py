@@ -49,12 +49,7 @@ def solve(blizzards, limits, start, end):
         if position == end:
             return step, blizzs
 
-        skip = False
-        for _, b in blizzs.items():
-            if position in b:
-                skip = True
-                break
-        if skip:
+        if any([position in b for b in blizzs.values()]):
             continue
 
         for a in [(-1, 0), (1, 0), (0, -1), (0, 1), (0, 0)]:
