@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/slicer/code/advent_of_code/2022/25/main.py", line 31, in <module>
+    print("Part 1:", part1(lines))
+                     ^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2022/25/main.py", line 23, in part1
+    res = (dec % 5) + res
+          ~~~~~~~~^~~~~~~
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+real	0m0.357s
+user	0m0.336s
+sys	0m0.021s
