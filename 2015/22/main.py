@@ -81,5 +81,6 @@ def turn(spell, mana_spent, my_mana, my_hp, boss_hp, shield_left, poison_left, r
         )
     )
 
+
 print("Part 1:", min((turn(spell, 0, my_mana, my_hp, boss_hp, 0, 0, 0, False) for spell in spells.keys())))
 print("Part 2:", min((turn(spell, 0, my_mana, my_hp, boss_hp, 0, 0, 0, True) for spell in spells.keys())))
