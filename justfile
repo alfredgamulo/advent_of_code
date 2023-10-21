@@ -1,4 +1,4 @@
-year := "2022"
+year := "2023"
 
 _:
     @echo Welcome to {{year}} AoC 🎄
