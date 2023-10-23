@@ -21,10 +21,6 @@ def solve(pots, rules, rounds):
     return sum(pots)
 
 
-def part2():
-    pass
-
-
 if __name__ == "__main__":
     sections = sys.stdin.read().split("\n\n")
 
