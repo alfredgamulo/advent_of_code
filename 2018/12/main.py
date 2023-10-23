@@ -1,6 +1,5 @@
 import sys
 from collections import deque
-from itertools import chain
 
 
 def solve(pots, rules, rounds):
