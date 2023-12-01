@@ -1,0 +1,3003 @@
+Traceback (most recent call last):
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 57, in <module>
+    root = stuffit(root)
+           ^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 47, in stuffit
+    root.left = stuffit(Rule(parsed[int(options[0])]))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 42, in stuffit
+    root.left = stuffit(Rule(options[:pipe]))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 38, in stuffit
+    return stuffit(Rule(parsed[int(options[0])]))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 42, in stuffit
+    root.left = stuffit(Rule(options[:pipe]))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 42, in stuffit
+    root.left = stuffit(Rule(options[:pipe]))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 42, in stuffit
+    root.left = stuffit(Rule(options[:pipe]))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 47, in stuffit
+    root.left = stuffit(Rule(parsed[int(options[0])]))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 42, in stuffit
+    root.left = stuffit(Rule(options[:pipe]))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 42, in stuffit
+    root.left = stuffit(Rule(options[:pipe]))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 42, in stuffit
+    root.left = stuffit(Rule(options[:pipe]))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 43, in stuffit
+    root.right = stuffit(Rule(options[pipe + 1 :]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 48, in stuffit
+    root.right = stuffit(Rule(parsed[int(options[1])]))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/slicer/code/advent_of_code/2020/19/main.py", line 42, in stuffit
+    root.left = stuffit(Rule(options[:pipe]))
+                        ^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+real	0m0.852s
+user	0m0.752s
+sys	0m0.101s

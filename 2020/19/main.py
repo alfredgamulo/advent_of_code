@@ -1,9 +1,8 @@
+import re
 import time as timer
+from collections import defaultdict
 
 start_time = timer.time()
-
-from collections import defaultdict
-import re
 
 # Create readable input
 with open("input") as f:
@@ -16,6 +15,7 @@ for rule in rules:
     root, children = rule.split(":")
     for c in children.split():
         parsed[int(root)].append(c.strip('"'))
+
 
 # Create the Rule tree
 class Rule:
@@ -55,6 +55,7 @@ def stuffit(root):
 
 
 root = stuffit(root)
+
 
 # Convert Rule tree to regex
 def inorder(root, ra):
