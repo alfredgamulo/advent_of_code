@@ -10,7 +10,7 @@ def part1(lines):
 def part2(lines):
     helper = {
         "one": "o1e",
-        "two": "t2",
+        "two": "t2o",
         "three": "t3e",
         "four": "4",
         "five": "5e",
