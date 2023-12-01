@@ -23,8 +23,7 @@ def part2(lines):
 
     for i in range(len(lines)):
         for word, number in helper.items():
-            if word in lines[i]:
-                lines[i] = lines[i].replace(word, number)
+            lines[i] = lines[i].replace(word, number)
     return part1(lines)
 
 
