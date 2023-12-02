@@ -22,8 +22,6 @@ def solve(games):
 
 if __name__ == "__main__":
     games = sys.stdin.read().splitlines()
-
     part1, part2 = solve(games)
-
     print("Part 1:", part1)
     print("Part 2:", part2)
