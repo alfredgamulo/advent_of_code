@@ -6,7 +6,7 @@ from math import prod
 def solve(handfuls):
     rules = {"red": 12, "green": 13, "blue": 14}
     possible = True
-    maxes = defaultdict(lambda: 0)
+    maxes = defaultdict(int)
     for handful in handfuls.split(";"):
         for cubes in handful.split(","):
             amount, color = cubes.split()
