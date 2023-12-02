@@ -10,8 +10,8 @@ def solve(games):
     for id, game in enumerate(games, 1):
         maxes = defaultdict(int)
         for handful in game.split(":")[1].split(";"):
-            for cubes in handful.split(","):
-                amount, color = cubes.split()
+            for dice in handful.split(","):
+                amount, color = dice.split()
                 maxes[color] = max(int(amount), maxes[color])
 
         possibles += all(a >= maxes[c] for c, a in rules.items()) * id
