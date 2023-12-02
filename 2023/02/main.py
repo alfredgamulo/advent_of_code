@@ -22,9 +22,8 @@ if __name__ == "__main__":
 
     answer1 = 0
     answer2 = 0
-    for game in games:
-        id, handfuls = game.split(":")
-        id = int(id.split()[-1])
+    for id, game in enumerate(games, 1):
+        handfuls = game.split(":")[1]
         part1, part2 = solve(handfuls)
         if part1:
             answer1 += id
