@@ -5,16 +5,14 @@ from math import prod
 
 def solve(handfuls):
     rules = {"red": 12, "green": 13, "blue": 14}
-    possible = True
     maxes = defaultdict(int)
     for handful in handfuls.split(";"):
         for cubes in handful.split(","):
             amount, color = cubes.split()
-            if int(amount) > rules[color] and possible:
-                possible = False
-            if int(amount) > maxes[color]:
-                maxes[color] = int(amount)
-    return possible, prod(maxes.values())
+            maxes[color] = max(int(amount), maxes[color])
+    part1 = all(a >= maxes[c] for c, a in rules.items())
+    part2 = prod(maxes.values())
+    return part1, part2
 
 
 if __name__ == "__main__":
@@ -25,8 +23,7 @@ if __name__ == "__main__":
     for id, game in enumerate(games, 1):
         handfuls = game.split(":")[1]
         part1, part2 = solve(handfuls)
-        if part1:
-            answer1 += id
+        answer1 += part1 * id
         answer2 += part2
 
     print("Part 1:", answer1)
