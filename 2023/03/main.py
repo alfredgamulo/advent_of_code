@@ -34,8 +34,7 @@ def solve(numbers, symbols):
     for span, num in numbers.items():
         neighborset = neighbors(span)
         part1 += num * bool(neighborset.intersection(symbols.keys()))
-        if intersection := neighborset.intersection(gear_coords):
-            gear_ratios[tuple(intersection)].append(num)
+        gear_ratios[tuple(neighborset.intersection(gear_coords))].append(num)
 
     part2 = sum(prod(ratios) for ratios in gear_ratios.values() if len(ratios) == 2)
     return part1, part2
