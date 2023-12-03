@@ -1,6 +1,7 @@
 import re
 import sys
 from collections import defaultdict
+from math import prod
 
 symbols = "#%&*+-/=@$"
 
@@ -41,7 +42,7 @@ def solve(numbers, symbols):
             if g in neighborset:
                 gear_ratios[g].append(num)
     part2 = sum(
-        gear_ratios[gear][0] * gear_ratios[gear][1]
+        prod(gear_ratios[gear])
         for gear in filter(lambda g: len(gear_ratios[g]) == 2, gear_ratios)
     )
     return part1, part2
