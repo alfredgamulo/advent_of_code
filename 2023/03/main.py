@@ -33,8 +33,8 @@ def solve(numbers, symbols):
     gear_coords = set(filter(lambda s: symbols[s] == "*", symbols))
     for span, num in numbers.items():
         neighborset = neighbors(span)
-        part1 += num * any(n in symbols.keys() for n in neighborset)
-        if intersection := gear_coords.intersection(neighborset):
+        part1 += num * bool(neighborset.intersection(symbols.keys()))
+        if intersection := neighborset.intersection(gear_coords):
             gear_ratios[tuple(intersection)].append(num)
 
     part2 = sum(prod(ratios) for ratios in gear_ratios.values() if len(ratios) == 2)
