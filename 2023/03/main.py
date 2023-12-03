@@ -16,13 +16,13 @@ def parse(lines):
     return numbers, symbols
 
 
-def neighbors(coords):
+def neighbors(span):
     adjacentset = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]
     neighborset = set()
-    x = coords[0][0]
-    for y in range(coords[0][1], coords[1][1]):
+    x = span[0][0]
+    for y in range(span[0][1], span[1][1]):
         for a in adjacentset:
-            if a[0] == 0 and y + a[1] in range(coords[0][1], coords[1][1]):
+            if a[0] == 0 and y + a[1] in range(span[0][1], span[1][1]):
                 continue
             neighborset.add(((x + a[0], y + a[1])))
     return neighborset
@@ -32,8 +32,8 @@ def solve(numbers, symbols):
     part1 = 0
     gear_ratios = defaultdict(list)
     gear_coords = list(filter(lambda s: symbols[s] == "*", symbols))
-    for coords, num in numbers.items():
-        neighborset = neighbors(coords)
+    for span, num in numbers.items():
+        neighborset = neighbors(span)
         if any(n in symbols.keys() for n in neighborset):
             part1 += num
         for g in gear_coords:
