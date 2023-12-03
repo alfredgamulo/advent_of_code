@@ -11,8 +11,7 @@ def parse(lines):
         for finding in re.finditer("\\d+|[^.]", line):
             start, end = (i, finding.start()), (i, finding.end())
             try:
-                num = int(finding.group())
-                numbers[(start, end)] = num
+                numbers[(start, end)] = int(finding.group())
             except ValueError:
                 symbols[(start)] = finding.group()
     return numbers, symbols
@@ -24,7 +23,7 @@ def neighbors(coords):
     x = coords[0][0]
     for y in range(coords[0][1], coords[1][1]):
         for a in adjacentset:
-            if x + a[0] == x and y + a[1] in range(coords[0][1], coords[1][1]):
+            if a[0] == 0 and y + a[1] in range(coords[0][1], coords[1][1]):
                 continue
             neighborset.add(((x + a[0], y + a[1])))
     return neighborset
