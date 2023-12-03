@@ -17,7 +17,7 @@ def parse(lines):
 
 
 def neighbors(span):
-    adjacentset = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]
+    adjacentset = {(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)}
     neighborset = set()
     for y in range(span[0][1], span[1][1]):
         for a in adjacentset:
@@ -41,8 +41,7 @@ def solve(numbers, symbols):
 
 
 if __name__ == "__main__":
-    lines = sys.stdin.read().splitlines()
-    numbers, symbols = parse(lines)
+    numbers, symbols = parse(sys.stdin.read().splitlines())
     part1, part2 = solve(numbers, symbols)
     print("Part 1:", part1)
     print("Part 2:", part2)
