@@ -3,8 +3,6 @@ import sys
 from collections import defaultdict
 from math import prod
 
-symbols = "#%&*+-/=@$"
-
 
 def parse(lines):
     numbers, symbols = {}, {}
