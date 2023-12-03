@@ -1,7 +1,6 @@
 import re
 import sys
 from collections import defaultdict
-from functools import cache
 
 symbols = "#%&*+-/=@$"
 
@@ -19,7 +18,6 @@ def parse(lines):
     return numbers, symbols
 
 
-@cache
 def neighbors(coords):
     adjacentset = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]
     neighborset = set()
@@ -32,30 +30,27 @@ def neighbors(coords):
     return neighborset
 
 
-def part1(numbers, symbols):
-    parts = 0
+def solve(numbers, symbols):
+    part1 = 0
+    gear_ratios = defaultdict(list)
+    gear_coords = list(filter(lambda s: symbols[s] == "*", symbols))
     for coords, num in numbers.items():
         neighborset = neighbors(coords)
         if any(n in symbols.keys() for n in neighborset):
-            parts += num
-    return parts
-
-
-def part2(numbers, symbols):
-    gear_ratios = defaultdict(list)
-    for coords, num in numbers.items():
-        neighborset = neighbors(coords)
-        for g in filter(lambda s: symbols[s] == "*", symbols):
+            part1 += num
+        for g in gear_coords:
             if g in neighborset:
                 gear_ratios[g].append(num)
-    return sum(
+    part2 = sum(
         gear_ratios[gear][0] * gear_ratios[gear][1]
         for gear in filter(lambda g: len(gear_ratios[g]) == 2, gear_ratios)
     )
+    return part1, part2
 
 
 if __name__ == "__main__":
     lines = sys.stdin.read().splitlines()
     numbers, symbols = parse(lines)
-    print("Part 1:", part1(numbers, symbols))
-    print("Part 2:", part2(numbers, symbols))
+    part1, part2 = solve(numbers, symbols)
+    print("Part 1:", part1)
+    print("Part 2:", part2)
