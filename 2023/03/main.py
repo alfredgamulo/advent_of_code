@@ -43,10 +43,9 @@ def part1(numbers, symbols):
 
 def part2(numbers, symbols):
     gear_ratios = defaultdict(list)
-    gear_coords = list(filter(lambda s: symbols[s] == "*", symbols))
     for coords, num in numbers.items():
         neighborset = neighbors(coords)
-        for g in gear_coords:
+        for g in filter(lambda s: symbols[s] == "*", symbols):
             if g in neighborset:
                 gear_ratios[g].append(num)
     return sum(
