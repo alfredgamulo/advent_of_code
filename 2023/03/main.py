@@ -19,12 +19,11 @@ def parse(lines):
 def neighbors(span):
     adjacentset = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]
     neighborset = set()
-    x = span[0][0]
     for y in range(span[0][1], span[1][1]):
         for a in adjacentset:
             if a[0] == 0 and y + a[1] in range(span[0][1], span[1][1]):
                 continue
-            neighborset.add(((x + a[0], y + a[1])))
+            neighborset.add(((span[0][0] + a[0], y + a[1])))
     return neighborset
 
 
