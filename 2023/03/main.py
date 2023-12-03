@@ -37,10 +37,7 @@ def solve(numbers, symbols):
         if intersection := gear_coords.intersection(neighborset):
             gear_ratios[tuple(intersection)].append(num)
 
-    part2 = sum(
-        prod(gear_ratios[gear])
-        for gear in filter(lambda g: len(gear_ratios[g]) == 2, gear_ratios)
-    )
+    part2 = sum(prod(ratios) for ratios in gear_ratios.values() if len(ratios) == 2)
     return part1, part2
 
 
