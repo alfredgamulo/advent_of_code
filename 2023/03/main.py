@@ -31,14 +31,13 @@ def neighbors(span):
 def solve(numbers, symbols):
     part1 = 0
     gear_ratios = defaultdict(list)
-    gear_coords = list(filter(lambda s: symbols[s] == "*", symbols))
+    gear_coords = set(filter(lambda s: symbols[s] == "*", symbols))
     for span, num in numbers.items():
         neighborset = neighbors(span)
-        if any(n in symbols.keys() for n in neighborset):
-            part1 += num
-        for g in gear_coords:
-            if g in neighborset:
-                gear_ratios[g].append(num)
+        part1 += num * any(n in symbols.keys() for n in neighborset)
+        if intersection := gear_coords.intersection(neighborset):
+            gear_ratios[tuple(intersection)].append(num)
+
     part2 = sum(
         prod(gear_ratios[gear])
         for gear in filter(lambda g: len(gear_ratios[g]) == 2, gear_ratios)
