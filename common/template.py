@@ -8,15 +8,8 @@ from contextlib import suppress
 from dataclasses import dataclass
 from functools import cache, cmp_to_key, reduce
 from io import StringIO
-from itertools import (
-    chain,
-    combinations,
-    count,
-    cycle,
-    permutations,
-    product,
-    zip_longest,
-)
+from itertools import permutations  # noqa
+from itertools import chain, combinations, count, cycle, product, zip_longest
 from math import ceil, floor, prod, sqrt
 from pathlib import Path
 from pprint import PrettyPrinter
