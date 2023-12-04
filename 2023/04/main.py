@@ -17,13 +17,13 @@ def solve(cards):
 
 
 if __name__ == "__main__":
-    cards = [
+    cards = (
         map(
             lambda card: set(re.findall("(\\d+)", card)),
             line.split(":")[1].split("|"),
         )
         for line in sys.stdin.read().splitlines()
-    ]
+    )
     part1, part2 = solve(cards)
     print("Part 1:", part1)
     print("Part 2:", part2)
