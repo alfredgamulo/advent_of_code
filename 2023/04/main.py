@@ -13,7 +13,6 @@ def solve(cards):
         part2 += (instances := multipliers[id] + 1)
         for future in range(1, matches + 1):
             multipliers[id + future] += instances
-
     return part1, part2
 
 
