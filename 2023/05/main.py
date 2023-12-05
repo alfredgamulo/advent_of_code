@@ -11,8 +11,7 @@ def part1(seeds, maps):
         for mapping in maps:
             for m in mapping:
                 if cursor in m["src"]:
-                    diff = cursor - m["src"][0]
-                    cursor = m["dst"][diff]
+                    cursor = m["dst"][cursor - m["src"][0]]
                     break
         location = min(location, cursor)
     return location
@@ -20,16 +19,15 @@ def part1(seeds, maps):
 
 def part2(seeds, maps):
     seed_range = []
-    for s in grouper(seeds, 2):
-        seed_range.append((range(s[0], s[0] + s[1])))
+    for start, end in grouper(seeds, 2):
+        seed_range.append((range(start, start + end)))
 
     for location in count():
         cursor = location
         for mapping in maps[-1::-1]:
             for m in mapping:
                 if cursor in m["dst"]:
-                    diff = cursor - m["dst"][0]
-                    cursor = m["src"][diff]
+                    cursor = m["src"][cursor - m["dst"][0]]
                     break
         if any(cursor in s for s in seed_range):
             return location
@@ -37,7 +35,6 @@ def part2(seeds, maps):
 
 if __name__ == "__main__":
     groups = sys.stdin.read().split("\n\n")
-
     seeds = list(map(int, groups[0].split(":")[1].split()))
     maps = []
     for group in groups[1:]:
@@ -51,6 +48,5 @@ if __name__ == "__main__":
                 }
             )
         maps.append(ranges)
-
     print("Part 1:", part1(seeds, maps))
     print("Part 2:", part2(seeds, maps))
