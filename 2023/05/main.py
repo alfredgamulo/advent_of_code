@@ -16,16 +16,16 @@ def loop(maps, cursor, src, dst):
 
 def part1(seeds, maps):
     location = inf
-    for cursor in seeds:
-        location = min(location, loop(maps, cursor, "src", "dst"))
+    for seed in seeds:
+        location = min(location, loop(maps, seed, "src", "dst"))
     return location
 
 
 def part2(seeds, maps):
-    seed_range = [range(start, start + end) for start, end in grouper(seeds, 2)]
+    seed_ranges = [range(start, start + end) for start, end in grouper(seeds, 2)]
     for location in count():
-        cursor = loop(maps[-1::-1], location, "dst", "src")
-        if any(cursor in s for s in seed_range):
+        seed = loop(maps[-1::-1], location, "dst", "src")
+        if any(seed in sr for sr in seed_ranges):
             return location
 
 
