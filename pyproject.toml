@@ -5,7 +5,7 @@ description = ""
 authors = ["Alfred Gamulo"]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.12"
 requests = "^2.26.0"
 beautifulsoup4 = "^4.10.0"
 rich = "^10.16.1"

@@ -1,15 +1,13 @@
 import sys
-from itertools import count
+from itertools import batched, count
 from math import inf
-
-from more_itertools import grouper
 
 
 def loop(maps, cursor, src, dst):
     for mapping in maps:
         for m in mapping:
-            if cursor in m[src]:
-                cursor = m[dst][cursor - m[src][0]]
+            if m[src][0] <= cursor < m[src][1]:
+                cursor = m[dst][0] + cursor - m[src][0]
                 break
     return cursor
 
@@ -22,10 +20,10 @@ def part1(seeds, maps):
 
 
 def part2(seeds, maps):
-    seed_ranges = [range(start, start + end) for start, end in grouper(seeds, 2)]
+    seed_ranges = ((start, start + end) for start, end in batched(seeds, 2))
     for location in count():
         seed = loop(maps[-1::-1], location, "dst", "src")
-        if any(seed in sr for sr in seed_ranges):
+        if any(start <= seed < end for start, end in seed_ranges):
             return location
 
 
@@ -39,8 +37,8 @@ if __name__ == "__main__":
             dst, src, rng = map(int, g.split())
             ranges.append(
                 {
-                    "src": range(src, src + rng),
-                    "dst": range(dst, dst + rng),
+                    "src": (src, src + rng),
+                    "dst": (dst, dst + rng),
                 }
             )
         maps.append(ranges)
