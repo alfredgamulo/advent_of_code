@@ -5,27 +5,26 @@ from math import inf
 from more_itertools import grouper
 
 
+def loop(maps, cursor, src, dst):
+    for mapping in maps:
+        for m in mapping:
+            if cursor in m[src]:
+                cursor = m[dst][cursor - m[src][0]]
+                break
+    return cursor
+
+
 def part1(seeds, maps):
     location = inf
     for cursor in seeds:
-        for mapping in maps:
-            for m in mapping:
-                if cursor in m["src"]:
-                    cursor = m["dst"][cursor - m["src"][0]]
-                    break
-        location = min(location, cursor)
+        location = min(location, loop(maps, cursor, "src", "dst"))
     return location
 
 
 def part2(seeds, maps):
     seed_range = [range(start, start + end) for start, end in grouper(seeds, 2)]
     for location in count():
-        cursor = location
-        for mapping in maps[-1::-1]:
-            for m in mapping:
-                if cursor in m["dst"]:
-                    cursor = m["src"][cursor - m["dst"][0]]
-                    break
+        cursor = loop(maps[-1::-1], location, "dst", "src")
         if any(cursor in s for s in seed_range):
             return location
 
