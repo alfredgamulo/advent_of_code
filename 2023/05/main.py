@@ -18,10 +18,7 @@ def part1(seeds, maps):
 
 
 def part2(seeds, maps):
-    seed_range = []
-    for start, end in grouper(seeds, 2):
-        seed_range.append((range(start, start + end)))
-
+    seed_range = [range(start, start + end) for start, end in grouper(seeds, 2)]
     for location in count():
         cursor = location
         for mapping in maps[-1::-1]:
