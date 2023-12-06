@@ -1,15 +1,13 @@
 import re
 import sys
+from math import prod
 
 
 def solve(times, dists):
-    total = 1
-    for time, dist in zip(times, dists):
-        scores = []
-        for seconds in range(time + 1):
-            scores.append(seconds * (time - seconds))
-        total *= sum(s > dist for s in scores)
-    return total
+    return prod(
+        sum(seconds * (time - seconds) > dist for seconds in range(time + 1))
+        for time, dist in zip(times, dists)
+    )
 
 
 def part1(lines):
