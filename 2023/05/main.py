@@ -20,9 +20,9 @@ def part1(seeds, maps):
 
 
 def part2(seeds, maps):
-    seed_ranges = ((start, start + end) for start, end in batched(seeds, 2))
+    seed_ranges = [(start, start + end) for start, end in batched(seeds, 2)]
     for location in count():
-        seed = loop(maps[-1::-1], location, "dst", "src")
+        seed = loop(maps[::-1], location, "dst", "src")
         if any(start <= seed < end for start, end in seed_ranges):
             return location
 
