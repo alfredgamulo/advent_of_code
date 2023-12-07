@@ -3,18 +3,14 @@ from collections import Counter
 from functools import cmp_to_key
 
 
-def val(left, right):
-    return (left - right) // abs(left - right)
-
-
 def cmp(left, lcount, right, rcount, order):
     if len(lcount) == len(rcount):
         if lcount.most_common()[0][1] == rcount.most_common()[0][1]:
             for lchar, rchar in zip(left, right):
                 if lchar != rchar:
-                    return val(order.index(rchar), order.index(lchar))
-        return val(lcount.most_common()[0][1], rcount.most_common()[0][1])
-    return val(len(rcount), len(lcount))
+                    return order.index(rchar) - order.index(lchar)
+        return lcount.most_common()[0][1] - rcount.most_common()[0][1]
+    return len(rcount) - len(lcount)
 
 
 def cmp_wrapper1(left, right):
