@@ -30,10 +30,13 @@ if __name__ == "__main__":
         network[nodes[0]] = (nodes[1], nodes[2])
 
     part1 = solve(instructions, network, "AAA", "ZZZ")
-
-    part2 = []
-    for cursor in [node for node in network if node.endswith("A")]:
-        part2.append(solve(instructions, network, cursor, "..Z"))
+    part2 = reduce(
+        lcm,
+        (
+            solve(instructions, network, cursor, "..Z")
+            for cursor in [node for node in network if node.endswith("A")]
+        ),
+    )
 
     print("Part 1:", part1)
-    print("Part 2:", reduce(lcm, part2))
+    print("Part 2:", part2)
