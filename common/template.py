@@ -24,8 +24,7 @@ def part2():
 
 
 if __name__ == "__main__":
-    with open(sys.argv[1]) as f:
-        lines = f.read().splitlines()
+    lines = Path(sys.argv[1]).read_text().splitlines()
 
     print("Part 1:", part1(lines))
     print("Part 2:", part2())

@@ -1,8 +1,8 @@
 import re
 import sys
-from functools import reduce
 from itertools import cycle
 from math import lcm
+from pathlib import Path
 
 
 def solve(instructions, network, cursor, end):
@@ -13,20 +13,18 @@ def solve(instructions, network, cursor, end):
 
 
 if __name__ == "__main__":
-    with open(sys.argv[1]) as f:
-        instructions, maps = f.read().split("\n\n")
+    instructions, maps = Path(sys.argv[1]).read_text().split("\n\n")
     network = {}
     for m in maps.splitlines():
         nodes = re.findall("[0-9A-Z]+", m)
         network[nodes[0]] = (nodes[1], nodes[2])
 
     part1 = solve(instructions, network, "AAA", "ZZZ")
-    part2 = reduce(
-        lcm,
-        (
+    part2 = lcm(
+        *[
             solve(instructions, network, cursor, "..Z")
             for cursor in [node for node in network if node.endswith("A")]
-        ),
+        ]
     )
 
     print("Part 1:", part1)
