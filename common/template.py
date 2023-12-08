@@ -10,7 +10,7 @@ from functools import cache, cmp_to_key, reduce
 from io import StringIO
 from itertools import permutations  # noqa
 from itertools import batched, chain, combinations, count, cycle, product, zip_longest
-from math import ceil, floor, prod, sqrt
+from math import ceil, floor, lcm, prod, sqrt
 from pathlib import Path
 from pprint import PrettyPrinter
 

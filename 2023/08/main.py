@@ -2,6 +2,7 @@ import re
 import sys
 from functools import reduce
 from itertools import cycle
+from math import lcm
 
 
 def solve(instructions, network, cursor, end):
@@ -9,16 +10,6 @@ def solve(instructions, network, cursor, end):
         cursor = network[cursor]["LR".index(instruction)]
         if re.match(end, cursor):
             return step
-
-
-def gcd(a, b):
-    while b:
-        a, b = b, a % b
-    return a
-
-
-def lcm(a, b):
-    return a * b // gcd(a, b)
 
 
 if __name__ == "__main__":
