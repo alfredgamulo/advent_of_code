@@ -34,7 +34,7 @@ sample url:
 run day input="input":
     #!/usr/bin/env bash
     cd {{year}}/{{day}}
-    (time poetry run python main.py < {{input}}) 2>&1 | tee output
+    (time poetry run python main.py {{input}}) |& tee output
 
 lint day:
     poetry run black {{year}}/{{day}}/.
