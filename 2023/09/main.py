@@ -5,8 +5,7 @@ from pathlib import Path
 def solve(sequence):
     if not any(sequence):
         return 0
-    new_sequence = list(s2 - s1 for s1, s2 in zip(sequence, sequence[1:]))
-    new_number = solve(new_sequence)
+    new_number = solve(list(s2 - s1 for s1, s2 in zip(sequence, sequence[1:])))
     return sequence[-1] + new_number
 
 
