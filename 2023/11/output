@@ -1,17 +1,6 @@
-[3, 7]
-[2, 5, 8]
-Traceback (most recent call last):
-  File "/home/slicer/code/advent_of_code/2023/11/main.py", line 41, in <module>
-    print("Part 1:", solve(lines, 2))
-                     ^^^^^^^^^^^^^^^
-  File "/home/slicer/code/advent_of_code/2023/11/main.py", line 36, in solve
-    return sum(abs(a - b) for a, b in combinations(galaxies, 2))
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/slicer/code/advent_of_code/2023/11/main.py", line 36, in <genexpr>
-    return sum(abs(a - b) for a, b in combinations(galaxies, 2))
-                   ~~^~~
-TypeError: unsupported operand type(s) for -: 'tuple' and 'tuple'
+Part 1: 9947476
+Part 2: 519939907614
 
-real	0m0.241s
-user	0m0.231s
-sys	0m0.010s
+real	0m0.569s
+user	0m0.420s
+sys	0m0.092s
