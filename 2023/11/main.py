@@ -1,5 +1,5 @@
 import sys
-from itertools import batched, combinations, product
+from itertools import combinations, product
 from pathlib import Path
 
 
