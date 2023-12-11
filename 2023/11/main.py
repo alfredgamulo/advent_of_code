@@ -15,41 +15,28 @@ from pathlib import Path
 from pprint import PrettyPrinter
 
 
-def parse1(lines):
-    pass1 = []
-    for line in lines:
-        pass1.append(deque(line))
-        if "#" not in line:
-            pass1.append(deque(line))
-    rotated = list(zip(*pass1[::-1]))
-    pass2 = []
-    for line in rotated:
-        pass2.append(deque(line))
-        if "#" not in line:
-            pass2.append(deque(line))
-    graph = list(reversed(list(zip(*pass2))))
-    galaxies = []
-    for x, y in product(range(len(graph)), range(len(graph[0]))):
-        if graph[x][y] == "#":
-            galaxies.append((x, y))
-    return galaxies
-
-
-def part1(lines):
-    galaxies = parse1(lines)
-    n = len(galaxies)
-    distances = 0
-    for i in range(n):
-        for j in range(i + 1, n):
-            distances += sum(abs(a - b) for a, b in zip(galaxies[i], galaxies[j]))
-    return distances
-
-
-def part2():
-    ...
+def solve(graph, expansion):
+    galaxies = [
+        (x, y)
+        for x, y in product(range(len(graph)), range(len(graph[0])))
+        if graph[x][y] == "#"
+    ]
+    xs = [x for x, line in enumerate(graph) if "#" not in line]
+    graph = list(zip(*graph[::-1]))
+    ys = [x for x, line in enumerate(graph) if "#" not in line]
+    print(xs)
+    print(ys)
+    galaxies = [
+        (
+            (x + (next((i for i, v in enumerate(xs) if v > x), 0) * expansion)),
+            (y + (next((i for i, v in enumerate(ys) if v > y), 0) * expansion)),
+        )
+        for x, y in galaxies
+    ]
+    return sum(abs(a - b) for a, b in combinations(galaxies, 2))
 
 
 if __name__ == "__main__":
     lines = Path(sys.argv[1]).read_text().splitlines()
-    print("Part 1:", part1(lines))
-    print("Part 2:", part2())
+    print("Part 1:", solve(lines, 2))
+    # print("Part 2:", solve(lines, 1000000))
