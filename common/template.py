@@ -15,16 +15,16 @@ from pathlib import Path
 from pprint import PrettyPrinter
 
 
-def part1(lines):
-    print(lines)
+def part1():
+    ...
 
 
 def part2():
-    pass
+    ...
 
 
 if __name__ == "__main__":
     lines = Path(sys.argv[1]).read_text().splitlines()
-
-    print("Part 1:", part1(lines))
+    print(lines)
+    print("Part 1:", part1())
     print("Part 2:", part2())
