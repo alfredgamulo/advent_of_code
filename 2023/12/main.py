@@ -1,7 +1,5 @@
 import sys
-from contextlib import suppress
 from functools import cache
-from itertools import groupby, product
 from pathlib import Path
 
 
@@ -10,15 +8,7 @@ def part1(lines):
     for line in lines:
         arrangement, information = line.split()
         information = tuple(map(int, information.split(",")))
-        # total += sum(
-        #     information
-        #     == tuple(
-        #         len(list(group)) for spring, group in groupby(pattern) if spring == "#"
-        #     )
-        #     for pattern in product(*(a == "?" and "#." or a for a in arrangement))
-        # )
         total += recurse(arrangement, information, 0)
-
     return total
 
 
@@ -28,9 +18,8 @@ def recurse(line, numbers, buffer_size):
         return (len(numbers) == 1 and numbers[0] == buffer_size) or (
             not (numbers or buffer_size)
         )
-    with suppress(IndexError):
-        if numbers[0] < buffer_size:
-            return 0
+    if numbers and numbers[0] < buffer_size:
+        return 0
     n = 0
     if line[0] in "#?":
         n += recurse(line[1:], numbers, buffer_size + 1)
@@ -50,7 +39,6 @@ def part2(lines):
         information = list(map(int, information.split(",")))
         information = tuple(information * 5)
         total += recurse(arrangement, information, 0)
-
     return total
 
 
