@@ -1,22 +1,8 @@
 import sys
+from contextlib import suppress
 from functools import cache
 from itertools import groupby, product
 from pathlib import Path
-
-
-def get_patterns(arrangement):
-    return set(product(*(a == "?" and "#." or a for a in arrangement)))
-
-
-@cache
-def matches(arrangement, information):
-    return sum(
-        information
-        == tuple(
-            len(list(group)) for spring, group in groupby(pattern) if spring == "#"
-        )
-        for pattern in get_patterns(arrangement)
-    )
 
 
 def part1(lines):
@@ -24,9 +10,36 @@ def part1(lines):
     for line in lines:
         arrangement, information = line.split()
         information = tuple(map(int, information.split(",")))
-        total += matches(arrangement, information)
+        # total += sum(
+        #     information
+        #     == tuple(
+        #         len(list(group)) for spring, group in groupby(pattern) if spring == "#"
+        #     )
+        #     for pattern in product(*(a == "?" and "#." or a for a in arrangement))
+        # )
+        total += recurse(arrangement, information, 0)
 
     return total
+
+
+@cache
+def recurse(line, numbers, buffer_size):
+    if not line:
+        return (len(numbers) == 1 and numbers[0] == buffer_size) or (
+            not (numbers or buffer_size)
+        )
+    with suppress(IndexError):
+        if numbers[0] < buffer_size:
+            return 0
+    n = 0
+    if line[0] in "#?":
+        n += recurse(line[1:], numbers, buffer_size + 1)
+    if line[0] in ".?":
+        if buffer_size == 0:
+            n += recurse(line[1:], numbers, 0)
+        elif numbers and numbers[0] == buffer_size:
+            n += recurse(line[1:], numbers[1:], 0)
+    return n
 
 
 def part2(lines):
@@ -36,7 +49,7 @@ def part2(lines):
         arrangement = "?".join([arrangement] * 5)
         information = list(map(int, information.split(",")))
         information = tuple(information * 5)
-        # total += matches(arrangement, information)
+        total += recurse(arrangement, information, 0)
 
     return total
 
