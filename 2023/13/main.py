@@ -13,11 +13,8 @@ def find(pattern, tolerance=0):
     return False
 
 
-def solve(patterns, tolerance=0):
-    return sum(
-        (100 * find(pattern, tolerance)) or find(list(zip(*pattern)), tolerance)
-        for pattern in patterns
-    )
+def solve(patterns, t=0):
+    return sum((100 * find(p, t)) or find(list(zip(*p)), t) for p in patterns)
 
 
 if __name__ == "__main__":
