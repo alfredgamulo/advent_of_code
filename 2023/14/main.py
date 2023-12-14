@@ -1,59 +1,56 @@
-import copy
-import os
-import re
-import string
 import sys
-from collections import Counter, defaultdict, deque, namedtuple
-from contextlib import suppress
-from dataclasses import dataclass
-from functools import cache, cmp_to_key, reduce
-from io import StringIO
-from itertools import (
-    batched,
-    chain,
-    combinations,
-    count,
-    groupby,
-    permutations,
-    product,
-    zip_longest,
-)
-from math import ceil, floor, lcm, prod, sqrt
+from functools import cache
+from itertools import product
 from pathlib import Path
-from pprint import PrettyPrinter
 
 
-def tumble(platform):
-    total = 0
-    for x, p in enumerate(platform):
-        wall = len(platform) + 1
-        for i in re.finditer("#|O", "".join(p)):
-            if i.group() == "#":
-                wall = len(platform) - i.span()[0]
-            if i.group() == "O":
-                wall -= 1
-                total += wall
-                platform[x][i.span()[0]] = "."
-                platform[x][len(platform) - wall] = "O"
-    return total, platform
+def parse(lines):
+    rocks, walls = set(), []
+    for x, line in enumerate(lines):
+        for y, l in enumerate(line):
+            if l == "O":
+                rocks.add((x, y))
+            elif l == "#":
+                walls.append((x, y))
+    walls.extend((x, y) for x, y in product([-1, len(lines[0])], range(len(lines))))
+    walls.extend((x, y) for x, y in product(range(len(lines[0])), [-1, len(lines[0])]))
+    return frozenset(rocks), frozenset(walls)
 
 
-def part1(platform):
-    total, platform = tumble(platform)
-    return total
+@cache
+def tilt(rocks, walls, roll):
+    rocks = set(rocks)
+    moved = True
+    while moved:
+        moved = False
+        tmp_rocks = set()
+        while rocks and (pop := rocks.pop()):
+            x, y = pop[0] + roll[0], pop[1] + roll[1]
+            if (x, y) not in walls and (x, y) not in rocks and (x, y) not in tmp_rocks:
+                tmp_rocks.add((x, y))
+                moved = True
+            else:
+                tmp_rocks.add(pop)
+        rocks = tmp_rocks
+    return frozenset(rocks)
 
 
-def part2(platform):
-    load = 0
-    for i in range(1_000_000_000):
-        load, platform = tumble(platform)
-        platform = [deque(list((item)[::-1])) for item in zip(*platform)]
-        if (i % 4) == 3:
-            print(i, load)
-    return load
+def part1(rocks, walls):
+    rocks = tilt(rocks, walls, (-1, 0))
+    return sum(len(lines) - r[0] for r in rocks)
+
+
+def part2(rocks, walls):
+    loads = []
+    for _ in range(1_000):
+        for roll in [(-1, 0), (0, -1), (1, 0), (0, 1)]:
+            rocks = tilt(rocks, walls, roll)
+        loads.append(sum(len(lines) - r[0] for r in rocks))
+    return loads[-1]
 
 
 if __name__ == "__main__":
     lines = Path(sys.argv[1]).read_text().splitlines()
-    print("Part 1:", part1([deque(item) for item in zip(*lines)][::-1]))
-    print("Part 2:", part2([deque(item) for item in zip(*lines)][::-1]))
+    rocks, walls = parse(lines)
+    print("Part 1:", part1(rocks, walls))
+    print("Part 2:", part2(rocks, walls))
