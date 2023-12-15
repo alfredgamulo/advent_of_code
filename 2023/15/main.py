@@ -19,11 +19,11 @@ def part2(sequence):
     boxes = defaultdict(OrderedDict)
     for label, lens in map(lambda s: re.split("=|-", s), sequence):
         box = hash(label)
-        if lens:
+        with suppress(ValueError):
             boxes[box][label] = int(lens)
-        else:
-            with suppress(KeyError):
-                del boxes[box][label]
+            continue
+        with suppress(KeyError):
+            del boxes[box][label]
 
     return sum(
         (box + 1) * slot * length
