@@ -17,8 +17,7 @@ def part1(sequence):
 
 def part2(sequence):
     boxes = defaultdict(OrderedDict)
-    for s in sequence:
-        label, lens = re.split("=|-", s)
+    for label, lens in map(lambda s: re.split("=|-", s), sequence):
         box = hash(label)
         if lens:
             boxes[box][label] = int(lens)
