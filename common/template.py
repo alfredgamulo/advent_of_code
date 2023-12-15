@@ -3,7 +3,7 @@ import os
 import re
 import string
 import sys
-from collections import Counter, defaultdict, deque, namedtuple
+from collections import Counter, OrderedDict, defaultdict, deque, namedtuple
 from contextlib import suppress
 from dataclasses import dataclass
 from functools import cache, cmp_to_key, reduce
