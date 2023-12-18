@@ -28,5 +28,5 @@ def part2():
 if __name__ == "__main__":
     lines = Path(sys.argv[1]).read_text().splitlines()
     dirs = {"R": (0, 1), "D": (1, 0), "L": (0, -1), "U": (-1, 0)}
-    print("Part 1:", part1())
-    print("Part 2:", part2())
+    for p in "12":
+        print(f"Part {p}:", locals()[f"part{p}"]())
