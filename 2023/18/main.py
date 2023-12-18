@@ -1,10 +1,9 @@
 import sys
-from collections import deque
 from pathlib import Path
 
 
 def solve(func):
-    curr, trench, perimeter = (0, 0), deque(), 0
+    curr, trench, perimeter = (0, 0), [], 0
     for line in lines:
         d, v = func(line)
         trench.append((curr, curr := (curr[0] + d[0] * v, curr[1] + d[1] * v)))
