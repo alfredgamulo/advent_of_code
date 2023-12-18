@@ -1,18 +1,6 @@
-----> (0, 0)
-> /Users/slicer/code/advent_of_code/2023/17/main.py(30)solve()
--> heats.append(int(grid[x][y]) + solve((nx, ny), dir, straight_moves + 1 if dir == prev_dir else 0, count +1))
-(Pdb) 'D'
-(Pdb) 1
-(Pdb) 0
-(Pdb) ----> (1, 0)
-> /Users/slicer/code/advent_of_code/2023/17/main.py(30)solve()
--> heats.append(int(grid[x][y]) + solve((nx, ny), dir, straight_moves + 1 if dir == prev_dir else 0, count +1))
-(Pdb) 0
-(Pdb) 0
-(Pdb) ----> (0, 0)
-> /Users/slicer/code/advent_of_code/2023/17/main.py(30)solve()
--> heats.append(int(grid[x][y]) + solve((nx, ny), dir, straight_moves + 1 if dir == prev_dir else 0, count +1))
-(Pdb) -1
-(Pdb) 0
-(Pdb) False
-(Pdb) 
+Part 1: 1065
+Part 2: 1249
+
+real	0m1.542s
+user	0m1.532s
+sys	0m0.010s
