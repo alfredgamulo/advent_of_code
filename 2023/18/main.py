@@ -21,7 +21,7 @@ def part1():
 def part2():
     return solve(
         lambda line: (h := line.split()[-1][2:-1])
-        and (list(dirs.items())[int(h[-1])][1], int(h[:-1], 16))
+        and (dirs["RDLU"[int(h[-1])]], int(h[:-1], 16))
     )
 
 
