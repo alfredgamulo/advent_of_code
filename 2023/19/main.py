@@ -22,9 +22,7 @@ def part1():
                         consider = outcome
                         break
                 consider = w
-        [[], accepted]["RA".index(consider)].append(
-            sum([namespace["x"], namespace["m"], namespace["a"], namespace["s"]])
-        )
+        [[], accepted]["RA".index(consider)].append(sum([namespace[c] for c in "xmas"]))
     return sum(accepted)
 
 
