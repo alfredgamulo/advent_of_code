@@ -1,26 +1,10 @@
 import copy
-import os
 import re
-import string
 import sys
-from collections import Counter, OrderedDict, defaultdict, deque, namedtuple
+from collections import deque
 from contextlib import suppress
-from dataclasses import dataclass
-from functools import cache, cmp_to_key, reduce
-from io import StringIO
-from itertools import (
-    batched,
-    chain,
-    combinations,
-    count,
-    groupby,
-    permutations,
-    product,
-    zip_longest,
-)
-from math import ceil, floor, lcm, prod, sqrt
+from math import prod
 from pathlib import Path
-from pprint import PrettyPrinter
 
 
 def part1():
@@ -45,7 +29,30 @@ def part1():
 
 
 def part2():
-    ...
+    total = 0
+    dq = deque((("in", [[1, 4001], [1, 4001], [1, 4001], [1, 4001]]),))
+    while dq and (search := dq.popleft()):
+        consider, xmas = search
+        if consider == "A":
+            total += prod(h - l for l, h in xmas)
+            continue
+        if consider == "R":
+            continue
+        for w in rules[consider]:
+            with suppress(ValueError):
+                condition, outcome = w.split(":")
+                part, comparator, number = condition[0], condition[1], condition[2:]
+                nxmas = copy.deepcopy(xmas)
+                update = [
+                    max(xmas["xmas".index(part)]["><".index(comparator)], int(number) + 1),
+                    min(xmas["xmas".index(part)]["><".index(comparator)], int(number)),
+                ]["><".index(comparator)]
+                nxmas["xmas".index(part)]["><".index(comparator)] = update
+                xmas["xmas".index(part)]["<>".index(comparator)] = update
+                dq.append((outcome, nxmas))
+                continue
+            dq.append((w, xmas))
+    return total
 
 
 if __name__ == "__main__":
