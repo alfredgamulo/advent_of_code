@@ -31,7 +31,7 @@ def part2():
     dq = deque((("in", [[1, 4001], [1, 4001], [1, 4001], [1, 4001]]),))
     while dq and (search := dq.popleft()):
         consider, xmas = search
-        if consider in "RA":
+        with suppress(ValueError):
             total += [0, prod(h - l for l, h in xmas)]["RA".index(consider)]
             continue
         for w in rules[consider]:
