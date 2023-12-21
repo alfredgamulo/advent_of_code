@@ -28,7 +28,6 @@ def parse(lines):
 def solve(modules, button_presses, track=None):
     lows, highs = 0, 0
     for i in range(1, button_presses + 1):
-        lows += 1
         pulses = deque(["broadcaster"])
         while pulses and (cursor := pulses.popleft()) and (module := modules[cursor]):
             match module:
@@ -53,7 +52,7 @@ def solve(modules, button_presses, track=None):
                         pulses.append(destination)
                 except KeyError:
                     ...  # rx/output
-    return lows * highs
+    return (button_presses + lows) * highs
 
 
 def part1():
