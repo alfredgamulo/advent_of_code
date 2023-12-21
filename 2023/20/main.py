@@ -37,9 +37,6 @@ def solve(modules, button_presses, track=None):
                     signal = [1, 0][all(module[0].values())]
                 case (list(),):  # broadcaster
                     signal = 0
-            with suppress(TypeError, KeyError):
-                if not track[cursor] and signal:
-                    track[cursor] = i
             for destination in module[-1]:
                 highs += signal
                 lows += not signal
@@ -52,6 +49,9 @@ def solve(modules, button_presses, track=None):
                         pulses.append(destination)
                 except KeyError:
                     ...  # rx/output
+            with suppress(TypeError, KeyError):
+                if not track[cursor] and signal:
+                    track[cursor] = i
     return (button_presses + lows) * highs
 
 
