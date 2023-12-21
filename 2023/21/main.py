@@ -4,25 +4,6 @@ from itertools import product
 from pathlib import Path
 
 
-def part1(limit):
-    neighbors = ((0, 1), (0, -1), (1, 0), (-1, 0))
-    possibilities = deque(((0, start),))
-    visited = set([start])
-    answer = 0
-    while possibilities and (check := possibilities.popleft()):
-        steps, position = check
-        if steps > limit:
-            continue
-        if steps % 2 == 0:
-            answer += 1
-        for n in neighbors:
-            dr, dc = position[0] + n[0], position[1] + n[1]
-            if (dr, dc) not in visited and (dr, dc) in plots:
-                possibilities.append((steps + 1, (dr, dc)))
-                visited.add((dr, dc))
-    return answer
-
-
 def expand(plots, boundaries):
     new = set()
     neighbors = list(product([0, -1, 1], repeat=2))
@@ -33,21 +14,19 @@ def expand(plots, boundaries):
     )
     for r, c in plots:
         new.update(
-            set(
-                [
-                    (
-                        r + n[0] * multiplier * len(lines),
-                        c + n[1] * multiplier * len(lines),
-                    )
-                    for n in neighbors
-                ]
-            )
+            [
+                (
+                    r + n[0] * multiplier * len(lines),
+                    c + n[1] * multiplier * len(lines),
+                )
+                for n in neighbors
+            ]
         )
     plots.update(new)
     return plots, boundaries
 
 
-def part2(limit, plots, boundaries):
+def solve(limit, plots, boundaries):
     neighbors = ((0, 1), (0, -1), (1, 0), (-1, 0))
     possibilities = deque(((0, start),))
     visited = set([start])
@@ -75,5 +54,5 @@ if __name__ == "__main__":
         for c, l in enumerate(line):
             if l != "#":
                 plots.add((r, c))
-    print("Part 1:", part1(6))
-    print("Part 2:", part2(5000, plots, (0, len(lines))))
+    print("Part 1:", solve(6, plots, (0, len(lines))))
+    print("Part 2:", solve(1000, plots, (0, len(lines))))
