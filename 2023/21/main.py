@@ -15,7 +15,7 @@ def solve(limit):
         parity[steps % 2] += 1
         for n in neighbors:
             dr, dc = position[0] + n[0], position[1] + n[1]
-            if (dr, dc) not in visited and (dr % len(lines), dc % len(lines)) in plots:
+            if (dr, dc) not in visited and (dr, dc) in plots:
                 possibilities.append((steps + 1, (dr, dc)))
                 visited.add((dr, dc))
     return parity
@@ -28,21 +28,17 @@ if __name__ == "__main__":
         for c, l in enumerate(line):
             if l != "#":
                 plots.add((r, c))
+
     print("Part 1:", solve(64)[0])
 
     # math required summarized here: https://github.com/villuna/aoc23/wiki/A-Geometric-solution-to-advent-of-code-2023,-day-21
-    x = 200
-    even_full, odd_full = solve(x)  # any number of steps enough to saturate
-    even_inner_corner, odd_inner_corner = solve(
-        start[0]
-    )  # the steps for the inner diamond, the distance from S to the edge
-    even_corners, odd_corners = (
-        even_full - even_inner_corner,
-        odd_full - odd_inner_corner,
-    )  # outer corners is full minus inner diamond
-    n = (26501365 - (len(lines) // 2)) // len(
-        lines
-    )  # n is the number of grids out we will go
+    even_full, odd_full = solve(200)  # even & odd tiles of a fully saturated square
+    even_diamond, odd_diamond = solve(start[0])  # a saturated diamond
+    even_corners, odd_corners = (  # outer corners is full minus inner diamond
+        even_full - even_diamond,
+        odd_full - odd_diamond,
+    )
+    n = (26501365 - start[0]) // len(lines)  # n is the number of grids out we will go
     p2 = (
         ((n + 1) ** 2 * odd_full)
         + (n**2 * even_full)
