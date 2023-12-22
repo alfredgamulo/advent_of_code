@@ -31,6 +31,11 @@ sample url:
     soup = BeautifulSoup(page, "html.parser")
     print(soup.find('pre').find('code').contents[0].strip())
 
+debug day input="input":
+    #!/usr/bin/env bash
+    cd {{year}}/{{day}}
+    (time poetry run python main.py {{input}})
+
 run day input="input":
     #!/usr/bin/env bash
     cd {{year}}/{{day}}

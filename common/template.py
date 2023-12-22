@@ -7,6 +7,7 @@ from collections import Counter, OrderedDict, defaultdict, deque, namedtuple
 from contextlib import suppress
 from dataclasses import dataclass
 from functools import cache, cmp_to_key, reduce
+from heapq import heappop, heappush
 from io import StringIO
 from itertools import (
     batched,

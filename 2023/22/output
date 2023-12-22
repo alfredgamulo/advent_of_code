@@ -1,0 +1,5 @@
+[(['1', '0', '1'],), (['1', '2', '1'],)]
+> /home/slicer/code/advent_of_code/2023/22/main.py(42)<module>()
+-> heappush(
+(Pdb) '1,0,1~1,2,1'
+(Pdb) 
