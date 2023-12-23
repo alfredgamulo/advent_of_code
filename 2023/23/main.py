@@ -25,13 +25,22 @@ from pprint import PrettyPrinter
 
 
 def part1():
-    hikes = [(0, start, set())]
+    hikes = [(0, start, [start])]
     neighbors = ((0, 1), (0, -1), (1, 0), (-1, 0))
+    violation = {(0, 1): "<",(0, -1): ">", (1, 0):"^", (-1, 0):"v"}
+    completes = []
     while hikes:
         steps, cursor, visited = heappop(hikes)
         if cursor == end:
-            return abs(steps)
+            heappush(completes,(steps, cursor, visited))
         for n in neighbors:
+            dr, dc = cursor[0]+n[0], cursor[1]+n[1]
+            if (dr, dc) in slopes and slopes[(dr,dc)] == violation[n]:
+                continue
+            if (dr,dc) in paths and (dr,dc) not in visited:
+                heappush(hikes, (steps-1, (dr, dc), visited + [(dr,dc)]))
+    return abs(heappop(completes)[0])
+
             
 
 
@@ -43,14 +52,10 @@ if __name__ == "__main__":
     lines = Path(sys.argv[1]).read_text().splitlines()
     start, end = (0, 1), (len(lines) - 1, len(lines[0]) - 2)
     paths, slopes = set(), dict()
-    print(start, end)
     for r, c in product(range(len(lines)), repeat=2):
-        if lines[r][c] == ".":
+        if lines[r][c] in ".^>v<":
             paths.add((r, c))
-        elif lines[r][c] in "^>v<":
+        if lines[r][c] in "^>v<":
             slopes[(r, c)] = lines[r][c]
-    print(paths)
-    print(slopes)
-
     print("Part 1:", part1())
     print("Part 2:", part2())
