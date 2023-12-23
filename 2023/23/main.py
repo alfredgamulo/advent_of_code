@@ -1,51 +1,29 @@
-import copy
-import os
-import re
-import string
 import sys
-from collections import Counter, OrderedDict, defaultdict, deque, namedtuple
-from contextlib import suppress
-from dataclasses import dataclass
-from functools import cache, cmp_to_key, reduce
+
 from heapq import heappop, heappush
-from io import StringIO
-from itertools import (
-    batched,
-    chain,
-    combinations,
-    count,
-    groupby,
-    permutations,
-    product,
-    zip_longest,
-)
-from math import ceil, floor, lcm, prod, sqrt
+from itertools import product
 from pathlib import Path
-from pprint import PrettyPrinter
 
 
-def part1():
+def solve(slippery=True):
     hikes = [(0, start, [start])]
     neighbors = ((0, 1), (0, -1), (1, 0), (-1, 0))
-    violation = {(0, 1): "<",(0, -1): ">", (1, 0):"^", (-1, 0):"v"}
+    violation = {(0, 1): "<", (0, -1): ">", (1, 0): "^", (-1, 0): "v"}
+    duplicate = dict()
     completes = []
     while hikes:
-        steps, cursor, visited = heappop(hikes)
+        steps, cursor, history = heappop(hikes)
         if cursor == end:
-            heappush(completes,(steps, cursor, visited))
+            heappush(completes, (steps, cursor, history))
+        if cursor in duplicate and duplicate[cursor] > steps:
+            continue
         for n in neighbors:
-            dr, dc = cursor[0]+n[0], cursor[1]+n[1]
-            if (dr, dc) in slopes and slopes[(dr,dc)] == violation[n]:
+            dr, dc = cursor[0] + n[0], cursor[1] + n[1]
+            if slippery and (dr, dc) in slopes and slopes[(dr, dc)] == violation[n]:
                 continue
-            if (dr,dc) in paths and (dr,dc) not in visited:
-                heappush(hikes, (steps-1, (dr, dc), visited + [(dr,dc)]))
+            if (dr, dc) in paths and (dr, dc) not in history:
+                heappush(hikes, (steps - 1, (dr, dc), history + [(dr, dc)]))
     return abs(heappop(completes)[0])
-
-            
-
-
-def part2():
-    ...
 
 
 if __name__ == "__main__":
@@ -57,5 +35,6 @@ if __name__ == "__main__":
             paths.add((r, c))
         if lines[r][c] in "^>v<":
             slopes[(r, c)] = lines[r][c]
-    print("Part 1:", part1())
-    print("Part 2:", part2())
+
+    print("Part 1:", solve())
+    print("Part 2:", solve(False))
