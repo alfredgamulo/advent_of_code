@@ -6,20 +6,24 @@ from pathlib import Path
 
 
 def solve(slippery=True):
-    hikes = [(0, start, [start])]
+    hikes = [(0, start, set([start]))]
     neighbors = ((0, 1), (0, -1), (1, 0), (-1, 0))
     violation = {(0, 1): "<", (0, -1): ">", (1, 0): "^", (-1, 0): "v"}
     completes = []
+    most = 0
     while hikes:
         steps, cursor, history = heappop(hikes)
         if cursor == end:
+            if not slippery and abs(steps) > most:
+                most = abs(steps)
+                print(most, flush=True)
             heappush(completes, (steps, cursor, history))
         for n in neighbors:
             dr, dc = cursor[0] + n[0], cursor[1] + n[1]
             if slippery and (dr, dc) in slopes and slopes[(dr, dc)] == violation[n]:
                 continue
             if (dr, dc) in paths and (dr, dc) not in history:
-                heappush(hikes, (steps - 1, (dr, dc), history + [(dr, dc)]))
+                heappush(hikes, (steps - 1, (dr, dc), set(list(history) + [(dr, dc)])))
     return abs(heappop(completes)[0])
 
 
