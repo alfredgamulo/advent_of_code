@@ -22,6 +22,7 @@ from itertools import (
 from math import ceil, floor, lcm, prod, sqrt
 from pathlib import Path
 from pprint import PrettyPrinter
+from fractions import Fraction
 
 
 def slope_intercept(x, y, dx, dy):  # return m and b
@@ -75,5 +76,6 @@ if __name__ == "__main__":
         search = (200_000_000_000_000, 400_000_000_000_000)
     else:
         search = (7, 27)
+    print(stones)
     print("Part 1:", part1())
     print("Part 2:", part2())
