@@ -13,14 +13,17 @@ def solve(slippery=True):
     while hikes:
         steps, cursor, history = heappop(hikes)
         while cursor not in junctions:
+            change = False
             for n in neighbors:
                 dr, dc = cursor[0] + n[0], cursor[1] + n[1]
                 if (dr, dc) in paths and (dr, dc) not in history:
+                    change = True
                     steps -= 1
                     history.add((dr, dc))
                     cursor = (dr, dc)
                     break
-            break
+            if not change:
+                break
         if cursor == end:
             if abs(steps) + magic_number > most:
                 most = abs(steps) + magic_number
