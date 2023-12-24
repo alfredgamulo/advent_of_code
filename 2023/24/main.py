@@ -36,11 +36,30 @@ def intersection(m1, b1, m2, b2):
     return x, y
 
 
+def check(origin, velocity, intersect):
+    return not (
+        (velocity > 0 and intersect < origin) or (velocity < 0 and intersect > origin)
+    )
+
+
 def part1():
+    total = 0
     for one, two in combinations(stones, 2):
         x, y = intersection(*one[-1], *two[-1])
-        print("\n====>", one, two)
-        print(x, y)
+        if not (x and y):
+            continue
+        if search[0] <= x <= search[1] and search[0] <= y <= search[1]:
+            if all(
+                check(o, v, i)
+                for o, v, i in [
+                    (one[0], one[3], x),
+                    (one[1], one[4], y),
+                    (two[0], two[3], x),
+                    (two[1], two[4], y),
+                ]
+            ):
+                total += 1
+    return total
 
 
 def part2():
@@ -53,9 +72,8 @@ if __name__ == "__main__":
         x, y, z, dx, dy, dz = map(int, re.findall("-?\\d+", line))
         stones.append([x, y, z, dx, dy, dz, slope_intercept(x, y, dx, dy)])
     if sys.argv[1] == "input":
-        search = (7, 27)
-    else:
         search = (200_000_000_000_000, 400_000_000_000_000)
-    print(stones)
+    else:
+        search = (7, 27)
     print("Part 1:", part1())
     print("Part 2:", part2())
