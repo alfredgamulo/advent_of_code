@@ -10,6 +10,9 @@ rich = "^10.16.1"
 click = "^8.0.3"
 requests = "^2.31.0"
 beautifulsoup4 = "^4.12.2"
+sympy = "^1.12"
+scipy = "^1.11.4"
+z3-solver = "^4.12.4.0"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^4.0.1"

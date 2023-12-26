@@ -1,5 +1,4 @@
 import sys
-from collections import deque
 from contextlib import suppress
 from heapq import heappop, heappush
 from itertools import product
