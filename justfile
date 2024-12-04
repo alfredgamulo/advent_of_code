@@ -1,10 +1,12 @@
-year := "2023"
+year := "2024"
 
 _:
     @echo Welcome to {{year}} AoC 🎄
     @just -l -u
 
-# Python
+install:
+    #!/usr/bin/env bash
+    poetry install
 
 start day:
     #!/usr/bin/env bash
@@ -12,7 +14,6 @@ start day:
     cd {{year}}
     mkdir -p {{day}}
     cd {{day}}
-    cp -n ../../common/template.py main.py
     day=$((10#{{day}}))
     # echo "session=53616c74..." > cookie.txt
     url="https://adventofcode.com/{{year}}/day/${day}"
@@ -21,7 +22,6 @@ start day:
     just sample "${url}" > sample
     code input
     code sample
-    code main.py
 
 sample url:
     #!.venv/bin/python
@@ -31,17 +31,31 @@ sample url:
     soup = BeautifulSoup(page, "html.parser")
     print(soup.find('pre').find('code').contents[0].strip())
 
-debug day input="input":
+# Rust
+start-rust day:
+    #!/usr/bin/env bash
+    cd {{year}}/{{day}}
+    cargo init --name aoc || true
+    echo "reopen the workspace to this directory"
+
+# Python
+start-python day:
+    #!/usr/bin/env bash
+    cd {{year}}/{{day}}
+    cp -n ../../common/template.py main.py
+    code main.py
+
+debug-python day input="input":
     #!/usr/bin/env bash
     cd {{year}}/{{day}}
     (time poetry run python main.py {{input}})
 
-run day input="input":
+run-python day input="input":
     #!/usr/bin/env bash
     cd {{year}}/{{day}}
     (time poetry run python main.py {{input}}) 2>&1 | tee output
 
-lint day:
+lint-python day:
     poetry run black {{year}}/{{day}}/.
     poetry run flake8 {{year}}/{{day}}/.
 
