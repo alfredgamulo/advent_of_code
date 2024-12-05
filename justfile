@@ -36,6 +36,7 @@ start-rust day:
     #!/usr/bin/env bash
     cd {{year}}/{{day}}
     cargo init --name aoc || true
+    cp ../../common/template.rs src/main.rs
     echo "reopen the workspace to this directory"
 
 # Python
