@@ -21,9 +21,9 @@ def part2(lines):
     for line in lines:
         for m in re.finditer(r"mul\(\d+,\d+\)|do\(\)|don't\(\)", line):
             match m.group():
-                case("do()"):
+                case "do()":
                     enabled = True
-                case("don't()"):
+                case "don't()":
                     enabled = False
                 case found:
                     if enabled:
