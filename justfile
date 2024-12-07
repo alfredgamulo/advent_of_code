@@ -6,7 +6,7 @@ _:
 
 install:
     #!/usr/bin/env bash
-    poetry install
+    poetry install --no-root
 
 start day:
     #!/usr/bin/env bash
@@ -58,7 +58,6 @@ run-python day input="input":
 
 lint-python day:
     poetry run black {{year}}/{{day}}/.
-    poetry run flake8 {{year}}/{{day}}/.
 
 # Lua
 

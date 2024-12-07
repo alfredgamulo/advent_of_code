@@ -11,7 +11,7 @@ click = "^8.0.3"
 requests = "^2.31.0"
 beautifulsoup4 = "^4.12.2"
 sympy = "^1.12"
-scipy = "^1.11.4"
+scipy = "^1.14.1"
 z3-solver = "^4.12.4.0"
 networkx = "^3.2.1"
 
