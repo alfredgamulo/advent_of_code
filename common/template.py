@@ -18,16 +18,16 @@ from pprint import PrettyPrinter
 import numpy as np
 
 
-def part1():
+def part1(lines):
     ...
 
 
-def part2():
+def part2(lines):
     ...
 
 
 if __name__ == "__main__":
     lines = Path(sys.argv[1]).read_text().splitlines()
     print(lines)
-    print("Part 1:", part1())
-    print("Part 2:", part2())
+    print("Part 1:", part1(lines))
+    print("Part 2:", part2(lines))
