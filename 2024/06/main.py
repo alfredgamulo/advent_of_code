@@ -1,21 +1,5 @@
-import copy
-import os
-import re
-import string
 import sys
-from collections import Counter, OrderedDict, defaultdict, deque, namedtuple
-from contextlib import suppress
-from dataclasses import dataclass
-from functools import cache, cmp_to_key, reduce
-from heapq import heappop, heappush
-from io import StringIO
-from itertools import (batched, chain, combinations, count, groupby,
-                       permutations, product, zip_longest)
-from math import ceil, floor, lcm, prod, sqrt
 from pathlib import Path
-from pprint import PrettyPrinter
-
-import numpy as np
 
 dirs = [
     (0, -1),
@@ -35,11 +19,32 @@ def part1(lines, location, obstacles):
             location = nxt
         else:
             direction = dirs[(dirs.index(direction) + 1) % 4]
-    return len(visited)
+    return visited
 
 
-def part2():
-    ...
+def part2(lines, location, obstacles, options):
+    ans = 0
+    start = location
+    for option in options:
+        location = start
+        current_obstacles = obstacles.copy()
+        current_obstacles.add(option)
+        visited = set()
+        direction = dirs[0]
+        loop = set()
+        while 0 <= location[0] < len(lines) and 0 <= location[1] < len(lines):
+            visited.add(location)
+            loop.add((location, direction))
+            nxt = location[0] + direction[0], location[1] + direction[1]
+            if nxt not in current_obstacles:
+                location = nxt
+            else:
+                direction = dirs[(dirs.index(direction) + 1) % 4]
+            if (location, direction) in loop:
+                ans += 1
+                break
+        continue
+    return ans
 
 
 if __name__ == "__main__":
@@ -52,5 +57,8 @@ if __name__ == "__main__":
                 location = (x, y)
             if c == "#":
                 obstacles.add((x, y))
-    print("Part 1:", part1(lines, location, obstacles))
-    print("Part 2:", part2())
+    visited = part1(lines, location, obstacles)
+    print("Part 1:", len(visited))
+    options = visited
+    options.discard(location)
+    print("Part 2:", part2(lines, location, obstacles, options))
