@@ -21,7 +21,8 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"vmsynkov.colonize"
+				"vmsynkov.colonize",
+				"ms-python.isort"
 			]
 		}
 	},

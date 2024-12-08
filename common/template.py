@@ -9,19 +9,13 @@ from dataclasses import dataclass
 from functools import cache, cmp_to_key, reduce
 from heapq import heappop, heappush
 from io import StringIO
-from itertools import (
-    batched,
-    chain,
-    combinations,
-    count,
-    groupby,
-    permutations,
-    product,
-    zip_longest,
-)
+from itertools import (batched, chain, combinations, count, groupby,
+                       permutations, product, zip_longest)
 from math import ceil, floor, lcm, prod, sqrt
 from pathlib import Path
 from pprint import PrettyPrinter
+
+import numpy as np
 
 
 def part1():
