@@ -10,7 +10,7 @@ def solvable(target, operands):
             return True
         else:
             return False
-    if operands[0] >= target:
+    if operands[0] > target:
         return False
     one = operands.popleft()
     two = operands.popleft()
