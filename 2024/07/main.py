@@ -4,22 +4,20 @@ from collections import deque
 from pathlib import Path
 
 
-def solvable(target, operands):
-    if len(operands) == 1:
-        if operands[0] == target:
-            return True
-        else:
-            return False
-    if operands[0] > target:
-        return False
-    one = operands.popleft()
-    two = operands.popleft()
-    left = solvable(target, deque([one + two] + list(operands)))
-    right = solvable(target, deque([one * two] + list(operands)))
-    return left or right
-
-
 def part1(equations):
+    def solvable(target, operands):
+        if len(operands) == 1:
+            if operands[0] == target:
+                return True
+            else:
+                return False
+        if operands[0] > target:
+            return False
+        one = operands.popleft()
+        two = operands.popleft()
+        left = solvable(target, deque([one + two] + list(operands)))
+        right = solvable(target, deque([one * two] + list(operands)))
+        return left or right
     ans = 0
     for equation in equations:
         target = equation[0]
@@ -31,7 +29,28 @@ def part1(equations):
 
 
 def part2(equations):
-    ...
+    def solvable(target, operands):
+        if len(operands) == 1:
+            if operands[0] == target:
+                return True
+            else:
+                return False
+        if operands[0] > target:
+            return False
+        one = operands.popleft()
+        two = operands.popleft()
+        left = solvable(target, deque([one + two] + list(operands)))
+        right = solvable(target, deque([one * two] + list(operands)))
+        crap = solvable(target, deque([int(str(one) + str(two))] + list(operands)))
+        return left or right or crap
+    ans = 0
+    for equation in equations:
+        target = equation[0]
+        operands = deque(equation[1:])
+        s = solvable(target, operands)
+        if s:
+            ans += target
+    return ans
 
 
 if __name__ == "__main__":
