@@ -24,8 +24,19 @@ def part1(lines):
     return p1
 
 
+def part2(lines):
+    print(lines)
+    disk = deque()
+    for i, c in enumerate(lines[0]):
+        push = None
+        if i % 2 == 0:
+            push = int(i) // 2
+        disk += [push] * int(c)
+    print(disk)
+
+
 if __name__ == "__main__":
     lines = Path(sys.argv[1]).read_text().splitlines()
 
     print("Part 1:", part1(lines))
-    print("Part 2:", None)
+    print("Part 2:", part2(lines))
