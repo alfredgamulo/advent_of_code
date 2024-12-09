@@ -2,8 +2,8 @@ import sys
 from collections import deque
 from pathlib import Path
 
-if __name__ == "__main__":
-    lines = Path(sys.argv[1]).read_text().splitlines()
+
+def part1(lines):
     disk = deque()
     for i, c in enumerate(lines[0]):
         push = None
@@ -18,14 +18,14 @@ if __name__ == "__main__":
         if push is not None:
             new_disk.append(push)
     disk = new_disk
-    print("".join(map(str, disk)))
     p1 = 0
     for i, d in enumerate(disk):
         p1 += i * d
+    return p1
 
-    print("Part 1:", p1)
+
+if __name__ == "__main__":
+    lines = Path(sys.argv[1]).read_text().splitlines()
+
+    print("Part 1:", part1(lines))
     print("Part 2:", None)
-
-# 6154086908998 too low
-# 6154096669449
-#
