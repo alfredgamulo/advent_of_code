@@ -1,8 +1,6 @@
-Part 1: 1928
-['2333133121414131402']
-deque([0, 0, None, None, None, 1, 1, 1, None, None, None, 2, None, None, None, 3, 3, 3, None, 4, 4, None, 5, 5, 5, 5, None, 6, 6, 6, 6, None, 7, 7, 7, None, 8, 8, 8, 8, 9, 9])
-Part 2: None
+Part 1: 6154342787400
+Part 2: 6183632723350
 
-real	0m0.984s
-user	0m0.806s
-sys	0m0.164s
+real	0m18.554s
+user	0m18.290s
+sys	0m0.161s
