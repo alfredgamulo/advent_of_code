@@ -1,9 +1,8 @@
 
 
 import sys
-from collections import defaultdict, deque
+from collections import deque
 from functools import cache
-from math import gcd
 from pathlib import Path
 
 
@@ -20,7 +19,7 @@ def neighbors(coords, limit):
     return r
 
 
-def calculate_perimeter(coords):
+def solve(coords):
     @cache
     def is_boundary(x, y):
         # Check if a point is a boundary point
@@ -28,47 +27,23 @@ def calculate_perimeter(coords):
 
     boundary_points = [point for point in coords if is_boundary(*point)]
     perimeter = 0
+    sides = set()
 
     for x, y in boundary_points:
         if (x - 1, y) not in coords:
             perimeter += 1
+            sides.add((x - 1, "vertical"))
         if (x + 1, y) not in coords:
             perimeter += 1
+            sides.add((x + 1, "vertical"))
         if (x, y - 1) not in coords:
             perimeter += 1
+            sides.add((y - 1, "horizontal"))
         if (x, y + 1) not in coords:
             perimeter += 1
+            sides.add((y + 1, "horizontal"))
 
-    return perimeter, boundary_points
-
-
-def count_continuous_lines(coords):
-    from collections import defaultdict
-
-    # Group coordinates by rows and columns
-    rows = defaultdict(list)
-    cols = defaultdict(list)
-    for x, y in coords:
-        rows[y].append(x)
-        cols[x].append(y)
-
-    def count_lines(group):
-        count = 0
-        for key in group:
-            group[key].sort()
-            start = group[key][0]
-            for i in range(1, len(group[key])):
-                if group[key][i] != group[key][i - 1] + 1:
-                    count += 1
-                    start = group[key][i]
-            count += 1
-        return count
-
-    # Count horizontal and vertical lines
-    horizontal_lines = count_lines(rows)
-    vertical_lines = count_lines(cols)
-    print(horizontal_lines, vertical_lines)
-    return horizontal_lines + vertical_lines
+    return perimeter, len(sides)
 
 
 if __name__ == "__main__":
@@ -94,10 +69,9 @@ if __name__ == "__main__":
     p1 = 0
     p2 = 0
     for r in regions:
-        perimeter, boundary = calculate_perimeter(r)
-        print("bounds = ", boundary)
+        perimeter, sides = solve(r)
         p1 += len(r) * perimeter
-        p2 += len(r) * count_continuous_lines(boundary)
+        p2 += len(r) * sides
 
     print("Part 1:", p1)
     print("Part 2:", p2)
