@@ -32,16 +32,16 @@ def solve(coords):
     for x, y in boundary_points:
         if (x - 1, y) not in coords:
             perimeter += 1
-            sides.add((x - 1, "vertical"))
+            sides.add((x - 1, "x"))
         if (x + 1, y) not in coords:
             perimeter += 1
-            sides.add((x + 1, "vertical"))
+            sides.add((x + 1, "x"))
         if (x, y - 1) not in coords:
             perimeter += 1
-            sides.add((y - 1, "horizontal"))
+            sides.add((y - 1, "y"))
         if (x, y + 1) not in coords:
             perimeter += 1
-            sides.add((y + 1, "horizontal"))
+            sides.add((y + 1, "y"))
 
     return perimeter, len(sides)
 
