@@ -2,6 +2,17 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/rust
 {
 	"name": "Rust",
+	"remoteUser": "vscode",
+	"runArgs": [
+		"--init"
+	],
+	"mounts": [
+		"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
+		"source=${env:SSH_AUTH_SOCK},target=${env:SSH_AUTH_SOCK},type=bind"
+	],
+	"containerEnv": {
+		"SSH_AUTH_SOCK": "${env:SSH_AUTH_SOCK}"
+	},
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"build": {
 		"dockerfile": "Dockerfile"
