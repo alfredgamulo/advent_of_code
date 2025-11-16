@@ -1,5 +1,4 @@
 {
-    "python.defaultInterpreterPath": ".venv/bin/python",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
         "source.organizeImports": "explicit"
@@ -7,5 +6,8 @@
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "python.analysis.autoImportCompletions": true,
-    "python.poetryPath": ".venv/bin/python"
+    "python.defaultInterpreterPath": ".venv/bin/python",
+    "python.poetryPath": ".venv/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "python.terminal.activateEnvInCurrentTerminal": true
 }
