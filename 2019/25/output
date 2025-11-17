@@ -1,0 +1,13 @@
+--- Exploring Ship ---
+  > Found Sensor Direction: south (from Security Checkpoint)
+Mapping Complete. Items: ['whirled peas', 'astronaut ice cream', 'boulder', 'hypercube', 'space law space brochure', 'shell', 'mug', 'festive hat']
+Walking to Checkpoint: ['east', 'north', 'west', 'north', 'west', 'west', 'south']
+Brute forcing... (Sensor: south)
+
+--- ACCESS GRANTED ---
+Part 1 Answer: 33624080
+Part 2: Click the star!
+
+real	0m2.822s
+user	0m2.722s
+sys	0m0.090s
