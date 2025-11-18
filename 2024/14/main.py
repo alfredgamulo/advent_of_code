@@ -55,7 +55,88 @@ def part1(lines):
 
 
 def part2(lines):
-    ...
+    # Parse positions and velocities. Accept both common AoC formats.
+    robots = []
+    for line in lines:
+        m = re.match(r"p=<\s*(-?\d+),\s*(-?\d+)\s*> v=<\s*(-?\d+),\s*(-?\d+)\s*>", line)
+        if not m:
+            m = re.match(r"p=(-?\d+),(-?\d+) v=(-?\d+),(-?\d+)", line)
+        if m:
+            x, y, vx, vy = map(int, m.groups())
+            robots.append((x, y, vx, vy))
+
+    if not robots:
+        return None
+
+    # Use the same wrapping/grid parameters as part1 (observed in this puzzle)
+    width, height = 101, 103
+
+    def minimal_circular_span(coords, limit):
+        # coords: iterable of integer coordinates in [0, limit-1]
+        vals = sorted(set(coords))
+        if not vals:
+            return 0, 0
+        # compute largest gap between successive coords (circular)
+        max_gap = -1
+        max_gap_end = None
+        for i in range(len(vals)):
+            a = vals[i]
+            b = vals[(i + 1) % len(vals)]
+            gap = (b - a - 1) % limit
+            if gap > max_gap:
+                max_gap = gap
+                # end of max_gap is a
+                max_gap_end = a
+        # minimal span covering all points contiguously on circle
+        span = limit - max_gap
+        # start coordinate is (max_gap_end + 1) mod limit
+        start = (max_gap_end + 1) % limit
+        return span, start
+
+    best_t = None
+    best_row_span = None
+    best_col_span = None
+    best_ranges = None
+
+    max_t = 5099900
+    for t in range(max_t + 1):
+        pos = [((x + vx * t) % width, (y + vy * t) % height) for x, y, vx, vy in robots]
+        xs = [p[0] for p in pos]
+        ys = [p[1] for p in pos]
+
+        row_span, row_start = minimal_circular_span(ys, height)
+        col_span, col_start = minimal_circular_span(xs, width)
+
+        # Heuristic: message occurs when row_span is minimal (points compressed vertically)
+        if best_row_span is None or row_span < best_row_span or (row_span == best_row_span and col_span < best_col_span):
+            best_row_span = row_span
+            best_col_span = col_span
+            best_t = t
+            best_ranges = (row_start, row_span, col_start, col_span)
+
+    # Render the message at best_t
+    if best_ranges is None:
+        return None
+
+    row_start, row_span, col_start, col_span = best_ranges
+    # clamp spans to reasonable maximum when rendering
+    if row_span > height or col_span > width:
+        return best_t
+
+    # Build grid
+    grid = [["." for _ in range(col_span)] for _ in range(row_span)]
+    pos = [((x + vx * best_t) % width, (y + vy * best_t) % height) for x, y, vx, vy in robots]
+    for x, y in pos:
+        rx = (x - col_start) % width
+        ry = (y - row_start) % height
+        if 0 <= rx < col_span and 0 <= ry < row_span:
+            grid[ry][rx] = "#"
+
+    print("\nMessage at t=", best_t)
+    for row in grid:
+        print("".join(row))
+
+    return best_t
 
 
 if __name__ == "__main__":
