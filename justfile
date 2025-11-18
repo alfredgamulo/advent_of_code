@@ -32,7 +32,7 @@ sample url:
     print(soup.find('pre').find('code').contents[0].strip())
 
 # Rust
-start-rust day:
+start-rust day: (start day)
     #!/usr/bin/env bash
     cd {{year}}/{{day}}
     cargo init --name aoc || true
@@ -40,7 +40,7 @@ start-rust day:
     echo "reopen the workspace to this directory"
 
 # Python
-start-python day:
+start-python day: (start day)
     #!/usr/bin/env bash
     cd {{year}}/{{day}}
     cp -n ../../common/template.py main.py
@@ -61,7 +61,7 @@ lint-python day:
 
 # Lua
 
-start-lua day:
+start-lua day: (start day)
     #!/usr/bin/env bash
     cd {{year}}/{{day}}
     cp -n ../00/start.lua main.lua || echo "already exists"
@@ -74,7 +74,7 @@ run-lua day input="input":
 
 # Go
 
-start-go day:
+start-go day: (start day)
     #!/usr/bin/env bash
     cd {{year}}/{{day}}
     cp -n ../../common/template.go main.go || echo "already exists"
