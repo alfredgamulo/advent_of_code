@@ -1,0 +1,40 @@
+['129A', '176A', '985A', '170A', '528A']
+No sequence found for 129A. reachable numeric labels within depth 10: ['A']
+Reachable positions on level0 within depth 6: [(0, 1), (1, 0), (1, 1), (2, 0), (2, 1)]
+Reachable positions on level1 within depth 6: [(0, 1), (1, 0), (1, 1), (2, 0), (2, 1)]
+Reachable positions on level2 within depth 6: [(2, 0)]
+Enumerated end positions for level2 (pos->example seq):
+(2, 0) <
+seq <A
+  step 1 btn < ok True outs [] pos [(1, 0), (2, 0), (2, 0), (2, 3)]
+  step 2 btn A ok False outs None pos None
+seq >A
+  step 1 btn > ok False outs None pos None
+seq ^A
+  step 1 btn ^ ok False outs None pos None
+seq vA
+  step 1 btn v ok True outs [] pos [(2, 1), (2, 0), (2, 0), (2, 3)]
+  step 2 btn A ok False outs None pos None
+seq <AA
+  step 1 btn < ok True outs [] pos [(1, 0), (2, 0), (2, 0), (2, 3)]
+  step 2 btn A ok False outs None pos None
+seq <vA
+  step 1 btn < ok True outs [] pos [(1, 0), (2, 0), (2, 0), (2, 3)]
+  step 2 btn v ok True outs [] pos [(1, 1), (2, 0), (2, 0), (2, 3)]
+  step 3 btn A ok True outs [] pos [(1, 1), (2, 1), (2, 0), (2, 3)]
+seq <vAA
+  step 1 btn < ok True outs [] pos [(1, 0), (2, 0), (2, 0), (2, 3)]
+  step 2 btn v ok True outs [] pos [(1, 1), (2, 0), (2, 0), (2, 3)]
+  step 3 btn A ok True outs [] pos [(1, 1), (2, 1), (2, 0), (2, 3)]
+  step 4 btn A ok False outs None pos None
+Traceback (most recent call last):
+  File "/workspaces/advent_of_code/2024/21/main.py", line 289, in <module>
+    print("Part 1:", part1(lines))
+                     ~~~~~^^^^^^^
+  File "/workspaces/advent_of_code/2024/21/main.py", line 275, in part1
+    raise RuntimeError(f"No sequence found for {code}")
+RuntimeError: No sequence found for 129A
+
+real	0m0.349s
+user	0m0.257s
+sys	0m0.087s
