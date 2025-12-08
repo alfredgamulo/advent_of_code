@@ -1,0 +1,9 @@
+    Finished `release` profile [optimized] target(s) in 0.00s
+     Running `target/release/aoc sample`
+["L68", "L30", "R48", "L5", "R60", "L55", "L1", "L99", "R14", "L82"]
+Part 1: None
+Part 2: None
+
+real	0m0.046s
+user	0m0.025s
+sys	0m0.022s

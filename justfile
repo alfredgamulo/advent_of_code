@@ -1,4 +1,4 @@
-year := "2024"
+year := "2025"
 
 _:
     @echo Welcome to {{year}} AoC 🎄
@@ -38,6 +38,12 @@ start-rust day: (start day)
     cargo init --name aoc || true
     cp ../../common/template.rs src/main.rs
     echo "reopen the workspace to this directory"
+
+run-rust day input="input":
+    #!/usr/bin/env bash
+    cd {{year}}/{{day}}
+    cargo build --release
+    (time cargo run --release {{input}}) 2>&1 | tee output
 
 # Python
 start-python day: (start day)
