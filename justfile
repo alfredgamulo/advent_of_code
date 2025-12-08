@@ -37,7 +37,16 @@ start-rust day: (start day)
     cd {{year}}/{{day}}
     cargo init --name aoc || true
     cp ../../common/template.rs src/main.rs
-    echo "reopen the workspace to this directory"
+    cargo add log --features std
+    cargo add env_logger
+    code src/main.rs
+
+debug-rust day input="input":
+    #!/usr/bin/env bash
+    cd {{year}}/{{day}}
+    cargo build
+    export RUST_LOG=debug
+    time cargo run --release {{input}}
 
 run-rust day input="input":
     #!/usr/bin/env bash
@@ -55,7 +64,7 @@ start-python day: (start day)
 debug-python day input="input":
     #!/usr/bin/env bash
     cd {{year}}/{{day}}
-    (time poetry run python main.py {{input}})
+    time poetry run python main.py {{input}}
 
 run-python day input="input":
     #!/usr/bin/env bash
