@@ -52,7 +52,7 @@ run-rust day input="input":
     #!/usr/bin/env bash
     cd {{year}}/{{day}}
     cargo build --release
-    (time cargo run --release {{input}}) 2>&1 | tee output
+    (time cargo run --release {{input}}) | tee output
 
 # Python
 start-python day: (start day)
