@@ -14,7 +14,7 @@ fn main() {
 
     log::debug!("{:?}", lines);
     println!("Part 1: {}", part1(&lines).unwrap());
-    println!("Part 2: {:?}", part2(&lines));
+    println!("Part 2: {}", part2(&lines).unwrap());
 }
 
 fn part1(lines: &Vec<&str>) -> Option<String> {
@@ -45,6 +45,41 @@ fn part1(lines: &Vec<&str>) -> Option<String> {
     sum.to_string().into()
 }
 
-fn part2(_lines: &Vec<&str>) -> Option<String> {
-    None
+fn part2(lines: &Vec<&str>) -> Option<String> {
+    let mut invalid_numbers: Vec<i64> = Vec::new();
+    for line in lines {
+        let ranges: Vec<&str> = line.split(',').collect();
+        for range in ranges {
+            let bounds: Vec<&str> = range.split('-').collect();
+            if bounds.len() != 2 {
+                continue;
+            }
+            let start: i64 = bounds[0].parse().unwrap();
+            let end: i64 = bounds[1].parse().unwrap();
+            for num in start..=end {
+                let num_str = num.to_string();
+                let len = num_str.len();
+                let mut is_periodic = false;
+
+                // Check if the number is formed by repeating a substring
+                for sub_len in 1..=len / 2 {
+                    if len % sub_len == 0 {
+                        let sub = &num_str[0..sub_len];
+                        let repetitions = len / sub_len;
+                        if sub.repeat(repetitions) == num_str {
+                            is_periodic = true;
+                            break;
+                        }
+                    }
+                }
+
+                if is_periodic {
+                    log::debug!("Found periodic number: {}", num);
+                    invalid_numbers.push(num);
+                }
+            }
+        }
+    }
+    let sum: i64 = invalid_numbers.iter().sum();
+    sum.to_string().into()
 }
