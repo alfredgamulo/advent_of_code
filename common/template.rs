@@ -13,14 +13,14 @@ fn main() {
     let lines: Vec<&str> = contents.lines().collect();
 
     log::debug!("{:?}", lines);
-    println!("Part 1: {:?}", part1(&lines));
-    println!("Part 2: {:?}", part2(&lines));
+    println!("Part 1: {}", part1(&lines).unwrap());
+    println!("Part 2: {}", part2(&lines).unwrap());
 }
 
-fn part1(_lines: &Vec<&str>) -> Option<String> {
-    None
+fn part1(lines: &Vec<&str>) -> Option<String> {
+    lines.len().to_string().into()
 }
 
-fn part2(_lines: &Vec<&str>) -> Option<String> {
-    None
+fn part2(lines: &Vec<&str>) -> Option<String> {
+    lines.len().to_string().into()
 }
