@@ -39,5 +39,44 @@ fn part1(lines: &Vec<&str>) -> Option<String> {
 }
 
 fn part2(lines: &Vec<&str>) -> Option<String> {
-    lines.len().to_string().into()
+    let mut result: Vec<u64> = Vec::new();
+    for line in lines {
+        log::debug!("Processing line: {}", line);
+        let digits: Vec<u32> = line.chars().filter_map(|c| c.to_digit(10)).collect();
+        log::debug!("Digits: {:?}", digits);
+
+        let greatest = if digits.len() >= 12 {
+            // Greedy approach: at each position, pick the largest digit
+            // such that we still have enough digits remaining
+            let mut selected = Vec::new();
+            let mut start = 0;
+
+            for pos in 0..12 {
+                let remaining_needed = 12 - pos - 1;
+                let search_end = digits.len() - remaining_needed;
+
+                // Find the maximum digit in the valid range
+                let mut max_digit = 0;
+                let mut max_idx = start;
+
+                for i in start..search_end {
+                    if digits[i] > max_digit {
+                        max_digit = digits[i];
+                        max_idx = i;
+                    }
+                }
+
+                selected.push(max_digit);
+                start = max_idx + 1;
+            }
+
+            selected.iter().fold(0u64, |acc, &d| acc * 10 + d as u64)
+        } else {
+            0
+        };
+
+        log::debug!("Greatest twelve-digit number: {}", greatest);
+        result.push(greatest);
+    }
+    Some(result.iter().sum::<u64>().to_string())
 }
